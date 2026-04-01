@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="tablesheet" href="style.css"
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title> Premier League Standings</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    margin: 0; padding: 0;  
+    background: linear-gradient(to bottom, #1a1a1a, #303030);
+    color: #eee;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  header {
+    background: #121212; /* Man Utd red */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header img.logo {
+    height: 70px;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  nav a:hover {
+    background: rgba(255 255 255 / 0.2);
+  }
+
+  /* Hero banner */
+  .hero {
+    background: url('https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg') no-repeat center/contain;
+    background-color: #111;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 900;
+    letter-spacing: 3px;
+  }
+  .hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+  .hero a {
+    background: #2fc910;
+    color: #111;
+    padding: 14px 28px;
+    font-weight: 700;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(249,168,37,0.4);
+  }
+  .hero a:hover {
+    background: #8b2cd8;
+  }
+
+  /* Main content */
+  main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+  }
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    transition: box-shadow 0.3s;
+    background: white;
+    display: flex;
+    flex-direction: column;
+  }
+  .product-card:hover {
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+  }
+  .product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    object-fit: contain;
+    background: #f9f9f9;
+  }
+  .product-info {
+    padding: 15px 18px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .product-title {
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #da291c;
+  }
+  .product-price {
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 12px;
+  }
+  .product-actions {
+    margin-top: auto;
+  }
+  .btn {
+    display: inline-block;
+    background: #da291c;
+    color: white;
+    padding: 10px 16px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    user-select: none;
+    width: 100%;
+  }
+  .btn:hover {
+    background: #a81c15;
+  }
+
+  /* Footer */
+  footer {
+    background: #111;
+    color: #ccc;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: #da291c;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    table {
+      font-size: 0.9rem;
+    }
+    
+    th, td {
+      padding: 6px 4px;
+    }
+    
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 15px;
+    }
+    nav {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    
+    table {
+      font-size: 0.8rem;
+    }
+    
+    th, td {
+      padding: 4px 2px;
+    }
+    
+    #pointsTable h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    table {
+      font-size: 0.7rem;
+    }
+    
+    th, td {
+      padding: 3px 1px;
+    }
+    
+    #pointsTable h1 {
+      font-size: 1.3rem;
+    }
+  }
+  table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid rgba(82, 82, 82, 0.35);;
+}
+
+tr:hover {background-color: rgba(255 255 255 / 0.2);}
+</style>
+  </head>
+  <body>
+    <header>
+        <a href="#" aria-label="Kick Zone Home">
+          <img class="logo" src="{{ url_for('static', filename='images/kickzone_logo.png') }}" alt="Kick Zone Logo" />
+        </a>
+        <nav>
+          <a href="{{ url_for('home') }}">Home</a>
+          <a href="{{ url_for('chatbot') }}">ChatBot United</a>
+          <a href="{{ url_for('news') }}">News</a>
+          <a href="{{ url_for('store') }}">Store</a>
+        </nav>
+      </header>
+      <table id="pointsTable">
+        <h1 style="text-align:center;"> Premier League Standings </h1>
+        <thead>
+          <tr>
+            <th scope="col" style="text-align: center;">Pos</th>
+            <th scope="col" style="text-align: left;">Team</th>
+            <th scope="col" style="text-align: center;">Matches</th>
+            <th scope="col" style="text-align: center;">Wins</th>
+            <th scope="col" style="text-align: center;">Losses</th>
+            <th scope="col" style="text-align: center;">Draws</th>
+            <th scope="col" style="text-align: center;">GD</th>
+            <th scope="col" style="text-align: center;">Points</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <script>
+        fetch('{{ url_for("static", filename="standings.json") }}')
+        .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+      })
+        .then(data => {
+        const tbody = document.querySelector("#pointsTable tbody");
+
+        data.forEach(item => {
+          const tr = document.createElement("tr");
+
+          const tdPos = document.createElement("td");
+          tdPos.textContent = 'Centered';
+          tdPos.style.textAlign = 'center';
+          tdPos.style.verticalAlign = 'middle';
+          tdPos.textContent = item.Position;
+          tr.appendChild(tdPos);
+
+          const tdTeam = document.createElement("td");
+          tdTeam.textContent = item.Team;
+          tr.appendChild(tdTeam);
+
+          const tdMP = document.createElement("td");
+          tdMP.textContent = 'Centered';
+          tdMP.style.textAlign = 'center';
+          tdMP.style.verticalAlign = 'middle';
+          tdMP.textContent = item.Played;
+          tr.appendChild(tdMP);
+
+          const tdWins = document.createElement("td");
+          tdWins.textContent = 'Centered';
+          tdWins.style.textAlign = 'center';
+          tdWins.style.verticalAlign = 'middle';
+          tdWins.textContent = item.Wins;
+          tr.appendChild(tdWins);
+
+          const tdLosses = document.createElement("td");
+          tdLosses.textContent = 'Centered';
+          tdLosses.style.textAlign = 'center';
+          tdLosses.style.verticalAlign = 'middle';
+          tdLosses.textContent = item.Losses;
+          tr.appendChild(tdLosses);
+
+          const tdDraws = document.createElement("td");
+          tdDraws.textContent = 'Centered';
+          tdDraws.style.textAlign = 'center';
+          tdDraws.style.verticalAlign = 'middle';
+          tdDraws.textContent = item.Draws;
+          tr.appendChild(tdDraws);
+
+          const tdGD = document.createElement("td");
+          tdGD.textContent = 'Centered';
+          tdGD.style.textAlign = 'center';
+          tdGD.style.verticalAlign = 'middle';
+          tdGD.textContent = item["Goal Difference"];
+          tr.appendChild(tdGD);
+
+          const tdPoints = document.createElement("td");
+          tdPoints.textContent = 'Centered';
+          tdPoints.style.textAlign = 'center';
+          tdPoints.style.verticalAlign = 'middle';
+          tdPoints.textContent = item.Points;
+          tr.appendChild(tdPoints);
+
+          tbody.appendChild(tr);
+        });
+      })
+      .catch(error => {
+        console.error('There was a problem fetching the JSON:', error);
+      });
+      </script>
+  </body>

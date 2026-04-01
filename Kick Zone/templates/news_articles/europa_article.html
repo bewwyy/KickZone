@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thursday's European matches: Forest, Villa & Palace analysis - Kick Zone</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1a1a1a, #303030);
+    color: #eee;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  header {
+    background: #121212;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header img.logo {
+    height: 70px;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  nav a:hover {
+    background: rgba(255 255 255 / 0.2);
+  }
+
+  /* Article content */
+  .article-container {
+    max-width: none;
+    margin: 40px 0;
+    padding: 0 40px;
+  }
+
+  .article-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .article-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #f1eeee;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .article-meta {
+    color: #d5d0d0;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .article-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin: 30px auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .article-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 60px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .article-content h2 {
+    color: #da291c;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #da291c;
+    padding-bottom: 10px;
+  }
+
+  .article-content h3 {
+    color: #f1eeee;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .article-content h4 {
+    color: #f1eeee;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .article-content p {
+    margin-bottom: 20px;
+    color: #d5d0d0;
+    font-size: 1.1rem;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid #da291c;
+    padding-left: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: #f1eeee;
+    background: rgba(218, 41, 28, 0.1);
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .score-highlight {
+    background: linear-gradient(135deg, #da291c, #a81c15);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(218, 41, 28, 0.3);
+  }
+
+  .score-highlight.defeat {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+  }
+
+  .score-highlight.victory {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+  }
+
+  .stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .stats-table th {
+    background: #da291c;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .stats-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #d5d0d0;
+  }
+
+  .stats-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .back-link {
+    display: inline-block;
+    background: #da291c;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-bottom: 30px;
+  }
+
+  .back-link:hover {
+    background: #a81c15;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(218, 41, 28, 0.3);
+  }
+
+  .tweet-embed {
+    background: #1a1a1a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .tweet-embed a {
+    color: #1da1f2;
+    text-decoration: underline;
+  }
+
+  /* Footer */
+  footer {
+    background: #111;
+    color: #ccc;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: #ffffff;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 0 20px;
+    }
+    
+    .article-title {
+      font-size: 2rem;
+    }
+    
+    .article-content {
+      padding: 30px;
+    }
+    
+    .article-content h2 {
+      font-size: 1.5rem;
+    }
+    
+    .stats-table {
+      font-size: 0.9rem;
+    }
+    
+    .stats-table th,
+    .stats-table td {
+      padding: 8px 10px;
+    }
+    
+    .score-highlight {
+      font-size: 1.1rem;
+      padding: 12px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .article-container {
+      padding: 0 15px;
+    }
+    
+    .article-title {
+      font-size: 1.8rem;
+    }
+    
+    .article-content {
+      padding: 20px;
+    }
+    
+    .article-content h2 {
+      font-size: 1.3rem;
+    }
+    
+    .article-content h3 {
+      font-size: 1.2rem;
+    }
+    
+    .stats-table {
+      font-size: 0.8rem;
+    }
+    
+    .stats-table th,
+    .stats-table td {
+      padding: 6px 8px;
+    }
+    
+    .score-highlight {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="{{ url_for('home') }}" aria-label="Kick Zone Home">
+    <img class="logo" src="{{ url_for('static', filename='images/kickzone_logo.png') }}" alt="Kick Zone Logo" />
+  </a>
+</header>
+
+<div class="article-container">
+  <a href="{{ url_for('news') }}" class="back-link">← Back to News</a>
+  
+  <div class="article-header">
+    <h1 class="article-title">What we learned from Thursday's European matches</h1>
+    <div class="article-meta">23 Oct 2025 • Europa League & Conference League Analysis</div>
+  </div>
+
+  <div class="article-content">
+    <p><em>Football writer David Coverdale reports on how Nottingham Forest, Aston Villa and Crystal Palace fared in their respective matches in the UEFA Europa League and Conference League on Thursday night.</em></p>
+
+    <h2>Perfect start for Dyche on Forest debut</h2>
+    
+    <div class="score-highlight victory">Nottingham Forest 2-0 Porto</div>
+
+    <p>Sean Dyche got his Nottingham Forest reign off to a dream start as he oversaw a statement win over Portuguese giants Porto.</p>
+
+    <p>The former Burnley and Everton boss was taking charge of his first match since replacing Ange Postecoglou, who left on 18 October.</p>
+
+    <p>And while his predecessor failed to win any of his eight games in the Forest dugout, Dyche tasted victory at the first time of asking thanks to penalties from Morgan Gibbs-White and Igor Jesus.</p>
+
+    <p>The 54-year-old was only appointed the club's new head coach on Tuesday, but he has clearly wasted no time in instilling his philosophy.</p>
+
+    <p>Dyche ripped up the back five Postecoglou had experimented with in recent weeks and restored a back four, the system favoured by Forest's head coach at the start of the season, Nuno Espirito Santo.</p>
+
+    <p>Jesus replaced Taiwo Awoniyi up front, while Callum Hudson-Odoi and Dan Ndoye were chosen as the wide men in a 4-2-3-1 formation, with midfielder Ibrahim Sangare and defender Morato making way.</p>
+
+    <p>The first goal of the Dyche era came after only 19 minutes and it was his captain who got it.</p>
+
+    <p>After Porto's former Southampton defender Jan Bednarek handled in the area, Gibbs-White coolly converted from the spot for his first goal of the season.</p>
+
+    <p>Intriguingly, when Forest were awarded a second penalty in the 77th minute after Nicolo Savona was tripped by Martim Fernandes, Gibbs-White handed the ball to Jesus, who stepped up to score.</p>
+
+    <p>Before kick-off, Dyche spoke about wanting to see his side "be good from a defensive point of view". So he will have been delighted to see his team keep their first clean sheet of the campaign, especially against a Porto side who had won their previous two Europa League matches and were unbeaten this season.</p>
+
+    <p>It was Forest's first win in any competition since their Premier League opener against Brentford. And the only negative of the night was an injury to Oleksandr Zinchenko, who is now a doubt for Sunday's trip to AFC Bournemouth.</p>
+
+    <blockquote>
+      "It's been a difficult couple of months here, with all the changes that have happened and the bad performances, so we are happy to get a win. It has only been one game, but you can feel the morale within the group, it feels a lot more energetic and positive. That is credit to the manager that has come in. We have got to keep going now and maintain that positive energy."<br>
+      <strong>— Morgan Gibbs-White, Nottingham Forest captain</strong>
+    </blockquote>
+
+    <h2>Villa's winning run comes to an end in the Netherlands</h2>
+    
+    <div class="score-highlight defeat">Go Ahead Eagles 2-1 Aston Villa</div>
+
+    <p>Aston Villa's winning run came to a shuddering halt as they were stunned by European debutants Go Ahead Eagles.</p>
+
+    <p>Unai Emery's men arrived in the Netherlands having registered five successive victories in all competitions.</p>
+
+    <p>However, despite taking an early lead through Evann Guessand, Villa conceded two sloppy goals and crashed to their first Europa League defeat of the season when Emiliano Buendia blazed over a late penalty.</p>
+
+    <p>It was the seventh spot-kick they have missed from their last 13, excluding shootouts, while they have missed both their penalties this season.</p>
+
+    <p>This was a night when Emery made seven changes from the team that won at Tottenham Hotspur on Sunday, but saw a host of his players fail to seize their chance.</p>
+
+    <p>Ollie Watkins was back in the starting line-up ahead of Donyell Malen. But the England striker was unable to add to his solitary goal of this season and was subbed off after 67 minutes.</p>
+
+    <p>Ian Maatsen, meanwhile, started at left-back in place of Lucas Digne, who picked up a nasty gash on his ankle at Spurs.</p>
+
+    <p>Yet the Dutchman was involved in the Eagles' 61st-minute winner, allowing Mats Deijl to run off him from Joris Kramer's ball over the top, with the home captain then bringing the ball down and clipping it over Emiliano Martinez.</p>
+
+    <p>It was the second time of the night that Villa were made to pay for their high line.</p>
+
+    <p>The hosts' 42nd-minute equaliser came when Mathis Suray broke clear from Calvin Twigt's free-kick and finished via a deflection off Pau Torres.</p>
+
+    <blockquote>
+      "Today was a match we were dominating, we were creating chances, and we scored the first goal. We conceded a few chances to them and they were clinical. Away is an experience I've always felt is difficult, like today. I'm positive, but today I'm feeling disappointed and a little frustrated."<br>
+      <strong>— Unai Emery, Aston Villa manager</strong>
+    </blockquote>
+
+    <div class="tweet-embed">
+      <p><strong>Watch: Emery's post-match reaction</strong></p>
+      <p><a href="https://twitter.com/AVFCOfficial/status/1234567890" target="_blank">Unai's reaction to tonight's defeat 🗣️ pic.twitter.com/5Dh5sIHkNJ</a></p>
+      <p><em>— Aston Villa (@AVFCOfficial) October 23, 2025</em></p>
+    </div>
+
+    <p>Perhaps the only positive Emery could take from an otherwise miserable night was a first Villa goal for Guessand.</p>
+
+    <p>The Ivory Coast international had failed to score in his first 10 appearances for his new club following his reported £30million summer move from Nice.</p>
+
+    <p>But he got off the mark in the fourth minute in Deventer, even if it was a scrappy, fortunate finish, bundling in at the back post after a mix-up between Joris Kramer and his goalkeeper Jari de Busser following Jadon Sancho's cross.</p>
+
+    <p>Guessand could have doubled his tally when he was played clean through by Buendia, but shot straight at the onrushing De Brusser.</p>
+
+    <p>Emery must hope the forward's maiden goal boosts his confidence ahead of Sunday's visit of Manchester City.</p>
+
+    <h2>Palace come unstuck on home European debut</h2>
+    
+    <div class="score-highlight defeat">Crystal Palace 0-1 AEK Larnaca</div>
+
+    <p>Crystal Palace's big night fell flat as they suffered a shock defeat to AEK Larnaca in the UEFA Conference League.</p>
+
+    <p>Eagles fans arrived at Selhurst Park excited to witness the club's first-ever major European home fixture.</p>
+
+    <p>However, those supporters left the ground disappointed after seeing their side miss a string of chances and then fall to their first Conference League defeat to Riad Bajic's second-half goal.</p>
+
+    <p>Oliver Glasner made only three changes to the side who drew with Bournemouth, but it was one of those who was involved in Larnaca's winner - Jaydee Canvot.</p>
+
+    <p>The 19-year-old French defender, who is yet to feature in the Premier League following his summer arrival from Toulouse, passed the ball straight to Marcus Rohden just outside his own box. Rohden then picked out Bajic, who slammed home from 18 yards.</p>
+
+    <blockquote>
+      "Small mistakes get punished and on the other side we had enough chances to win the game. It is not just the story of today but many games. The effort was here, we were creating situations against a deep block. We had four or five big opportunities to score and we didn't and we make one mistake and you can lose a game like this. It is part of the game. Nobody is blaming [Canvot] him, it just happens. The finish was excellent. If you don't score you can't win. We lost a point today. It is disappointing, it is frustrating and it hurts but on the other side we keep going. We have enough games. We had enough clear chances and then you lose sometimes. We have to learn from it."<br>
+      <strong>— Oliver Glasner, Crystal Palace manager</strong>
+    </blockquote>
+
+    <p>Adam Wharton was one of those given a rest from the weekend and his creativity was badly missed against Larnaca's low block.</p>
+
+    <p>The England midfielder was brought on with 19 minutes to go, but he was unable to reverse Palace's fortunes.</p>
+
+    <p>Glasner's side still managed 15 shots, with the best chances falling to Jean-Philippe Mateta, fresh from his hat-trick heroics against Bournemouth.</p>
+
+    <p>But the French striker's finishing let him down on this occasion, hitting the bar from six yards in the first half, before being denied by a good Zlatan Alomerovic save after the break.</p>
+
+    <p>It was Palace's first defeat of their Conference League campaign, and they must now dust themselves down ahead of Sunday's visit to Premier League leaders Arsenal.</p>
+  </div>
+</div>
+
+<footer>
+  <p>Kick Zone</p>
+</footer>
+
+</body>
+</html>

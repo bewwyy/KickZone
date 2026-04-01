@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Match officials for Matchweek 9 - Kick Zone</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1a1a1a, #303030);
+    color: #eee;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  header {
+    background: #121212;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header img.logo {
+    height: 70px;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  nav a:hover {
+    background: rgba(255 255 255 / 0.2);
+  }
+
+  /* Article content */
+  .article-container {
+    max-width: none;
+    margin: 40px 0;
+    padding: 0 40px;
+  }
+
+  .article-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .article-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #f1eeee;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .article-meta {
+    color: #d5d0d0;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .article-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin: 30px auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .article-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 60px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .article-content h2 {
+    color: #da291c;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #da291c;
+    padding-bottom: 10px;
+  }
+
+  .article-content h3 {
+    color: #f1eeee;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .article-content h4 {
+    color: #f1eeee;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .article-content p {
+    margin-bottom: 20px;
+    color: #d5d0d0;
+    font-size: 1.1rem;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid #da291c;
+    padding-left: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: #f1eeee;
+    background: rgba(218, 41, 28, 0.1);
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .officials-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .officials-table th {
+    background: #da291c;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .officials-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #d5d0d0;
+  }
+
+  .officials-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .back-link {
+    display: inline-block;
+    background: #da291c;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-bottom: 30px;
+  }
+
+  .back-link:hover {
+    background: #a81c15;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(218, 41, 28, 0.3);
+  }
+
+  .highlight-box {
+    background: rgba(218, 41, 28, 0.1);
+    border-left: 4px solid #da291c;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .highlight-box h4 {
+    color: #da291c;
+    margin-bottom: 15px;
+  }
+
+  .highlight-box ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .highlight-box li {
+    margin-bottom: 8px;
+    color: #d5d0d0;
+  }
+
+  /* Footer */
+  footer {
+    background: #111;
+    color: #ccc;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: #ffffff;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 0 20px;
+    }
+    
+    .article-title {
+      font-size: 2rem;
+    }
+    
+    .article-content {
+      padding: 30px;
+    }
+    
+    .article-content h2 {
+      font-size: 1.5rem;
+    }
+    
+    .officials-table {
+      font-size: 0.9rem;
+    }
+    
+    .officials-table th,
+    .officials-table td {
+      padding: 8px 10px;
+    }
+    
+    .highlight-box {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .article-container {
+      padding: 0 15px;
+    }
+    
+    .article-title {
+      font-size: 1.8rem;
+    }
+    
+    .article-content {
+      padding: 20px;
+    }
+    
+    .article-content h2 {
+      font-size: 1.3rem;
+    }
+    
+    .article-content h3 {
+      font-size: 1.2rem;
+    }
+    
+    .officials-table {
+      font-size: 0.8rem;
+    }
+    
+    .officials-table th,
+    .officials-table td {
+      padding: 6px 8px;
+    }
+    
+    .highlight-box {
+      padding: 12px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="{{ url_for('home') }}" aria-label="Kick Zone Home">
+    <img class="logo" src="{{ url_for('static', filename='images/kickzone_logo.png') }}" alt="Kick Zone Logo" />
+  </a>
+</header>
+
+<div class="article-container">
+  <a href="{{ url_for('news') }}" class="back-link">← Back to News</a>
+  
+  <div class="article-header">
+    <h1 class="article-title">Match officials for Matchweek 9</h1>
+    <div class="article-meta">24 Oct 2025 • Premier League Match Officials</div>
+  </div>
+
+  <div class="article-content">
+    <p><em>See who will be officiating in the weekend's Premier League fixtures, including the Video Assistant Referees for Matchweek 9 of the 2025/26 Premier League season.</em></p>
+
+    <h2>Premier League Matchweek 9 Officials</h2>
+    
+    <p>The match officials for Matchweek 9 of the 2025/26 Premier League season have been appointed. Here's the complete list of referees, assistants, fourth officials, and VAR teams for this weekend's fixtures:</p>
+
+    <table class="officials-table">
+      <thead>
+        <tr>
+          <th>Fixture</th>
+          <th>Referee</th>
+          <th>Assistants</th>
+          <th>Fourth Official</th>
+          <th>VAR</th>
+          <th>Assistant VAR</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Fixture 1</strong></td>
+          <td>Stuart Attwell</td>
+          <td>Constantine Hatzidakis, Marc Perry</td>
+          <td>David Webb</td>
+          <td>James Bell</td>
+          <td>Adrian Holmes</td>
+        </tr>
+        <tr>
+          <td><strong>Fixture 2</strong></td>
+          <td>Andy Madley</td>
+          <td>Nick Hopton, Craig Taylor</td>
+          <td>Tom Bramall</td>
+          <td>Craig Pawson</td>
+          <td>Wade Smith</td>
+        </tr>
+        <tr>
+          <td><strong>Fixture 3</strong></td>
+          <td>Peter Bankes</td>
+          <td>Eddie Smart, Steve Meredith</td>
+          <td>Lewis Smith</td>
+          <td>John Brooks</td>
+          <td>Scott Ledger</td>
+        </tr>
+        <tr>
+          <td><strong>Fixture 4</strong></td>
+          <td>Anthony Taylor</td>
+          <td>Gary Beswick, Adam Nunn</td>
+          <td>Gavin Ward</td>
+          <td>Michael Oliver</td>
+          <td>Stuart Burt</td>
+        </tr>
+        <tr>
+          <td><strong>Fixture 5</strong></td>
+          <td>Simon Hooper</td>
+          <td>Adrian Holmes, Simon Long</td>
+          <td>Tim Robinson</td>
+          <td>Chris Kavanagh</td>
+          <td>Simon Bennett</td>
+        </tr>
+        <tr>
+          <td><strong>Fixture 6</strong></td>
+          <td>Tom Bramall</td>
+          <td>Simon Bennett, Nick Greenhalgh</td>
+          <td>Andy Madley</td>
+          <td>Chris Kavanagh</td>
+          <td>Craig Taylor</td>
+        </tr>
+        <tr>
+          <td><strong>Fixture 7</strong></td>
+          <td>Michael Oliver</td>
+          <td>Stuart Burt, Ian Hussin</td>
+          <td>Rob Jones</td>
+          <td>John Brooks</td>
+          <td>Nick Hopton</td>
+        </tr>
+        <tr>
+          <td><strong>Fixture 8</strong></td>
+          <td>Sam Barrott</td>
+          <td>James Mainwaring, Wade Smith</td>
+          <td>Tom Nield</td>
+          <td>Matt Donohue</td>
+          <td>Sian Massey-Ellis</td>
+        </tr>
+        <tr>
+          <td><strong>Fixture 9</strong></td>
+          <td>Tony Harrington</td>
+          <td>Richard West, Blake Antrobus</td>
+          <td>Anthony Backhouse</td>
+          <td>Tim Robinson</td>
+          <td>Neil Davies</td>
+        </tr>
+        <tr>
+          <td><strong>Fixture 10</strong></td>
+          <td>Craig Pawson</td>
+          <td>Lee Betts, Mat Wilkes</td>
+          <td>Lewis Smith</td>
+          <td>Stuart Attwell</td>
+          <td>Constantine Hatzidakis</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Key Officials to Watch</h2>
+
+    <div class="highlight-box">
+      <h4>Notable Appointments</h4>
+      <ul>
+        <li><strong>Simon Hooper</strong> - One of the Premier League's most experienced referees, known for his consistent decision-making</li>
+        <li><strong>Michael Oliver</strong> - FIFA-listed referee who regularly officiates high-profile matches</li>
+        <li><strong>Anthony Taylor</strong> - Another FIFA-listed official with extensive Premier League experience</li>
+        <li><strong>Sian Massey-Ellis</strong> - Assistant VAR, one of the most respected officials in the women's game</li>
+      </ul>
+    </div>
+
+    <h2>VAR Technology in Focus</h2>
+
+    <p>This weekend's fixtures will feature the Video Assistant Referee system across all Premier League matches. The VAR teams include some of the most experienced officials in English football, ensuring consistency in decision-making across all matches.</p>
+
+    <p>Key VAR officials for Matchweek 9 include:</p>
+
+    <ul>
+      <li><strong>James Bell</strong> - Leading VAR official with extensive experience</li>
+      <li><strong>Craig Pawson</strong> - Former Premier League referee now working in the VAR booth</li>
+      <li><strong>John Brooks</strong> - Known for his technical expertise in video analysis</li>
+      <li><strong>Michael Oliver</strong> - FIFA-listed referee providing VAR support</li>
+      <li><strong>Chris Kavanagh</strong> - Experienced official handling multiple VAR duties</li>
+    </ul>
+
+    <h2>Fourth Official Duties</h2>
+
+    <p>The fourth officials play a crucial role in match management, assisting the referee with substitutions, timekeeping, and maintaining order in the technical areas. This weekend's fourth officials include:</p>
+
+    <ul>
+      <li><strong>David Webb</strong> - Experienced fourth official</li>
+      <li><strong>Tom Bramall</strong> - Rising official in the Premier League</li>
+      <li><strong>Lewis Smith</strong> - Regular fourth official appointment</li>
+      <li><strong>Gavin Ward</strong> - Veteran official with extensive experience</li>
+      <li><strong>Tim Robinson</strong> - Known for his calm management of technical areas</li>
+    </ul>
+
+    <blockquote>
+      "The appointment of match officials is a crucial part of ensuring fair play and consistency across all Premier League fixtures. Our referees, assistants, and VAR teams undergo extensive training to maintain the highest standards of officiating."<br>
+      <strong>— Premier League Referees' Association</strong>
+    </blockquote>
+
+    <h2>Looking Ahead</h2>
+
+    <p>With Matchweek 9 featuring some crucial fixtures in the Premier League season, the appointed officials will be under scrutiny to ensure fair and consistent decision-making. The VAR system continues to evolve, with officials receiving regular training to stay up-to-date with the latest protocols and technology.</p>
+
+    <p>All officials are selected based on their performance throughout the season, with particular attention paid to their handling of high-pressure situations and their ability to work effectively with the VAR system.</p>
+
+    <div class="highlight-box">
+      <h4>Officials Training</h4>
+      <ul>
+        <li>Regular VAR protocol updates</li>
+        <li>Performance analysis and feedback</li>
+        <li>Technology training sessions</li>
+        <li>Communication workshops</li>
+        <li>Fitness and positioning drills</li>
+      </ul>
+    </div>
+
+    <p>Stay tuned for more updates on Premier League officiating and the latest developments in match technology as the season progresses.</p>
+  </div>
+</div>
+
+<footer>
+  <p>Kick Zone</p>
+</footer>
+
+</body>
+</html>

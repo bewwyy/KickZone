@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title> Kick Zone Official Store</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1a1a1a, #303030);
+    color: #eee; /* lighter text for better contrast */
+    min-height: 100vh;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  header {
+    background: #121212;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header img.logo {
+    height: 70px;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  nav a:hover {
+    background: rgba(255 255 255 / 0.2);
+  }
+
+  /* Hero banner */
+  .hero {
+  background: transparent; /* allows gradient to show through */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 900;
+    letter-spacing: 3px;
+  }
+  .hero p {
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+  }
+  .hero a {
+    background: #2fc910;
+    color: #111;
+    padding: 14px 28px;
+    font-weight: 700;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(249,168,37,0.4);
+  }
+  .hero a:hover {
+    background: #8b2cd8;
+  }
+
+  /* Main content */
+  main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+  }
+  .product-card {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    transition: box-shadow 0.3s;
+    background: #2c2c2c;
+    display: flex;
+    flex-direction: column;
+  }
+  .product-card:hover {
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+  }
+  .product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    background: transparent;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #6a6666;
+    height: auto;
+  }
+  .product-info {
+    padding: 15px 18px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .product-title {
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #f1eeee;
+  }
+  .product-price {
+    font-weight: 600;
+    color: #d5d0d0;
+    margin-bottom: 12px;
+  }
+  .product-actions {
+    margin-top: auto;
+  }
+  .btn {
+    display: inline-block;
+    background: #da291c;
+    color: white;
+    padding: 10px 16px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    user-select: none;
+    width: 100%;
+  }
+  .btn:hover {
+    background: #a81c15;
+  }
+
+  /* Footer */
+  footer {
+    background: #111;
+    color: #ccc;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: #da291c;
+  }
+
+  /* Cart Button */
+  .cart-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #da291c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cart-button:hover {
+    background: #a81c15;
+    transform: scale(1.1);
+  }
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #121212;
+    color: #eee;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Cart Modal */
+  .cart-modal {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background: #2c2c2c;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+  }
+  .cart-modal.open {
+    right: 0;
+  }
+  .cart-header {
+    padding: 20px;
+    border-bottom: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cart-header h3 {
+    margin: 0;
+    color: #f1eeee;
+  }
+  .close-cart {
+    background: none;
+    border: none;
+    color: #f1eeee;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .cart-items {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #444;
+  }
+  .cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+  }
+  .cart-item-info {
+    flex: 1;
+  }
+  .cart-item-title {
+    color: #f1eeee;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .cart-item-price {
+    color: #d5d0d0;
+    font-weight: 500;
+  }
+  .remove-item {
+    background: #da291c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .quantity-btn {
+    background: #444;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+  }
+  .quantity-btn:hover {
+    background: #555;
+  }
+  .quantity-btn:disabled {
+    background: #333;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  .quantity-display {
+    background: #444;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cart-footer {
+    padding: 20px;
+    border-top: 1px solid #444;
+  }
+  .cart-subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f1eeee;
+  }
+  .checkout-btn {
+    width: 100%;
+    background: #da291c;
+    color: #111;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .checkout-btn:hover {
+    background: #a81c15;
+  }
+  .empty-cart {
+    text-align: center;
+    color: #d5d0d0;
+    padding: 40px 20px;
+  }
+
+  /* Checkout Modal */
+  .checkout-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1002;
+  }
+  .checkout-modal.open {
+    display: flex;
+  }
+  .checkout-content {
+    background: #2c2c2c;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px;
+  }
+  .checkout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+  }
+  .checkout-header h2 {
+    margin: 0;
+    color: #f1eeee;
+  }
+  .close-checkout {
+    background: none;
+    border: none;
+    color: #f1eeee;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    display: block;
+    color: #f1eeee;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background: #1a1a1a;
+    color: #f1eeee;
+    font-size: 14px;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #da291c;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  .order-summary {
+    background: #1a1a1a;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .order-summary h3 {
+    color: #f1eeee;
+    margin-bottom: 15px;
+  }
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #d5d0d0;
+  }
+  .summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 18px;
+    color: #f1eeee;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  .payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .payment-method {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .payment-method:hover {
+    border-color: #da291c;
+  }
+  .payment-method.selected {
+    border-color: #da291c;
+    background: rgba(218, 41, 28, 0.1);
+  }
+  .payment-method input[type="radio"] {
+    margin-right: 8px;
+  }
+  .process-payment-btn {
+    width: 100%;
+    background: #da291c;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .process-payment-btn:hover {
+    background: #a81c15;
+  }
+  .process-payment-btn:disabled {
+    background: #555;
+    cursor: not-allowed;
+  }
+  .loading {
+    display: none;
+    text-align: center;
+    color: #d5d0d0;
+    margin-top: 20px;
+  }
+  .success-message {
+    display: none;
+    text-align: center;
+    color: #2fc910;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  .order-confirmation {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 6px;
+    margin-top: 20px;
+  }
+  .order-number {
+    font-size: 18px;
+    font-weight: bold;
+    color: #da291c;
+    margin-bottom: 10px;
+  }
+  .order-details {
+    color: #d5d0d0;
+    margin-bottom: 15px;
+  }
+  .tracking-info {
+    background: #2c2c2c;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 15px;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .products-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    
+    .product-card {
+      padding: 15px;
+    }
+    
+    .product-title {
+      font-size: 1.1rem;
+    }
+    
+    .product-price {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 15px;
+    }
+    nav {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    .cart-modal {
+      width: 100%;
+      right: -100%;
+    }
+    .cart-button {
+      bottom: 15px;
+      right: 15px;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+    }
+    
+    .products-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    
+    .product-card {
+      padding: 12px;
+    }
+    
+    .product-title {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#" aria-label="Kick Zone Home">
+    <img class="logo" src="{{ url_for('static', filename='images/kickzone_logo.png') }}" alt="Kick Zone Logo" />
+  </a>
+  <nav>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('chatbot') }}">ChatBot United</a>
+    <a href="{{ url_for('news') }}">News</a>
+    <a href="{{ url_for('standings') }}">PL Standings</a>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Kick Zone Official Products Promotion">
+  <h1>Kick Zone Store</h1>
+  <p>Shop the latest kits and apparel.</p>
+</section>
+
+<main>
+
+  <h2 style="text-align:center; margin-bottom: 30px; font-weight: 900; color: #f6f6f6;">Featured Products</h2>
+  <div class="products-grid" role="list">
+
+
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/manu_home.png') }}" alt="Manchester United Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Manchester United 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/manu_away.png') }}" alt="Manchester United Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Manchester United 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article> 
+
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/manc_home.png') }}" alt="Manchester United Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Manchester City 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/manc_away.png') }}" alt="Manchester United Home Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Manchester City 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Home Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/arshome.png') }}" alt="Manchester United Home Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Arsenal 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Home Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/arsaway.png') }}" alt="Manchester United Home Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Arsenal 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Home Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/villa_home.png') }}" alt="Manchester United Home Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Aston Villa 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Home Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/villa_away.png') }}" alt="Manchester United Home Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Aston Villa 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Home Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/mouth_home.png') }}" alt="Manchester United Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Bournemouth 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/mouth_away.png') }}" alt="Manchester United Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Bournemouth 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/palace_home.png') }}" alt="Manchester United Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Crystal Palace 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/palace_away.png') }}" alt="Manchester United Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Crystal Palace 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/fulham_home.png') }}" alt="Fulham Home Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Fulham 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Fulham Home Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/fulham_away.png') }}" alt="Fulham Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Fulham 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Fulham Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/leeds_home.png') }}" alt="Manchester United Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Leeds United 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/leeds_away.png') }}" alt="Manchester United Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Leeds United 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/spurs_home.png') }}" alt="Manchester United Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Tottenham Hotspur 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/spurs_away.png') }}" alt="Manchester United Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Tottenham Hotspur 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Manchester United Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/sunderland_home.png') }}" alt="Sunderland Home Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Sunderland 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Sunderland Home Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/sunderland_away.png') }}" alt="Sunderland Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Sunderland 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Sunderland Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/forest_home.png') }}" alt="Nottingham Forest Home Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Nottingham Forest 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Nottingham Forest Home Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/forest_away.png') }}" alt="Nottingham Forest Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Nottingham Forest 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Nottingham Forest Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/wolf_home.png') }}" alt="Wolverhampton Wanderers Home Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Wolverhampton Wanderers 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Wolverhampton Wanderers Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/wolf_away.png') }}" alt="Wolverhampton Wanderers Home Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Wolverhampton Wanderers 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Wolverhampton Wanderers Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/burnley_home.png') }}" alt="Wolverhampton Wanderers Home Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Burnley 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Burnley Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/burnley_away.png') }}" alt="Wolverhampton Wanderers Home Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Burnley 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Burnley Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/brent_home.png') }}" alt="Wolverhampton Wanderers Home Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Brentford 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Brentford Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/brent_away.png') }}" alt="Wolverhampton Wanderers Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Brentford 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Brentford Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/liverpool_home.png') }}" alt="Manchester United Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Liverpool 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Liverpool Home Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/liverpool_away.png') }}" alt="Liverpool Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Liverpool 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Liverpool Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/everton_home.png') }}" alt="Manchester United Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Everton 25/26 Home Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Everton Home Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>    
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="{{ url_for('static', filename='images/jerseys/everton_away.png') }}" alt="Manchester United Away Jersey 2025/26" />
+      <div class="product-info">
+        <h3 class="product-title">Everton 25/26 Away Jersey</h3>
+        <p class="product-price">₹3999</p>
+        <div class="product-actions">
+          <button class="btn" aria-label="Add Everton Away Jersey 2024 to cart">Add to Cart</button>
+        </div>
+      </div>
+    </article>    
+
+    
+    
+  </div>
+</main>
+
+<footer>
+  <p>Kick Zone</p>
+</footer>
+
+<!-- Cart Button -->
+<button class="cart-button" id="cartButton">
+  🛒
+  <span class="cart-count" id="cartCount" style="display: none;">0</span>
+</button>
+
+<!-- Cart Modal -->
+<div class="cart-modal" id="cartModal">
+  <div class="cart-header">
+    <h3>Shopping Cart</h3>
+    <button class="close-cart" id="closeCart">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="empty-cart">Your cart is empty</div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-subtotal">
+      <span>Subtotal:</span>
+      <span id="cartSubtotal">₹0.00</span>
+    </div>
+    <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+  </div>
+</div>
+
+<!-- Checkout Modal -->
+<div class="checkout-modal" id="checkoutModal">
+  <div class="checkout-content">
+    <div class="checkout-header">
+      <h2>Checkout</h2>
+      <button class="close-checkout" id="closeCheckout">&times;</button>
+    </div>
+    
+    <form id="checkoutForm">
+      <!-- Order Summary -->
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <div id="orderSummaryItems"></div>
+        <div class="summary-item">
+          <span>Subtotal:</span>
+          <span id="orderSubtotal">₹0.00</span>
+        </div>
+        <div class="summary-item">
+          <span>Shipping:</span>
+          <span id="shippingCost">₹299</span>
+        </div>
+        <div class="summary-item">
+          <span>Tax:</span>
+          <span id="taxAmount">₹0.00</span>
+        </div>
+        <div class="summary-total">
+          <span>Total:</span>
+          <span id="orderTotal">₹0.00</span>
+        </div>
+      </div>
+
+      <!-- Shipping Information -->
+      <h3 style="color: #f1eeee; margin-bottom: 20px;">Shipping Information</h3>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name *</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Street Address *</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="city">City *</label>
+          <input type="text" id="city" name="city" required>
+        </div>
+        <div class="form-group">
+          <label for="postcode">Postcode *</label>
+          <input type="text" id="postcode" name="postcode" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country *</label>
+        <select id="country" name="country" required>
+          <option value="">Select Country</option>
+          <option value="UK">United Kingdom</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="AU">Australia</option>
+          <option value="DE">Germany</option>
+          <option value="FR">France</option>
+          <option value="ES">Spain</option>
+          <option value="IT">Italy</option>
+          <option value="NL">Netherlands</option>
+          <option value="BE">Belgium</option>
+          <option value="IN">India</option>
+        </select>
+      </div>
+
+      <!-- Payment Method -->
+      <h3 style="color: #f1eeee; margin-bottom: 20px;">Payment Method</h3>
+      
+      <div class="payment-methods">
+        <label class="payment-method">
+          <input type="radio" name="paymentMethod" value="card" required>
+          <span>💳 Card</span>
+        </label>
+        <label class="payment-method">
+          <input type="radio" name="paymentMethod" value="paypal">
+          <span>🅿️ PayPal</span>
+        </label>
+        <label class="payment-method">
+          <input type="radio" name="paymentMethod" value="apple">
+          <span>🍎 Apple Pay</span>
+        </label>
+        <label class="payment-method">
+          <input type="radio" name="paymentMethod" value="google">
+          <span>📱 Google Pay</span>
+        </label>
+      </div>
+
+      <!-- Card Details (shown when card is selected) -->
+      <div id="cardDetails" style="display: none;">
+        <div class="form-group">
+          <label for="cardNumber">Card Number *</label>
+          <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="expiryDate">Expiry Date *</label>
+            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV *</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="cardName">Name on Card *</label>
+          <input type="text" id="cardName" name="cardName">
+        </div>
+      </div>
+
+      <button type="submit" class="process-payment-btn" id="processPaymentBtn">
+        Complete Order
+      </button>
+      
+      <div class="loading" id="loading">
+        Processing your order...
+      </div>
+      
+      <div class="success-message" id="successMessage">
+        ✅ Order placed successfully! You will receive a confirmation email shortly.
+      </div>
+      
+      <div class="order-confirmation" id="orderConfirmation">
+        <div class="order-number" id="orderNumber"></div>
+        <div class="order-details" id="orderDetails"></div>
+        <div class="tracking-info">
+          <strong>📦 Tracking Information:</strong><br>
+          <span id="trackingNumber"></span><br>
+          <small>You will receive tracking updates via email</small>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+// Cart functionality
+let cart = [];
+let cartTotal = 0;
+
+// DOM elements
+const cartButton = document.getElementById('cartButton');
+const cartModal = document.getElementById('cartModal');
+const closeCart = document.getElementById('closeCart');
+const cartItems = document.getElementById('cartItems');
+const cartCount = document.getElementById('cartCount');
+const cartSubtotal = document.getElementById('cartSubtotal');
+const checkoutBtn = document.getElementById('checkoutBtn');
+const checkoutModal = document.getElementById('checkoutModal');
+const closeCheckout = document.getElementById('closeCheckout');
+const checkoutForm = document.getElementById('checkoutForm');
+const processPaymentBtn = document.getElementById('processPaymentBtn');
+const loading = document.getElementById('loading');
+const successMessage = document.getElementById('successMessage');
+const cardDetails = document.getElementById('cardDetails');
+const orderConfirmation = document.getElementById('orderConfirmation');
+const orderNumber = document.getElementById('orderNumber');
+const orderDetails = document.getElementById('orderDetails');
+const trackingNumber = document.getElementById('trackingNumber');
+
+// Add to cart functionality
+function addToCart(productTitle, productPrice, productImage) {
+  const price = parseFloat(productPrice.replace('₹', ''));
+  
+  // Check if item already exists in cart
+  const existingItem = cart.find(item => item.title === productTitle);
+  
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({
+      title: productTitle,
+      price: price,
+      image: productImage,
+      quantity: 1
+    });
+  }
+  
+  updateCartDisplay();
+  showCartNotification();
+}
+
+// Update cart display
+function updateCartDisplay() {
+  // Update cart count
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  cartCount.textContent = totalItems;
+  cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
+  
+  // Update subtotal
+  cartTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  cartSubtotal.textContent = `₹${cartTotal.toFixed(2)}`;
+  
+  // Update cart items display
+  if (cart.length === 0) {
+    cartItems.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
+  } else {
+    cartItems.innerHTML = cart.map(item => `
+      <div class="cart-item">
+        <img src="${item.image}" alt="${item.title}" />
+        <div class="cart-item-info">
+          <div class="cart-item-title">${item.title}</div>
+          <div class="cart-item-price">₹${item.price.toFixed(2)}</div>
+          <div class="quantity-controls">
+            <button class="quantity-btn" onclick="decreaseQuantity('${item.title}')" ${item.quantity <= 1 ? 'disabled' : ''}>-</button>
+            <div class="quantity-display">${item.quantity}</div>
+            <button class="quantity-btn" onclick="increaseQuantity('${item.title}')">+</button>
+          </div>
+        </div>
+        <button class="remove-item" onclick="removeFromCart('${item.title}')">Remove</button>
+      </div>
+    `).join('');
+  }
+}
+
+// Increase quantity of item in cart
+function increaseQuantity(productTitle) {
+  const item = cart.find(item => item.title === productTitle);
+  if (item) {
+    item.quantity += 1;
+    updateCartDisplay();
+  }
+}
+
+// Decrease quantity of item in cart
+function decreaseQuantity(productTitle) {
+  const item = cart.find(item => item.title === productTitle);
+  if (item && item.quantity > 1) {
+    item.quantity -= 1;
+    updateCartDisplay();
+  }
+}
+
+// Remove item from cart
+function removeFromCart(productTitle) {
+  cart = cart.filter(item => item.title !== productTitle);
+  updateCartDisplay();
+}
+
+// Show cart notification
+function showCartNotification() {
+  cartButton.style.transform = 'scale(1.2)';
+  setTimeout(() => {
+    cartButton.style.transform = 'scale(1)';
+  }, 200);
+}
+
+// Checkout functionality
+function openCheckout() {
+  if (cart.length === 0) {
+    alert('Your cart is empty!');
+    return;
+  }
+  
+  updateOrderSummary();
+  checkoutModal.classList.add('open');
+  cartModal.classList.remove('open');
+}
+
+function updateOrderSummary() {
+  const orderSummaryItems = document.getElementById('orderSummaryItems');
+  const orderSubtotal = document.getElementById('orderSubtotal');
+  const shippingCost = document.getElementById('shippingCost');
+  const taxAmount = document.getElementById('taxAmount');
+  const orderTotal = document.getElementById('orderTotal');
+  
+  // Calculate totals
+  const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const shipping = 299; // ₹299 shipping
+  const tax = subtotal * 0.18; // 18% GST
+  const total = subtotal + shipping + tax;
+  
+  // Update order summary items
+  orderSummaryItems.innerHTML = cart.map(item => `
+    <div class="summary-item">
+      <span>${item.title} x${item.quantity}</span>
+      <span>₹${(item.price * item.quantity).toFixed(2)}</span>
+    </div>
+  `).join('');
+  
+  // Update totals
+  orderSubtotal.textContent = `₹${subtotal.toFixed(2)}`;
+  shippingCost.textContent = `₹${shipping.toFixed(2)}`;
+  taxAmount.textContent = `₹${tax.toFixed(2)}`;
+  orderTotal.textContent = `₹${total.toFixed(2)}`;
+}
+
+function processPayment() {
+  const formData = new FormData(checkoutForm);
+  const paymentMethod = formData.get('paymentMethod');
+  
+  // Validate form
+  if (!validateForm()) {
+    return;
+  }
+  
+  // Show loading
+  processPaymentBtn.disabled = true;
+  loading.style.display = 'block';
+  
+  // Simulate payment processing
+  setTimeout(() => {
+    loading.style.display = 'none';
+    successMessage.style.display = 'block';
+    
+    // Generate order confirmation
+    generateOrderConfirmation();
+    
+    // Clear cart and close modals after success
+    setTimeout(() => {
+      cart = [];
+      updateCartDisplay();
+      checkoutModal.classList.remove('open');
+      successMessage.style.display = 'none';
+      orderConfirmation.style.display = 'none';
+      processPaymentBtn.disabled = false;
+      checkoutForm.reset();
+      cardDetails.style.display = 'none';
+    }, 5000);
+  }, 2000);
+}
+
+function validateForm() {
+  const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'address', 'city', 'postcode', 'country'];
+  const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+  
+  // Check required fields
+  for (let field of requiredFields) {
+    const input = document.getElementById(field);
+    if (!input.value.trim()) {
+      alert(`Please fill in ${field.replace(/([A-Z])/g, ' $1').toLowerCase()}`);
+      input.focus();
+      return false;
+    }
+  }
+  
+  // Check payment method
+  if (!paymentMethod) {
+    alert('Please select a payment method');
+    return false;
+  }
+  
+  // If card payment, validate card details
+  if (paymentMethod.value === 'card') {
+    const cardNumber = document.getElementById('cardNumber').value;
+    const expiryDate = document.getElementById('expiryDate').value;
+    const cvv = document.getElementById('cvv').value;
+    const cardName = document.getElementById('cardName').value;
+    
+    if (!cardNumber || !expiryDate || !cvv || !cardName) {
+      alert('Please fill in all card details');
+      return false;
+    }
+    
+    // Basic card validation
+    if (cardNumber.replace(/\s/g, '').length !== 16) {
+      alert('Please enter a valid 16-digit card number');
+      return false;
+    }
+    
+    if (!/^\d{2}\/\d{2}$/.test(expiryDate)) {
+      alert('Please enter expiry date in MM/YY format');
+      return false;
+    }
+    
+    if (cvv.length !== 3) {
+      alert('Please enter a valid 3-digit CVV');
+      return false;
+    }
+  }
+  
+  return true;
+}
+
+function generateOrderConfirmation() {
+  // Generate order number
+  const orderNum = 'KZ' + Date.now().toString().slice(-8);
+  orderNumber.textContent = `Order #${orderNum}`;
+  
+  // Generate tracking number
+  const trackingNum = 'TRK' + Math.random().toString(36).substr(2, 9).toUpperCase();
+  trackingNumber.textContent = trackingNum;
+  
+  // Calculate order details
+  const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const shipping = 299;
+  const tax = subtotal * 0.18;
+  const total = subtotal + shipping + tax;
+  
+  orderDetails.innerHTML = `
+    <strong>Order Total: ₹${total.toFixed(2)}</strong><br>
+    <small>Items: ${cart.reduce((sum, item) => sum + item.quantity, 0)} | 
+    Subtotal: ₹${subtotal.toFixed(2)} | 
+    Shipping: ₹${shipping.toFixed(2)} | 
+    Tax: ₹${tax.toFixed(2)}</small>
+  `;
+  
+  // Show order confirmation
+  setTimeout(() => {
+    successMessage.style.display = 'none';
+    orderConfirmation.style.display = 'block';
+  }, 1000);
+}
+
+// Event listeners
+cartButton.addEventListener('click', () => {
+  cartModal.classList.add('open');
+});
+
+closeCart.addEventListener('click', () => {
+  cartModal.classList.remove('open');
+});
+
+checkoutBtn.addEventListener('click', openCheckout);
+
+closeCheckout.addEventListener('click', () => {
+  checkoutModal.classList.remove('open');
+});
+
+// Close modals when clicking outside
+cartModal.addEventListener('click', (e) => {
+  if (e.target === cartModal) {
+    cartModal.classList.remove('open');
+  }
+});
+
+checkoutModal.addEventListener('click', (e) => {
+  if (e.target === checkoutModal) {
+    checkoutModal.classList.remove('open');
+  }
+});
+
+// Payment method selection
+document.addEventListener('change', (e) => {
+  if (e.target.name === 'paymentMethod') {
+    if (e.target.value === 'card') {
+      cardDetails.style.display = 'block';
+    } else {
+      cardDetails.style.display = 'none';
+    }
+  }
+});
+
+// Form submission
+checkoutForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  processPayment();
+});
+
+// Add event listeners to all "Add to Cart" buttons
+document.addEventListener('DOMContentLoaded', () => {
+  const addToCartButtons = document.querySelectorAll('.btn');
+  
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      // Find the product card
+      const productCard = button.closest('.product-card');
+      const title = productCard.querySelector('.product-title').textContent;
+      const price = productCard.querySelector('.product-price').textContent;
+      const image = productCard.querySelector('.product-image').src;
+      
+      addToCart(title, price, image);
+    });
+  });
+});
+</script>
+
+</body>
+</html>

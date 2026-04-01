@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Why does the Premier League have a hi-vis PUMA ball for winter? - Kick Zone</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1a1a1a, #303030);
+    color: #eee;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  header {
+    background: #121212;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header img.logo {
+    height: 70px;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  nav a:hover {
+    background: rgba(255 255 255 / 0.2);
+  }
+
+  /* Article content */
+  .article-container {
+    max-width: none;
+    margin: 40px 0;
+    padding: 0 40px;
+  }
+
+  .article-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .article-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #f1eeee;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .article-meta {
+    color: #d5d0d0;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .article-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin: 30px auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .article-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 60px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .article-content h2 {
+    color: #da291c;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #da291c;
+    padding-bottom: 10px;
+  }
+
+  .article-content h3 {
+    color: #f1eeee;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .article-content h4 {
+    color: #f1eeee;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .article-content p {
+    margin-bottom: 20px;
+    color: #d5d0d0;
+    font-size: 1.1rem;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid #da291c;
+    padding-left: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: #f1eeee;
+    background: rgba(218, 41, 28, 0.1);
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .highlight-box {
+    background: rgba(218, 41, 28, 0.1);
+    border-left: 4px solid #da291c;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .highlight-box h4 {
+    color: #da291c;
+    margin-bottom: 15px;
+  }
+
+  .highlight-box ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .highlight-box li {
+    margin-bottom: 8px;
+    color: #d5d0d0;
+  }
+
+  .stats-highlight {
+    background: linear-gradient(135deg, #da291c, #a81c15);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(218, 41, 28, 0.3);
+  }
+
+  .timeline-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .timeline-item h4 {
+    color: #da291c;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    background: #da291c;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-bottom: 30px;
+  }
+
+  .back-link:hover {
+    background: #a81c15;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(218, 41, 28, 0.3);
+  }
+
+  /* Footer */
+  footer {
+    background: #111;
+    color: #ccc;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: #ffffff;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 0 20px;
+    }
+    
+    .article-title {
+      font-size: 2rem;
+    }
+    
+    .article-content {
+      padding: 30px;
+    }
+    
+    .article-content h2 {
+      font-size: 1.5rem;
+    }
+    
+    .stats-highlight {
+      font-size: 1.1rem;
+      padding: 12px 20px;
+    }
+    
+    .timeline-item {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .article-container {
+      padding: 0 15px;
+    }
+    
+    .article-title {
+      font-size: 1.8rem;
+    }
+    
+    .article-content {
+      padding: 20px;
+    }
+    
+    .article-content h2 {
+      font-size: 1.3rem;
+    }
+    
+    .article-content h3 {
+      font-size: 1.2rem;
+    }
+    
+    .stats-highlight {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+    
+    .timeline-item {
+      padding: 12px;
+    }
+    
+    .highlight-box {
+      padding: 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="{{ url_for('home') }}" aria-label="Kick Zone Home">
+    <img class="logo" src="{{ url_for('static', filename='images/kickzone_logo.png') }}" alt="Kick Zone Logo" />
+  </a>
+</header>
+
+<div class="article-container">
+  <a href="{{ url_for('news') }}" class="back-link">← Back to News</a>
+  
+  <div class="article-header">
+    <h1 class="article-title">Why does the Premier League have a hi-vis PUMA ball for winter?</h1>
+    <div class="article-meta">23 Oct 2025 • Premier League Equipment</div>
+  </div>
+
+  <div class="article-content">
+    <p><em>As the "Under The Lights" edition of the PUMA Orbita Ultimate PL arrives, we explore the origins of winter match balls and their importance in modern football.</em></p>
+
+    <div class="stats-highlight">PUMA Match Ball: 209 goals scored in first 80 matches of 2025/26</div>
+
+    <p>The Premier League's official hi-vis PUMA match ball for 2025/26 has been unveiled and will make its on-pitch debut on Saturday 8 November, when Tottenham Hotspur host Manchester United.</p>
+
+    <p>This season is PUMA's first as the official ball supplier for the Premier League. The PUMA match ball has hit the back of the net 209 times in the first 80 matches of a thrilling 2025/26 campaign so far.</p>
+
+    <p>But why does there need to be a winter ball and what are its origins?</p>
+
+    <h2>When was the first Premier League winter ball introduced?</h2>
+
+    <div class="timeline-item">
+      <h4>2004/05 Season</h4>
+      <p>The first Premier League winter ball was introduced in the 2004/05 season. This inaugural ball was used for two seasons but from 2008/09 onwards, a new winter ball was introduced each season, along the same lines as the main ball.</p>
+    </div>
+
+    <div class="stats-highlight">The PUMA "Under the Lights" ball will be the 20th different hi-vis ball in the Premier League</div>
+
+    <h2>When does the change of ball occur?</h2>
+
+    <p>The introduction of the PUMA hi-vis ball coincides with the switch from British Summer Time (BST) to Greenwich Mean Time (GMT), when the clocks go back one hour in the UK. This year, the clocks went back on Sunday 26 October at 02:00.</p>
+
+    <p>The return to GMT comes as the amount of daylight reduces. By the winter equinox of 21 December, the sun will be setting at about 16:00 GMT, meaning that the majority of Premier League matches will be played under floodlights.</p>
+
+    <div class="highlight-box">
+      <h4>Visibility Optimization</h4>
+      <ul>
+        <li>The vibrant colorway of the "Under The Lights" edition optimizes visibility</li>
+        <li>Players can track the ball more easily during evening matches</li>
+        <li>Match officials benefit from improved ball visibility</li>
+        <li>Supporters in the stands have better viewing experience</li>
+        <li>TV viewers can follow the action more clearly</li>
+      </ul>
+    </div>
+
+    <h2>How long will we see the winter ball for?</h2>
+
+    <p>The Hi-Vis balls are traditionally in play until early spring. In the early years, the main white ball returned but from 2019/20 a third ball has been used for the remainder of the campaign.</p>
+
+    <div class="timeline-item">
+      <h4>Ball Usage Timeline</h4>
+      <p><strong>Early Years:</strong> White ball → Hi-Vis ball → White ball return</p>
+      <p><strong>2019/20 Onwards:</strong> White ball → Hi-Vis ball → Third ball for remainder</p>
+    </div>
+
+    <h2>The Science Behind Hi-Vis Footballs</h2>
+
+    <p>Modern hi-vis footballs are designed with advanced technology to ensure optimal visibility under various lighting conditions. The PUMA "Under The Lights" ball features:</p>
+
+    <div class="highlight-box">
+      <h4>Technical Features</h4>
+      <ul>
+        <li><strong>Fluorescent Color Scheme:</strong> Bright orange and yellow combinations</li>
+        <li><strong>Enhanced Contrast:</strong> Designed to stand out against grass and artificial turf</li>
+        <li><strong>Floodlight Optimization:</strong> Specifically tuned for stadium lighting</li>
+        <li><strong>TV-Friendly Design:</strong> Optimized for broadcast visibility</li>
+        <li><strong>Player Performance:</strong> Maintains same weight and feel as standard ball</li>
+      </ul>
+    </div>
+
+    <h2>PUMA's First Season as Official Supplier</h2>
+
+    <p>This marks PUMA's debut season as the Premier League's official ball supplier, taking over from previous manufacturers. The partnership represents a significant milestone in football equipment innovation.</p>
+
+    <blockquote>
+      "The introduction of the hi-vis ball is crucial for maintaining the highest standards of play during the winter months. As daylight hours decrease, ensuring optimal visibility for all stakeholders - players, officials, and fans - becomes paramount to the integrity of the game."<br>
+      <strong>— Premier League Technical Committee</strong>
+    </blockquote>
+
+    <h2>Where can I buy the hi-vis Premier League PUMA ball?</h2>
+
+    <p>The "Under the Lights" edition of the ball is available to buy today in PUMA stores and selected retailers worldwide. It can also be bought online from the Premier League shop and from PUMA.com.</p>
+
+    <div class="highlight-box">
+      <h4>Purchase Options</h4>
+      <ul>
+        <li><strong>PUMA Stores:</strong> Available in physical PUMA retail locations</li>
+        <li><strong>Selected Retailers:</strong> Partner stores worldwide</li>
+        <li><strong>Premier League Shop:</strong> Official online store</li>
+        <li><strong>PUMA.com:</strong> Direct from manufacturer</li>
+      </ul>
+    </div>
+
+    <h2>Historical Impact on the Game</h2>
+
+    <p>Since the introduction of hi-vis balls in 2004/05, the Premier League has seen significant improvements in match visibility and player performance during winter months. The innovation has been adopted by leagues worldwide, becoming a standard practice in professional football.</p>
+
+    <p>The evolution from basic white balls to sophisticated hi-vis designs represents football's commitment to technological advancement and player welfare, ensuring that the beautiful game remains accessible and enjoyable regardless of seasonal lighting conditions.</p>
+
+    <div class="stats-highlight">20 Years of Innovation: From first hi-vis ball to PUMA's "Under The Lights" edition</div>
+
+    <p>As we look forward to the winter months and the introduction of the new PUMA hi-vis ball, we can appreciate how this seemingly simple innovation has enhanced the Premier League experience for players, officials, and fans alike.</p>
+  </div>
+</div>
+
+<footer>
+  <p>Kick Zone</p>
+</footer>
+
+</body>
+</html>

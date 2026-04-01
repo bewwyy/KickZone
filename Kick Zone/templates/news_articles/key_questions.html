@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ten key questions for the weekend's matches - Kick Zone</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1a1a1a, #303030);
+    color: #eee;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  header {
+    background: #121212;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header img.logo {
+    height: 70px;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  nav a:hover {
+    background: rgba(255 255 255 / 0.2);
+  }
+
+  /* Article content */
+  .article-container {
+    max-width: none;
+    margin: 40px 0;
+    padding: 0 40px;
+  }
+
+  .article-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .article-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #f1eeee;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .article-meta {
+    color: #d5d0d0;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .article-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin: 30px auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .article-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 60px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .article-content h2 {
+    color: #da291c;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #da291c;
+    padding-bottom: 10px;
+  }
+
+  .article-content h3 {
+    color: #f1eeee;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .article-content h4 {
+    color: #f1eeee;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .article-content p {
+    margin-bottom: 20px;
+    color: #d5d0d0;
+    font-size: 1.1rem;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid #da291c;
+    padding-left: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: #f1eeee;
+    background: rgba(218, 41, 28, 0.1);
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .question-highlight {
+    background: linear-gradient(135deg, #da291c, #a81c15);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(218, 41, 28, 0.3);
+  }
+
+  .fixture-preview {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 0;
+  }
+
+  .fixture-preview h4 {
+    color: #da291c;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+  }
+
+  .stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .stats-table th {
+    background: #da291c;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .stats-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #d5d0d0;
+  }
+
+  .stats-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .back-link {
+    display: inline-block;
+    background: #da291c;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-bottom: 30px;
+  }
+
+  .back-link:hover {
+    background: #a81c15;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(218, 41, 28, 0.3);
+  }
+
+  .key-points {
+    background: rgba(218, 41, 28, 0.1);
+    border-left: 4px solid #da291c;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .key-points h4 {
+    color: #da291c;
+    margin-bottom: 15px;
+  }
+
+  .key-points ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .key-points li {
+    margin-bottom: 8px;
+    color: #d5d0d0;
+  }
+
+  /* Footer */
+  footer {
+    background: #111;
+    color: #ccc;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: #ffffff;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 0 20px;
+    }
+    
+    .article-title {
+      font-size: 2rem;
+    }
+    
+    .article-content {
+      padding: 30px;
+    }
+    
+    .article-content h2 {
+      font-size: 1.5rem;
+    }
+    
+    .stats-table {
+      font-size: 0.9rem;
+    }
+    
+    .stats-table th,
+    .stats-table td {
+      padding: 8px 10px;
+    }
+    
+    .question-highlight {
+      font-size: 1.1rem;
+      padding: 12px 20px;
+    }
+    
+    .fixture-preview {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .article-container {
+      padding: 0 15px;
+    }
+    
+    .article-title {
+      font-size: 1.8rem;
+    }
+    
+    .article-content {
+      padding: 20px;
+    }
+    
+    .article-content h2 {
+      font-size: 1.3rem;
+    }
+    
+    .article-content h3 {
+      font-size: 1.2rem;
+    }
+    
+    .stats-table {
+      font-size: 0.8rem;
+    }
+    
+    .stats-table th,
+    .stats-table td {
+      padding: 6px 8px;
+    }
+    
+    .question-highlight {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+    
+    .fixture-preview {
+      padding: 12px;
+    }
+    
+    .key-points {
+      padding: 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="{{ url_for('home') }}" aria-label="Kick Zone Home">
+    <img class="logo" src="{{ url_for('static', filename='images/kickzone_logo.png') }}" alt="Kick Zone Logo" />
+  </a>
+</header>
+
+<div class="article-container">
+  <a href="{{ url_for('news') }}" class="back-link">← Back to News</a>
+  
+  <div class="article-header">
+    <h1 class="article-title">Ten key questions for the weekend's matches</h1>
+    <div class="article-meta">23 Oct 2025 • Premier League Matchweek 9 Preview</div>
+  </div>
+
+  <div class="article-content">
+    <p><em>Football writer Alex Keble analyses where this weekend's fixtures could be won and lost, including:</em></p>
+
+    <div class="key-points">
+      <h4>Key Questions This Weekend:</h4>
+      <ul>
+        <li><strong>Can Liverpool build on their Frankfurt win at Brentford?</strong></li>
+        <li><strong>Can Frank find a solution to break down Everton?</strong></li>
+        <li><strong>Will Emery's Buendia-Rogers tactics work again?</strong></li>
+        <li><strong>How will Dyche revive Forest's fortunes?</strong></li>
+        <li><strong>Will Brighton once again halt Man Utd's progress?</strong></li>
+        <li><strong>Is Palace the team to break down Arsenal's defence?</strong></li>
+        <li><strong>Are Fulham the perfect opponent to get Newcastle back on track?</strong></li>
+        <li><strong>Who will win the most important six-pointer of the season so far?</strong></li>
+        <li><strong>Which of Farke or Nuno will seize the moment in crucial six-pointer?</strong></li>
+        <li><strong>Can Maresca put a three-match streak together for the first time this season?</strong></li>
+      </ul>
+    </div>
+
+    <h2>Can Liverpool build on their Frankfurt win at Brentford?</h2>
+    
+    <div class="fixture-preview">
+      <h4>Liverpool vs Brentford</h4>
+      <p>The hope inside Liverpool is that a 5-1 victory at Eintracht Frankfurt in the UEFA Champions League on Wednesday was the moment Arne Slot's summer rebuild clicked into gear.</p>
+    </div>
+
+    <p>Andrew Robertson and Jeremie Frimpong excelled as a partnership, Florian Wirtz got his first assists and Hugo Ekitike worked well with Alexander Isak.</p>
+
+    <p>Has Slot found the team to get Liverpool back in their groove?</p>
+
+    <p>Maybe, but it's a bit more complicated than that. Eintracht's wild and hard-pressing tactics meant there were huge amounts of space for Liverpool to counter-attack into; Ekitike's goal was a fast break and Cody Gakpo's the result of a threaded through-ball.</p>
+
+    <p>Not many Premier League teams give up that kind of space, and certainly not Brentford, who sit very deep and narrow to frustrate high-ranking opposition.</p>
+
+    <p>Their average possession across league matches against Manchester City, Chelsea and Aston Villa this season is 29.7 per cent. They won four points from these fixtures.</p>
+
+    <p>Slot's team will need a radically different strategy to break Brentford down.</p>
+
+    <p>Liverpool have lost three consecutive Premier League matches and Brentford have won two of their last three. There is no guarantee Liverpool will build upon the fluid performance we saw in Germany.</p>
+
+    <p>However, this is just the kind of match for Wirtz to pick the lock and for Isak to get off the mark.</p>
+
+    <p>Isak has scored in all four of his previous appearances against Brentford. Liverpool will need him to be ruthless in tight spaces if they are to end their domestic winless run.</p>
+
+    <h2>Can Frank find a solution to break down Everton?</h2>
+    
+    <div class="fixture-preview">
+      <h4>Tottenham vs Everton</h4>
+      <p>A slight problem is beginning to develop for Thomas Frank and, ironically, it is the exact opposite of what Ange Postecoglou went through at Tottenham Hotspur.</p>
+    </div>
+
+    <p>Frank has only ever previously managed Brentford, a team that were able to play conservatively and exploit spaces on the counter-attack. At Spurs, there is a greater need to open up and be adventurous.</p>
+
+    <p>Spurs' workmanlike midfield meant the team were too sideways in their passing last weekend, allowing Villa to stunt them, and there was yet more frustration in midweek with a 0-0 draw at AS Monaco.</p>
+
+    <p>Frank simply prefers coaching reactively, when his team is the underdog, which helps explain why Spurs have won more away points (10) than anyone else but the fourth-fewest home points (four).</p>
+
+    <p>Everton will be hard to break down; will happily play like the away team.</p>
+
+    <p>David Moyes will instruct his players to sit off in a midblock, only occasionally pressing the Spurs defenders, meaning Frank will be required to play expansively at the Hill Dickinson Stadium.</p>
+
+    <p>The Toffees have lost just one of their last 13 Premier League home matches and that was against Man City in April. Stubbornness is their forte. Frank, and Spurs, have to find a way to open up.</p>
+
+    <h2>Will Emery's Buendia-Rogers tactics work again?</h2>
+    
+    <div class="fixture-preview">
+      <h4>Aston Villa vs Manchester City</h4>
+      <p>The hosts appear to have the tactical edge ahead of Sunday's match.</p>
+    </div>
+
+    <p>Villa's turnaround at Spurs last weekend was inspired by substitute Emiliano Buendia, and more specifically by his movement off the left wing to become one of two No 10s alongside Morgan Rogers.</p>
+
+    <p>That overwhelmed the Spurs midfield – just as it did Man City's in Villa's 2-1 win at Villa Park last season.</p>
+
+    <p>An injury to Rodri, plus an increasing tendency for Pep Guardiola's side to give up counter-attacking space between the defence and midfield lines, tells us it might happen again this weekend.</p>
+
+    <p>Villa's first goal last December was typical of the movement we saw from Villa, who got in behind City by swarming the centre.</p>
+
+    <p>City are even more vulnerable to that move this season because Guardiola has implemented a more direct system, in which two No 8s push forward.</p>
+
+    <p>They were caught ahead of the play, exposing their team to fast breaks through the centre, against Brighton & Hove Albion and Spurs in particular.</p>
+
+    <p>Villa already have the battle plan to take advantage of Man City's biggest flaw – and they have the psychological edge, too, having won their last two home league matches against Man City.</p>
+
+    <h2>How will Dyche revive Forest's fortunes?</h2>
+    
+    <div class="fixture-preview">
+      <h4>Bournemouth vs Nottingham Forest</h4>
+      <p>Nottingham Forest lurched dramatically from Nuno Espirito Santo to Postecoglou - and now they have lurched even further back the other way.</p>
+    </div>
+
+    <p>Sean Dyche is a more defensive, conservative, and long-ball tactician than Nuno, as we highlighted earlier this week.</p>
+
+    <p>Comparing Dyche's time at Everton to Nuno's at Forest, we see the new head coach tends to score fewer goals, hold less possession, and go more direct.</p>
+
+    <h3>How Dyche's Everton and Nuno's Forest compare</h3>
+    
+    <table class="stats-table">
+      <thead>
+        <tr>
+          <th>Stat</th>
+          <th>Dyche</th>
+          <th>Nuno</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Possession</td><td>39.5%</td><td>41.4%</td></tr>
+        <tr><td>Goals per match</td><td>0.99</td><td>1.52</td></tr>
+        <tr><td>Goals conceded per match</td><td>1.4</td><td>1.42</td></tr>
+        <tr><td>Direct attacks per match</td><td>1.7</td><td>2</td></tr>
+        <tr><td>Build-up attacks per match</td><td>0.9</td><td>1.6</td></tr>
+        <tr><td>10+pass OP sequences per match</td><td>4.6</td><td>7</td></tr>
+        <tr><td>% Long passes</td><td>17.5%</td><td>13.8%</td></tr>
+      </tbody>
+    </table>
+
+    <p>But the Forest players will at least understand the basics of his tactical strategy, having recently played in a low block under Nuno.</p>
+
+    <p>Nikola Milenkovic and Murillo will be relieved to return to a deeper line, while Chris Wood should excel under the head coach who developed him at Burnley.</p>
+
+    <p>There are plenty of positives, then, although Dyche faces a daunting start at AFC Bournemouth.</p>
+
+    <p>Andoni Iraola's side are unbeaten in their last seven Premier League matches (W4 D3), the longest current ongoing run in the competition, while Dyche has lost his last three Premier League encounters against Bournemouth.</p>
+
+    <p>Iraola did the double over Dyche's Everton last season. Forest's situation could get worse before it gets better.</p>
+
+    <h2>Will Brighton once again halt Man Utd's progress?</h2>
+    
+    <div class="fixture-preview">
+      <h4>Manchester United vs Brighton</h4>
+      <p>Ruben Amorim has finally won back-to-back matches as Manchester United head coach, but that doesn't mean things will get any easier.</p>
+    </div>
+
+    <p>Brighton have won six of their last seven league meetings with the Red Devils.</p>
+
+    <p>They are very much United's bogey team, making the timing of this fixture particularly frustrating for the home supporters inside Old Trafford. Brighton have won each of their last three on this ground.</p>
+
+    <p>Last season's 2-1 defeat for Man Utd came amid a small run of form in January, interrupting just after the Red Devils had drawn at Anfield and beaten Southampton. Fabian Hurzeler will back his team to halt momentum once again.</p>
+
+    <p>It feels essential that Amorim does not let that happen, because if victory at Anfield is not the catalyst for brighter days then the pressure will become greater than ever.</p>
+
+    <p>Win and Man Utd will be firmly in the European places. Lose, and they will drop out of the top 10.</p>
+
+    <p>That's the problem for Amorim. Every single match feels make or break.</p>
+
+    <h2>Is Palace the team to break down Arsenal's defence?</h2>
+    
+    <div class="fixture-preview">
+      <h4>Arsenal vs Crystal Palace</h4>
+      <p>Arsenal's 4-0 victory against Atletico Madrid on Tuesday was yet another sign that the Gunners have stepped up a level.</p>
+    </div>
+
+    <p>Viktor Gyokeres's double was a huge moment for him and should fill Arsenal with confidence ahead of the visit of Crystal Palace, although if anybody can break Arsenal's brilliant defensive record it is Oliver Glasner's side.</p>
+
+    <p>Arsenal have faced the fewest shots (65), fewest shots on target (18), the lowest Expected Goals (xG) of 4.8 and conceded three goals, the fewest in the Premier League.</p>
+
+    <p>It has given them a super platform and, perhaps surprisingly, Mikel Arteta's team have a history of performing well at Emirates Stadium when out in front.</p>
+
+    <p>Arsenal have lost only two of their 70 home Premier League matches when starting the day top of the table (W52 D16), losing to Hull in September 2008 and Man City in February 2023.</p>
+
+    <p>Since that defeat to City, they have won seven out of eight at home, scoring 28 goals.</p>
+
+    <p>But Palace are a serious threat to that solid defence and excellent home record. They top the charts for shots on target (43), xG (17.4) and big chances (33).</p>
+
+    <p>If Arsenal can keep Palace quiet, they will further strengthen their title credentials.</p>
+
+    <h2>Who will win the most important six-pointer of the season so far?</h2>
+    
+    <div class="fixture-preview">
+      <h4>Wolverhampton Wanderers vs Burnley</h4>
+      <p>It does not have headline billing this weekend but there is no bigger game than the Sunday afternoon encounter at Molineux.</p>
+    </div>
+
+    <p>Wolverhampton Wanderers are yet to win a Premier League match this season and, with respect to Burnley, they are unlikely to get a better chance.</p>
+
+    <p>Burnley are currently the lowest ranked of the promoted clubs and Scott Parker's side have only recorded wins against fellow promoted teams, beating Sunderland and Leeds United – both at Turf Moor.</p>
+
+    <p>They have lost all four away matches and are conceding more than three goals per game on average.</p>
+
+    <p>However, Parker will see this as the perfect opportunity to improve on that record. Wolves have already been beaten at home by Leeds and lost to Sunderland last time out. This is unquestionably a six-pointer.</p>
+
+    <p>The victor could see their season transformed. The loser could face a long winter.</p>
+
+    <h2>Are Fulham the perfect opponent to get Newcastle back on track?</h2>
+    
+    <div class="fixture-preview">
+      <h4>Newcastle United vs Fulham</h4>
+      <p>Back in 2023/24, Newcastle United's Champions League run negatively impacted their domestic form but, so far, the reverse seems to be true this time.</p>
+    </div>
+
+    <p>Their poor form in September was lifted by a 4-0 victory over Royale Union Saint-Gilloise, after which Newcastle beat Nottingham Forest 2-0 at St James' Park.</p>
+
+    <p>Eddie Howe will be hoping for a similar reaction after the Magpies eased past Benfica on Tuesday evening, a game defined by some brilliant counter-attacking interplay between Anthony Gordon and Nick Woltemade.</p>
+
+    <p>Their form should continue against Fulham, the perfect opponent for Newcastle to face right now.</p>
+
+    <p>Fulham have lost each of their last three Premier League fixtures, but more pertinently are looking blunt in attack; only Burnley and Sunderland (21 each) have had fewer shots on target than Marco Silva's side.</p>
+
+    <p>Newcastle have already kept five Premier League clean sheets, the joint-most with Arsenal, as well as a further two in the Champions League.</p>
+
+    <p>It might only take a single goal, then, for Newcastle to collect their third league win of the season and start moving back up the table.</p>
+
+    <h2>Which of Farke or Nuno will seize the moment in crucial six-pointer?</h2>
+    
+    <div class="fixture-preview">
+      <h4>Leeds United vs West Ham United</h4>
+      <p>The first big six-pointer of Matchweek 9 is on Friday night at Elland Road, where neither Daniel Farke nor Nuno can afford to come away with nothing.</p>
+    </div>
+
+    <p>Nuno has not won any of his three Premier League matches in charge of West Ham United and could become the first Hammers boss since Manuel Pellegrini (in 2018) to go four without victory.</p>
+
+    <p>Given the club's lowly position, it's vital he can provide some sort of new-manager bounce before heads drop further.</p>
+
+    <p>After all, with four points from eight, this is West Ham's worst ever start to a Premier League season.</p>
+
+    <p>The last time they started this badly was 1988/89, when they went on to be relegated in 19th.</p>
+
+    <p>Clearly playing a promoted club is a good opportunity for Nuno to get his tenure going.</p>
+
+    <p>But Leeds, too, simply have to seize the moment. It isn't often that promoted clubs get to host a team in such poor form.</p>
+
+    <h2>Can Maresca put a three-game streak together for the first time this season?</h2>
+    
+    <div class="fixture-preview">
+      <h4>Chelsea vs Sunderland</h4>
+      <p>Chelsea are quietly putting together a very impressive sequence.</p>
+    </div>
+
+    <p>Since they failed to score in the opening weekend, Enzo Maresca's side have scored 16 goals in seven matches and risen to fifth spot.</p>
+
+    <p>Only Man City (34) have earned more home points in the Premier League in 2025 than Chelsea (33), and following the 5-1 victory over Ajax in midweek, Chelsea are on a four-match winning streak in all competitions.</p>
+
+    <p>Maresca's side haven't put together a run of three in the Premier League since last season. If they are to challenge for the title, they have to get the job done this weekend.</p>
+  </div>
+</div>
+
+<footer>
+  <p>Kick Zone</p>
+</footer>
+
+</body>
+</html>

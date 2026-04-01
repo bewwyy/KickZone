@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kick Zone News</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1a1a1a, #303030);
+    color: #eee; /* lighter text for better contrast */
+    min-height: 100vh;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  header {
+    background: #121212; /* Man Utd red */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header img.logo {
+    height: 70px;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  nav a:hover {
+    background: rgba(255 255 255 / 0.2);
+  }
+
+  /* Hero banner */
+  .hero {
+  background: transparent; /* allows gradient to show through */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 900;
+    letter-spacing: 3px;
+  }
+  .hero p {
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+  }
+  .hero a {
+    background: #2fc910;
+    color: #111;
+    padding: 14px 28px;
+    font-weight: 700;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(249,168,37,0.4);
+  }
+  .hero a:hover {
+    background: #8b2cd8;
+  }
+
+  /* Main content */
+  main {
+    max-width: none;
+    width: 100%;
+    margin: 40px 0;
+    padding: 0;
+  }
+
+  main h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 900;
+    color: #da291c;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    padding-bottom: 10px;
+    display: table;       /* centers it visually */
+    margin-left: auto;    /* centers the block */
+    margin-right: auto;   /* centers the block */
+  }
+  
+  .products-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+  .product-card {
+    display: flex;
+    flex-direction: row-reverse; /* image on the right */
+    align-items: center;
+    border: none; /* remove old box border */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20); /* thin separator line */
+    background: transparent; /* let the gradient show through */
+    padding: 0px;
+    margin: 0; /* remove spacing so they touch */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .product-card:last-child {
+    border-bottom: none; /* no line after the last card */
+  }
+
+  .product-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .product-image {
+    width: 15%;
+    margin: 20px;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .product-card:hover .product-image {
+    transform: scale(1.05);
+  }
+
+  .product-info {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .product-title {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #cfcdcd;
+    margin: 0;
+    transition: color 0.3s, transform 0.2s;
+  }
+
+  .product-title:hover {
+    color: #db5d5d;
+    transform: scale(1.03);
+  }
+  .product-price {
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 12px;
+  }
+  .product-actions {
+    margin-top: auto;
+  }
+  .product-card {
+  display: flex;
+  flex-direction: row-reverse;
+  }
+
+  .btn {
+    display: inline-block;
+    background: #da291c;
+    color: white;
+    padding: 10px 16px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    user-select: none;
+    width: 100%;
+  } 
+  .btn:hover {
+    background: #a81c15;
+  }
+
+  /* Footer */
+  footer {
+    background: #111;
+    color: #ccc;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: #ffffff;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .product-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .product-image {
+      width: 100%;
+      max-width: 300px;
+      margin: 20px auto;
+    }
+    
+    .product-info {
+      width: 100%;
+      padding: 20px;
+    }
+    
+    .product-title {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 15px;
+    }
+    nav {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    
+    .product-card {
+      padding: 15px;
+    }
+    
+    .product-image {
+      max-width: 250px;
+    }
+    
+    .product-title {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="{{ url_for('home') }}" aria-label="Kick Zone Home">
+    <img class="logo" src="{{ url_for('static', filename='images/kickzone_logo.png') }}" alt="Kick Zone Logo" />
+  </a>
+  <nav>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('chatbot') }}">ChatBot United</a>
+    <a href="{{ url_for('store') }}">Store</a>
+    <a href="{{ url_for('standings') }}">PL Standings</a>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Kick Zone Latest News">
+  <h1>Kick Zone News Page</h1>
+  <p>Stay updated with the latest Premier League news and updates!</p>
+</section>
+
+<main>
+  <h2 style="text-align:center; margin-bottom: 30px; font-weight: 900; color: #f8f8f8;">Latest News</h2>
+  <div class="products-grid" role="list">
+
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="https://resources.premierleague.pulselive.com/photo-resources/2025/10/22/11b733d8-d078-41b0-8059-d867d7da5c80/Enzo-Vicario-Konate.png?width=2880" alt="Champions League Analysis" />
+      <div class="product-info">
+        <a href="{{ url_for('ucl_learnings') }}" class="product-title-link">
+          <h3 class="product-title">What we learned from Tuesday's Champions League matches</h3>
+        </a>
+        <p style="color: #d5d0d0; font-size: 0.9rem; margin-top: 10px;">Arsenal, Man City, and Newcastle all secure impressive wins in Europe</p>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="https://resources.premierleague.pulselive.com/photo-resources/2025/10/23/8fe9e738-a817-463f-9394-e7b975253a00/Guessand-Gibbs-White-Mateta.jpg?width=2880" alt="Europa League Analysis" />
+      <div class="product-info">
+        <a href="{{ url_for('europa_article') }}" class="product-title-link">
+          <h3 class="product-title">What we learned from Thursday's European matches</h3>
+        </a>
+        <p style="color: #d5d0d0; font-size: 0.9rem; margin-top: 10px;">Forest, Villa, and Palace in Europa League and Conference League action</p>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="https://resources.premierleague.pulselive.com/photo-resources/2025/10/23/0bd0b3c6-b5d0-4017-8f98-7284cacad4dd/10KQ-MW9.jpg?width=2880" alt="Weekend Preview" />
+      <div class="product-info">
+        <a href="{{ url_for('key_questions') }}" class="product-title-link">
+          <h3 class="product-title">Ten key questions for the weekend's matches</h3>
+        </a>
+        <p style="color: #d5d0d0; font-size: 0.9rem; margin-top: 10px;">Premier League Matchweek 9 preview with tactical analysis</p>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="https://resources.premierleague.pulselive.com/photo-resources/2025/10/20/c292fb43-a538-444c-b603-6eb15a1de395/GettyImages-2242054312.jpg?width=2880" alt="Match Officials" />
+      <div class="product-info">
+        <a href="{{ url_for('match_officials') }}" class="product-title-link">
+          <h3 class="product-title">Match officials for Matchweek 9</h3>
+        </a>
+        <p style="color: #d5d0d0; font-size: 0.9rem; margin-top: 10px;">Complete list of referees, assistants, and VAR teams for Premier League fixtures</p>
+      </div>
+    </article>
+    <article class="product-card" role="listitem">
+      <img class="product-image" src="https://resources.premierleague.pulselive.com/photo-resources/2025/10/22/71e08241-614d-43af-acee-5ba20b9db21c/Puma-ball-1.jpg?width=2880" alt="Hi-Vis Ball" />
+      <div class="product-info">
+        <a href="{{ url_for('hivis_ball') }}" class="product-title-link">
+          <h3 class="product-title">Why does the Premier League have a hi-vis PUMA ball for winter?</h3>
+        </a>
+        <p style="color: #d5d0d0; font-size: 0.9rem; margin-top: 10px;">Exploring the origins and reasons behind the winter match ball innovation</p>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <p>Kick Zone</p>
+</footer>
+
+</body>
+</html>

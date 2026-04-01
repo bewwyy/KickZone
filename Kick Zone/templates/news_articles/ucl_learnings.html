@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Champions League: What we learned from Tuesday's matches - Kick Zone</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1a1a1a, #303030);
+    color: #eee;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  header {
+    background: #121212;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header img.logo {
+    height: 70px;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  nav a:hover {
+    background: rgba(255 255 255 / 0.2);
+  }
+
+  /* Article content */
+  .article-container {
+    max-width: none;
+    margin: 40px 0;
+    padding: 0 40px;
+  }
+
+  .article-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .article-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #f1eeee;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .article-meta {
+    color: #d5d0d0;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .article-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin: 30px auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .article-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 60px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .article-content h2 {
+    color: #da291c;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #da291c;
+    padding-bottom: 10px;
+  }
+
+  .article-content h3 {
+    color: #f1eeee;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .article-content h4 {
+    color: #f1eeee;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .article-content p {
+    margin-bottom: 20px;
+    color: #d5d0d0;
+    font-size: 1.1rem;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid #da291c;
+    padding-left: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: #f1eeee;
+    background: rgba(218, 41, 28, 0.1);
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .score-highlight {
+    background: linear-gradient(135deg, #da291c, #a81c15);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(218, 41, 28, 0.3);
+  }
+
+  .stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .stats-table th {
+    background: #da291c;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .stats-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #d5d0d0;
+  }
+
+  .stats-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .back-link {
+    display: inline-block;
+    background: #da291c;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-bottom: 30px;
+  }
+
+  .back-link:hover {
+    background: #a81c15;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(218, 41, 28, 0.3);
+  }
+
+  /* Footer */
+  footer {
+    background: #111;
+    color: #ccc;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: #ffffff;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 0 20px;
+    }
+    
+    .article-title {
+      font-size: 2rem;
+    }
+    
+    .article-content {
+      padding: 30px;
+    }
+    
+    .article-content h2 {
+      font-size: 1.5rem;
+    }
+    
+    .stats-table {
+      font-size: 0.9rem;
+    }
+    
+    .stats-table th,
+    .stats-table td {
+      padding: 8px 10px;
+    }
+    
+    .score-highlight {
+      font-size: 1.1rem;
+      padding: 12px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .article-container {
+      padding: 0 15px;
+    }
+    
+    .article-title {
+      font-size: 1.8rem;
+    }
+    
+    .article-content {
+      padding: 20px;
+    }
+    
+    .article-content h2 {
+      font-size: 1.3rem;
+    }
+    
+    .article-content h3 {
+      font-size: 1.2rem;
+    }
+    
+    .stats-table {
+      font-size: 0.8rem;
+    }
+    
+    .stats-table th,
+    .stats-table td {
+      padding: 6px 8px;
+    }
+    
+    .score-highlight {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="{{ url_for('home') }}" aria-label="Kick Zone Home">
+    <img class="logo" src="{{ url_for('static', filename='images/kickzone_logo.png') }}" alt="Kick Zone Logo" />
+  </a>
+</header>
+
+<div class="article-container">
+  <a href="{{ url_for('news') }}" class="back-link">← Back to News</a>
+  
+  <div class="article-header">
+    <h1 class="article-title">What we learned from Tuesday's Champions League matches</h1>
+    <div class="article-meta"> • 21 Oct 2025 • </div>
+  </div>
+
+  <div class="article-content">
+
+    <h2>Gyokeres and company prove Arteta is not a modern Simeone</h2>
+    
+    <div class="score-highlight">Arsenal 4-0 Atletico Madrid</div>
+
+    <p>After a sturdy defensive showing and typical set-piece goal from Gabriel Magalhaes forced the breakthrough in the 57th minute, it was tempting to draw comparisons between this iteration of Mikel Arteta's Arsenal and Diego Simeone's Atletico Madrid.</p>
+
+    <p>But what followed showed that comparisons to the stubborn, defence-first, and counter-attacking Atleti are well wide of the mark – despite the fact Arsenal have already kept nine clean sheets in 12 matches this season.</p>
+
+    <p>Yes, Arsenal can grind out wins when they need to and they remain the set-piece kings of Europe, but this is a team with the attacking riches – and progressive football – to go all the way domestically and in the Champions League.</p>
+
+    <p>Until Gabriel's headed goal, this was a tight, tense encounter, and indeed with Carlos Alcaraz hitting the bar for the visitors a few minutes earlier, this game could have gone in a completely different direction.</p>
+
+    <p>Instead, Arsenal moved into fifth gear, Simeone's bark was muted, and the floodgates opened.</p>
+
+    <p>It will do wonders for the confidence of the Arsenal players, who continue to face unfair accusations of playing cautious football, but for none more so than Viktor Gyokeres, who had gone 624 minutes of football without a goal before his scrappy finish in the 67th minute, shortly followed by a second in the 70th minute.</p>
+
+    <blockquote>
+      "Both goals were great. I try to do my best all the time and work hard, contribute with different stuff and the goals would have come sooner or later. To score four and keep a clean sheet again is very good. We do things right when we defend and when we get the chances we are extremely strong in taking those."<br>
+      <strong>— Viktor Gyokeres, Arsenal forward</strong>
+    </blockquote>
+
+    <p>Before Gyokeres' brace, a brilliant weaving run from Myles Lewis-Skelly had set up Gabriel Martinelli for the cushion goal on 64 minutes and it was the pick of the bunch, not least for highlighting the importance of an under-rated part of this Arsenal team: the full-backs.</p>
+
+    <p>Jurrien Timber was typically aggressive on the right, a perfect foil for Bukayo Saka, while Lewis-Skelly didn't put a foot wrong.</p>
+
+    <p>But although it would be remiss not to mention that Atleti's shot on target in the 78th minute was the first against Arsenal in 260 minutes of play, stretching all the way back to the Olympiacos game at the beginning of the month, this was a match to put the forwards in the spotlight, not the defenders.</p>
+
+    <p>Gyokeres, Saka, and Martinelli ran riot – and Arsenal announced themselves as one of the tournament favourites.</p>
+
+    <blockquote>
+      "At this level in the Champions League you really need to step up and we certainly did that in every phase of the play. I'm very happy with the result. And I'm delighted for Viktor scoring two goals as he fully deserved it. The work rate he brings to the team is outstanding. We value a lot of things that he does for the team."<br>
+      <strong>— Mikel Arteta, Arsenal manager</strong>
+    </blockquote>
+
+    <h3>Arsenal's set-piece goals this season</h3>
+    
+    <table class="stats-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Minute</th>
+          <th>Scorer</th>
+          <th>Opponent</th>
+          <th>Set-piece</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>17/08/25</td><td>13</td><td>Calafiori</td><td>Man Utd</td><td>Corner</td></tr>
+        <tr><td>23/08/25</td><td>34</td><td>Timber</td><td>Leeds</td><td>Corner</td></tr>
+        <tr><td>23/08/25</td><td>56</td><td>Timber</td><td>Leeds</td><td>Corner</td></tr>
+        <tr><td>23/08/25</td><td>90</td><td>Gyokeres</td><td>Leeds</td><td>Penalty</td></tr>
+        <tr><td>13/09/25</td><td>32</td><td>Zubimendi</td><td>Nott'm Forest</td><td>Corner</td></tr>
+        <tr><td>13/09/25</td><td>79</td><td>Zubimendi</td><td>Nott'm Forest</td><td>Free-kick</td></tr>
+        <tr><td>28/09/25</td><td>84</td><td>Merino</td><td>Newcastle</td><td>Corner</td></tr>
+        <tr><td>28/09/25</td><td>90</td><td>Gabriel</td><td>Newcastle</td><td>Corner</td></tr>
+        <tr><td>04/10/25</td><td>67</td><td>Saka</td><td>West Ham</td><td>Penalty</td></tr>
+        <tr><td>18/10/25</td><td>58</td><td>Trossard</td><td>Fulham</td><td>Corner</td></tr>
+        <tr><td>21/10/25</td><td>57</td><td>Gabriel</td><td>Atletico Madrid</td><td>Free-kick</td></tr>
+        <tr><td>21/10/25</td><td>70</td><td>Gyokeres</td><td>Atletico Madrid</td><td>Corner</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Gordon-Woltemade connection sees Newcastle return to their best</h2>
+    
+    <div class="score-highlight">Newcastle United 3-0 Benfica</div>
+
+    <p>You know it was a good team performance when the super-sub who scored two goals within 20 minutes of coming off the bench - belting the ball home in the 70th and 83rd minutes - isn't even the the best attacker on the pitch.</p>
+
+    <p>Harvey Barnes' brace secured Newcastle's first home win of the 2025/26 Champions League campaign, and more than that energised a stadium that has been underwhelmed by a slow start domestically.</p>
+
+    <p>But the most significant part of Tuesday night's game was the connection between Anthony Gordon, Nick Woltemade, and whoever was on the right, be it Jacob Murphy or Barnes.</p>
+
+    <p>Eddie Howe preaches explosive attacking football, but after winning just nine points from eight Premier League games some of that spark had gone – until this evening.</p>
+
+    <p>Woltemade was outstanding up front, a target man with the touch and ability to bring the two flying wingers into the game.</p>
+
+    <p>It caused Benfica problems all night, from the 32nd-minute opener – Murphy getting in behind and squaring for Gordon to score – to the third goal in the 83rd minute, which followed a beautiful one-two between Gordon and Woltemade.</p>
+
+    <p>This time it was Barnes applying the finishing touch, less than 15 minutes after his first strike in the 70th minute, which was a counter-attack so direct, Nick Pope claimed the assist for throwing the ball out to him.</p>
+
+    <blockquote>
+      "We are working on a few things with Nick with his distribution and throwing is a big strength of his. I am really pleased with all of them. Anthony was a real threat all game, dynamic and very aggressive. Jacob has always been an assist threat and today he was absolutely that. I am really pleased for Harvey to come on and get two goals like he did, off the right side as well which shows his versatility."<br>
+      <strong>— Eddie Howe, Newcastle United manager</strong>
+    </blockquote>
+
+    <h2>Lewis shines in midfield as Man City continue an unnerving winning streak</h2>
+    
+    <div class="score-highlight">Villarreal 0-2 Manchester City</div>
+
+    <p>A routine win for Pep Guardiola's side in Spain was simply textbook Man City and in keeping with their last couple of months. That should worry supporters of their title rivals.</p>
+
+    <p>Erling Haaland's 17th-minute opener was his 24th goal of the season for club and country, extending his goalscoring streak to 12 consecutive matches, before captain Bernardo Silva added a second goal in the 40th minute, after which it was a walk in the park for the visitors.</p>
+
+    <p>But what really stood out about Haaland's goal was Rico Lewis's run down the right flank and calm pass across goal to assist the Norwegian. Lewis, playing a rare game in central midfield, showed the remarkable depth in the Man City squad.</p>
+
+    <p>The last time Lewis got a game in the middle of the park against top-tier opposition was a 2-0 victory over Nottingham Forest last April, in which he found the back of the net. Performances like this one might permanently move him ahead of Mateo Kovacic in the pecking order.</p>
+
+    <blockquote>
+      "I'm sure 90 per cent of people see Rico Lewis there and know what he will do. I love this type of player. Offensively, defensively, he knows perfectly when he has to move and I'm really pleased with his game. It's a tough place to come. At the end they had one or two chances but we played a fantastic game. It's a good step for us in this tournament."<br>
+      <strong>— Pep Guardiola, Manchester City manager</strong>
+    </blockquote>
+
+    <p>As for the result, the Man City manager reflected: "It's a tough place to come. At the end they had one or two chances but we played a fantastic game. It's a good step for us in this tournament."</p>
+
+    <p>His side are now nine matches unbeaten in all competitions and have conceded just four goals in that sequence. Almost unnoticed, they are putting together one of their quiet, ruthless, and efficient winning streaks.</p>
+
+    <p>Unlike Arsenal, you need to worry about Man City when you aren't hearing much about them. Nobody does routine wins, and indeed routine titles, like Guardiola.</p>
+  </div>
+</div>
+
+<footer>
+  <p>Kick Zone</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title> Kick Zone Home</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1a1a1a, #303030);
+    color: #eee; /* lighter text for better contrast */
+    min-height: 100vh;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  header {
+    background: #121212; /* Man Utd red */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header img.logo {
+    height: 70px;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  nav a:hover {
+    background: rgba(255 255 255 / 0.2);
+  }
+
+  /* Hero banner */
+  .hero {
+  background: transparent; /* allows gradient to show through */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 900;
+    letter-spacing: 3px;
+  }
+  .hero p {
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+  }
+  .hero a {
+    background: #2fc910;
+    color: #111;
+    padding: 14px 28px;
+    font-weight: 700;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(249,168,37,0.4);
+  }
+  .hero a:hover {
+    background: #8b2cd8;
+  }
+
+  /* Main content */
+  main {
+    max-width: none;
+    width: 100%;
+    margin: 40px 0;
+    padding: 0;
+  }
+
+  main h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 900;
+    color: #da291c;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    padding-bottom: 10px;
+    display: table;       /* centers it visually */
+    margin-left: auto;    /* centers the block */
+    margin-right: auto;   /* centers the block */
+  }
+  
+  .products-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+  .product-card {
+    display: flex;
+    flex-direction: row-reverse; /* image on the right */
+    align-items: center;
+    border: none; /* remove old box border */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20); /* thin separator line */
+    background: transparent; /* let the gradient show through */
+    padding: 0px;
+    margin: 0; /* remove spacing so they touch */
+    transition: background 0.3s;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .product-card:last-child {
+    border-bottom: none; /* no line after the last card */
+  }
+
+  .product-card:hover {
+    background: rgba(255, 255, 255, 0.05); /* subtle hover highlight */
+  }
+
+  .product-image {
+    width: 15%;
+    margin: 20px;
+    border-radius: 6px;
+    object-fit: cover;
+    max-height: 200px;
+  }
+
+  .product-info {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .product-title {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #da291c;
+    margin: 0;
+    transition: color 0.3s, transform 0.2s;
+  }
+
+  .product-title:hover {
+    color: #ff4747;
+    transform: scale(1.03);
+  }
+  .product-price {
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 12px;
+  }
+  .product-actions {
+    margin-top: auto;
+  }
+  .product-card {
+  display: flex;
+  flex-direction: row-reverse;
+  }
+
+  .btn {
+    display: inline-block;
+    background: #da291c;
+    color: white;
+    padding: 10px 16px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    user-select: none;
+    width: 100%;
+  } 
+  .btn:hover {
+    background: #a81c15;
+  }
+
+  /* Footer */
+  footer {
+    background: #111;
+    color: #ccc;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: #ffffff;
+  }
+
+  /* Fixtures section - Enhanced Design */
+  .fixtures-section {
+    margin-bottom: 60px;
+    padding: 0 20px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .fixtures-section h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  
+  .fixtures-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #da291c, #ff6b6b);
+    border-radius: 2px;
+  }
+  
+  .fixtures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+  }
+  
+  .fixture-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: 25px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  
+  .fixture-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #8b5a3c, #a67c52, #6b8e4e);
+    border-radius: 16px 16px 0 0;
+  }
+  
+  .fixture-card:hover {
+    background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));
+    border-color: rgba(139, 90, 60, 0.3);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+  
+  .fixture-teams {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.3;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .fixture-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1rem;
+  }
+  
+  .fixture-date {
+    font-weight: 600;
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  
+  .fixture-time {
+    font-weight: 700;
+    color: #8fbc8f;
+    font-size: 1rem;
+  }
+  
+  .fixture-broadcaster {
+    font-weight: 500;
+    color: #d4af37;
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+  
+  .fixture-broadcaster::before {
+    content: '📺 ';
+    margin-right: 5px;
+  }
+  
+  /* Day-based sections */
+  .day-section {
+    margin-bottom: 40px;
+  }
+  
+  .day-header {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 25px;
+    padding: 15px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+  }
+  
+  .day-header::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #8b5a3c, #a67c52);
+  }
+  
+  .day-fixtures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Enhanced responsive design */
+  @media (max-width: 768px) {
+    .fixtures-grid,
+    .day-fixtures {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .fixture-card {
+      padding: 20px;
+    }
+    
+    .fixture-teams {
+      font-size: 1.1rem;
+    }
+    
+    .fixtures-section h2 {
+      font-size: 2rem;
+    }
+    
+    .day-header {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .fixtures-section {
+      padding: 0 15px;
+    }
+    
+    .fixture-card {
+      padding: 15px;
+    }
+    
+    .fixture-details {
+      gap: 8px;
+    }
+    
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+    
+    .hero p {
+      font-size: 0.9rem;
+    }
+    
+    .fixtures-section h2 {
+      font-size: 1.8rem;
+    }
+    
+    .fixture-teams {
+      font-size: 1rem;
+    }
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 15px;
+    }
+    nav {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="" aria-label="Kick Zone Home">
+    <img class="logo" src="{{ url_for('static', filename='images/kickzone_logo.png') }}" alt="Kick Zone Logo" />
+  </a>
+  <nav>
+    <a href="{{ url_for('chatbot') }}">ChatBot United</a>
+    <a href="{{ url_for('news') }}">News</a>
+    <a href="{{ url_for('store') }}">Store</a>
+    <a href="{{ url_for('standings') }}">PL Standings</a>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Kick Zone Official Products Promotion">
+  <h1>Kick Zone Home</h1>
+  <p>Your one stop shop for everything Premier League!</p>
+</section>
+
+<main>
+  <div class="fixtures-section">
+    <h2 style="text-align:center; margin-bottom: 60px; font-weight: 900; color: #f8f8f8;">Fixtures - Gameweek 9</h2>
+    
+    <!-- Saturday Fixtures -->
+    <div class="day-section">
+      <h3 class="day-header">Saturday, 25 October 2025</h3>
+      <div class="day-fixtures">
+        <div class="fixture-card">
+          <div class="fixture-teams">Leeds United vs West Ham United</div>
+          <div class="fixture-details">
+            <div class="fixture-time">12:30 AM</div>
+            <div class="fixture-broadcaster">Star Sports Select 1/HD</div>
+          </div>
+        </div>
+        
+        <div class="fixture-card">
+          <div class="fixture-teams">Chelsea vs Sunderland</div>
+          <div class="fixture-details">
+            <div class="fixture-time">7:30 PM</div>
+            <div class="fixture-broadcaster">Star Sports Select 1/HD</div>
+          </div>
+        </div>
+        
+        <div class="fixture-card">
+          <div class="fixture-teams">Newcastle United vs Fulham</div>
+          <div class="fixture-details">
+            <div class="fixture-time">7:30 PM</div>
+            <div class="fixture-broadcaster">Star Sports Select 2/HD</div>
+          </div>
+        </div>
+        
+        <div class="fixture-card">
+          <div class="fixture-teams">Manchester United vs Brighton & Hove Albion</div>
+          <div class="fixture-details">
+            <div class="fixture-time">10:00 PM</div>
+            <div class="fixture-broadcaster">Star Sports Select 1/HD</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sunday Fixtures -->
+    <div class="day-section">
+      <h3 class="day-header">Sunday, 26 October 2025</h3>
+      <div class="day-fixtures">
+        <div class="fixture-card">
+          <div class="fixture-teams">Brentford vs Liverpool</div>
+          <div class="fixture-details">
+            <div class="fixture-time">12:30 AM</div>
+            <div class="fixture-broadcaster">Star Sports Select 2/HD</div>
+          </div>
+        </div>
+        
+        <div class="fixture-card">
+          <div class="fixture-teams">AFC Bournemouth vs Nottingham Forest</div>
+          <div class="fixture-details">
+            <div class="fixture-time">7:30 PM</div>
+            <div class="fixture-broadcaster">Star Sports Select 1/HD</div>
+          </div>
+        </div>
+        
+        <div class="fixture-card">
+          <div class="fixture-teams">Aston Villa vs Manchester City</div>
+          <div class="fixture-details">
+            <div class="fixture-time">7:30 PM</div>
+            <div class="fixture-broadcaster">Star Sports Select 2/HD</div>
+          </div>
+        </div>
+        
+        <div class="fixture-card">
+          <div class="fixture-teams">Arsenal vs Crystal Palace</div>
+          <div class="fixture-details">
+            <div class="fixture-time">7:30 PM</div>
+            <div class="fixture-broadcaster">Star Sports Select 1/HD</div>
+          </div>
+        </div>
+        
+        <div class="fixture-card">
+          <div class="fixture-teams">Wolverhampton Wanderers vs Burnley</div>
+          <div class="fixture-details">
+            <div class="fixture-time">7:30 PM</div>
+            <div class="fixture-broadcaster">Star Sports Select 2/HD</div>
+          </div>
+        </div>
+        
+        <div class="fixture-card">
+          <div class="fixture-teams">Everton vs Tottenham Hotspur</div>
+          <div class="fixture-details">
+            <div class="fixture-time">10:00 PM</div>
+            <div class="fixture-broadcaster">Star Sports Select 1/HD</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</main>
+
+<footer>
+  <p>Kick Zone</p>
+</footer>
+
+</body>
+</html>

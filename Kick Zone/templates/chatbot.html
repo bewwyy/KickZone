@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ChatBot United</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <a href="#" aria-label="KickZone Logo">
+        <img class="logo" src="{{ url_for('static', filename='images/kickzone_logo.png') }}" alt="Kick Zone Logo" />
+      </a>
+      <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('news') }}">News</a>
+        <a href="{{ url_for('store') }}">Store</a>
+        <a href="{{ url_for('standings') }}">PL Standings</a>
+      </nav>
+    </div>
+    <div id="chat-box" class="chat-box"></div>
+
+    <div class="input-wrapper">
+      <div class="input-area">
+        <input id="user-input" type="text" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendMessage()">
+        <button onclick="sendMessage()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+              <path d="M2.01 21l20.99-9L2.01 3v7l15 2-15 2z"/>
+            </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function sendMessage() {
+      const input = document.getElementById('user-input');
+      const message = input.value.trim();
+      if (!message) return;
+
+      appendMessage('user', message);
+      input.value = '';
+
+      const response = await fetch('/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message })
+      });
+      const data = await response.json();
+      appendMessage('bot', data.reply);
+    }
+
+    function appendMessage(sender, text) {
+      const chatBox = document.getElementById('chat-box');
+      const msg = document.createElement('div');
+      msg.classList.add('message', sender);
+
+      const bubble = document.createElement('div');
+      bubble.classList.add('bubble');
+      bubble.textContent = text;
+
+      msg.appendChild(bubble);
+      chatBox.appendChild(msg);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    
+    if (window.visualViewport) {
+    const chatContainer = document.querySelector('.chat-container');
+    const inputWrapper = document.querySelector('.input-wrapper');
+
+    window.visualViewport.addEventListener('resize', () => {
+      const viewportHeight = window.visualViewport.height;
+      chatContainer.style.height = viewportHeight + 'px';
+      inputWrapper.style.bottom = 0;
+    });
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,2427 @@
+    {"intents":     
+    [
+    {"tag": "greetings",
+    "patterns": ["hello", "hey", "whats up", "hi", "yo", "heyyy"],
+    "responses": ["Hello!", "What can I do for you?", "How can I help you today?"]
+},
+    {"tag": "goodbye",
+    "patterns": ["bye", "i need to go now", "ill talk to you later", "thank you for your help"],
+    "responses": ["I'm glad I was able to help you! If you have any more questions, you can always ask me!"]
+},
+    {"tag": "manchester_united_manager",
+     "patterns": ["who is the current manager of manchester united", "who is manchester uniteds manager", "who manages manchester united"],
+     "responses": ["The current manager of Manchester United is Ruben Amorim."]
+},
+    {"tag": "manchester_united_stadium",
+     "patterns": ["where is manchester uniteds stadium", "what stadium does manchester united play at", "where does manchester united play"],
+     "responses": ["Manchester United plays at Old Trafford in Manchester."]
+},
+    {"tag": "manchester_united_capacity",
+     "patterns": ["what is the capacity of old trafford", "how many people can old trafford hold"],
+     "responses": ["Old Trafford has a capacity of 74,310 people."]
+},
+    {"tag": "manchester_united_rival",
+     "patterns": ["who is manchester uniteds main rival", "who does manchester united hate", "manchester uniteds biggest rival"],
+     "responses": ["Manchester United's main rival is Manchester City, known as the Manchester Derby."]
+},
+    {"tag": "manchester_united_founded",
+     "patterns": ["when was manchester united founded", "when did manchester united start", "how old is manchester united"],
+     "responses": ["Manchester United was founded in 1878 as Newton Heath L&YR Football Club."]
+},
+    {"tag": "manchester_united_captain",
+     "patterns": ["who is manchester uniteds captain", "who is the captain of manchester united", "manchester uniteds current captain"],
+     "responses": ["The current captain of Manchester United is Bruno Fernandes."]
+},
+    {"tag": "manchester_united_nickname",
+     "patterns": ["what is manchester uniteds nickname", "what do they call manchester united", "manchester uniteds other name"],
+     "responses": ["Manchester United is known as 'The Red Devils'."]
+},
+    {"tag": "manchester_united_colors",
+     "patterns": ["what are manchester uniteds colors", "what color does manchester united wear", "manchester uniteds team colors"],
+     "responses": ["Manchester United's colors are red, white, and black."]
+},
+    {"tag": "manchester_united_titles",
+     "patterns": ["how many premier league titles has manchester united won", "how many league titles does manchester united have"],
+     "responses": ["Manchester United has won 20 Premier League titles (13 in the Premier League era, 7 in the old First Division)."]
+},
+    {"tag": "manchester_united_champions_league",
+     "patterns": ["has manchester united won the champions league", "how many champions league titles has manchester united won"],
+     "responses": ["Manchester United has won the Champions League 3 times (1968, 1999, 2008)."]
+},
+    {"tag": "manchester_united_owner",
+     "patterns": ["who owns manchester united", "who is manchester uniteds owner", "manchester uniteds current owner"],
+     "responses": ["Manchester United is owned by the Glazer family through their company Red Football Limited."]
+},
+    {"tag": "manchester_united_best_player",
+     "patterns": ["who is manchester uniteds best player ever", "manchester uniteds greatest player", "who is manchester uniteds legend"],
+     "responses": ["Sir Bobby Charlton is widely considered Manchester United's greatest player of all time."]
+},
+    {"tag": "manchester_united_current_squad",
+     "patterns": ["who are manchester uniteds current players", "manchester uniteds squad", "who plays for manchester united now"],
+     "responses": ["Manchester United's current squad includes players like Bruno Fernandes, Marcus Rashford, Rasmus Højlund, and Casemiro."]
+},
+    {"tag": "manchester_united_treble",
+     "patterns": ["when did manchester united win the treble", "manchester uniteds treble season"],
+     "responses": ["Manchester United won the treble in 1999, winning the Premier League, FA Cup, and Champions League."]
+},
+    {"tag": "manchester_united_sir_alex",
+     "patterns": ["who is sir alex ferguson", "manchester uniteds greatest manager", "sir alex ferguson achievements"],
+     "responses": ["Sir Alex Ferguson is Manchester United's most successful manager, winning 38 trophies during his 26-year tenure."]
+},
+    {"tag": "arsenal_manager",
+     "patterns": ["who is the current manager of arsenal", "who is arsenals manager", "who manages arsenal"],
+     "responses": ["The current manager of Arsenal is Mikel Arteta."]
+},
+    {"tag": "arsenal_stadium",
+     "patterns": ["where is arsenals stadium", "what stadium does arsenal play at", "where does arsenal play"],
+     "responses": ["Arsenal plays at the Emirates Stadium in London."]
+},
+    {"tag": "arsenal_capacity",
+     "patterns": ["what is the capacity of emirates stadium", "how many people can emirates stadium hold"],
+     "responses": ["The Emirates Stadium has a capacity of 60,704 people."]
+},
+    {"tag": "arsenal_rival",
+     "patterns": ["who is arsenals main rival", "who does arsenal hate", "arsenals biggest rival"],
+     "responses": ["Arsenal's main rival is Tottenham Hotspur, known as the North London Derby."]
+},
+    {"tag": "arsenal_founded",
+     "patterns": ["when was arsenal founded", "when did arsenal start", "how old is arsenal"],
+     "responses": ["Arsenal was founded in 1886 as Dial Square."]
+},
+    {"tag": "arsenal_captain",
+     "patterns": ["who is arsenals captain", "who is the captain of arsenal", "arsenals current captain"],
+     "responses": ["The current captain of Arsenal is Martin Ødegaard."]
+},
+    {"tag": "arsenal_nickname",
+     "patterns": ["what is arsenals nickname", "what do they call arsenal", "arsenals other name"],
+     "responses": ["Arsenal is known as 'The Gunners'."]
+},
+    {"tag": "arsenal_colors",
+     "patterns": ["what are arsenals colors", "what color does arsenal wear", "arsenals team colors"],
+     "responses": ["Arsenal's colors are red and white."]
+},
+    {"tag": "arsenal_titles",
+     "patterns": ["how many premier league titles has arsenal won", "how many league titles does arsenal have"],
+     "responses": ["Arsenal has won 13 Premier League titles (3 in the Premier League era, 10 in the old First Division)."]
+},
+    {"tag": "arsenal_champions_league",
+     "patterns": ["has arsenal won the champions league", "how many champions league titles has arsenal won"],
+     "responses": ["Arsenal has never won the Champions League, but they reached the final in 2006."]
+},
+    {"tag": "arsenal_owner",
+     "patterns": ["who owns arsenal", "who is arsenals owner", "arsenals current owner"],
+     "responses": ["Arsenal is owned by Kroenke Sports & Entertainment, with Stan Kroenke as the majority owner."]
+},
+    {"tag": "arsenal_best_player",
+     "patterns": ["who is arsenals best player ever", "arsenals greatest player", "who is arsenals legend"],
+     "responses": ["Thierry Henry is widely considered Arsenal's greatest player of all time."]
+},
+    {"tag": "arsenal_current_squad",
+     "patterns": ["who are arsenals current players", "arsenals squad", "who plays for arsenal now"],
+     "responses": ["Arsenal's current squad includes players like Bukayo Saka, Martin Ødegaard, Declan Rice, Gabriel Jesus, and William Saliba."]
+},
+    {"tag": "arsenal_emirates_cup",
+     "patterns": ["what is the emirates cup", "arsenals preseason tournament"],
+     "responses": ["The Emirates Cup is Arsenal's annual preseason tournament held at the Emirates Stadium."]
+},
+    {"tag": "arsenal_invincibles",
+     "patterns": ["what are the invincibles", "arsenals invincible season", "when did arsenal go unbeaten"],
+     "responses": ["The Invincibles refers to Arsenal's 2003-04 season when they went unbeaten in the Premier League, winning 26 games and drawing 12."]
+},
+    {"tag": "aston_villa_manager",
+     "patterns": ["who is the current manager of aston villa", "who is aston villas manager", "who manages aston villa"],
+     "responses": ["The current manager of Aston Villa is Unai Emery."]
+},
+    {"tag": "aston_villa_stadium",
+     "patterns": ["where is aston villas stadium", "what stadium does aston villa play at", "where does aston villa play"],
+     "responses": ["Aston Villa plays at Villa Park in Birmingham."]
+},
+    {"tag": "aston_villa_capacity",
+     "patterns": ["what is the capacity of villa park", "how many people can villa park hold"],
+     "responses": ["Villa Park has a capacity of 42,640 people."]
+},
+    {"tag": "aston_villa_rival",
+     "patterns": ["who is aston villas main rival", "who does aston villa hate", "aston villas biggest rival"],
+     "responses": ["Aston Villa's main rival is Birmingham City, known as the Second City Derby."]
+},
+    {"tag": "aston_villa_founded",
+     "patterns": ["when was aston villa founded", "when did aston villa start", "how old is aston villa"],
+     "responses": ["Aston Villa was founded in 1874."]
+},
+    {"tag": "aston_villa_captain",
+     "patterns": ["who is aston villas captain", "who is the captain of aston villa", "aston villas current captain"],
+     "responses": ["The current captain of Aston Villa is John McGinn."]
+},
+    {"tag": "aston_villa_nickname",
+     "patterns": ["what is aston villas nickname", "what do they call aston villa", "aston villas other name"],
+     "responses": ["Aston Villa is known as 'The Villans'."]
+},
+    {"tag": "aston_villa_colors",
+     "patterns": ["what are aston villas colors", "what color does aston villa wear", "aston villas team colors"],
+     "responses": ["Aston Villa's colors are claret and blue."]
+},
+    {"tag": "aston_villa_titles",
+     "patterns": ["how many premier league titles has aston villa won", "how many league titles does aston villa have"],
+     "responses": ["Aston Villa has won 7 First Division titles, but none in the Premier League era."]
+},
+    {"tag": "aston_villa_champions_league",
+     "patterns": ["has aston villa won the champions league", "how many champions league titles has aston villa won"],
+     "responses": ["Aston Villa won the European Cup (now Champions League) once in 1982."]
+},
+    {"tag": "aston_villa_owner",
+     "patterns": ["who owns aston villa", "who is aston villas owner", "aston villas current owner"],
+     "responses": ["Aston Villa is owned by Nassef Sawiris and Wes Edens through V Sports."]
+},
+    {"tag": "aston_villa_best_player",
+     "patterns": ["who is aston villas best player ever", "aston villas greatest player", "who is aston villas legend"],
+     "responses": ["Paul McGrath is widely considered one of Aston Villa's greatest players of all time."]
+},
+    {"tag": "aston_villa_current_squad",
+     "patterns": ["who are aston villas current players", "aston villas squad", "who plays for aston villa now"],
+     "responses": ["Aston Villa's current squad includes players like Ollie Watkins, Emiliano Martínez, Douglas Luiz, and Leon Bailey."]
+},
+    {"tag": "aston_villa_european_cup",
+     "patterns": ["when did aston villa win the european cup", "aston villas european success"],
+     "responses": ["Aston Villa won the European Cup in 1982, defeating Bayern Munich 1-0 in the final."]
+},
+    {"tag": "aston_villa_holte_end",
+     "patterns": ["what is the holte end", "aston villas famous stand"],
+     "responses": ["The Holte End is the famous stand at Villa Park where Aston Villa's most passionate supporters sit."]
+},
+    {"tag": "brighton_manager",
+     "patterns": ["who is the current manager of brighton", "who is brightons manager", "who manages brighton"],
+     "responses": ["The current manager of Brighton & Hove Albion is Roberto De Zerbi."]
+},
+    {"tag": "brighton_stadium",
+     "patterns": ["where is brightons stadium", "what stadium does brighton play at", "where does brighton play"],
+     "responses": ["Brighton & Hove Albion plays at the Amex Stadium in Brighton."]
+},
+    {"tag": "brighton_capacity",
+     "patterns": ["what is the capacity of the amex stadium", "how many people can the amex stadium hold"],
+     "responses": ["The Amex Stadium has a capacity of 31,800 people."]
+},
+    {"tag": "brighton_rival",
+     "patterns": ["who is brightons main rival", "who does brighton hate", "brightons biggest rival"],
+     "responses": ["Brighton's main rival is Crystal Palace, known as the M23 Derby."]
+},
+    {"tag": "brighton_founded",
+     "patterns": ["when was brighton founded", "when did brighton start", "how old is brighton"],
+     "responses": ["Brighton & Hove Albion was founded in 1901."]
+},
+    {"tag": "brighton_captain",
+     "patterns": ["who is brightons captain", "who is the captain of brighton", "brightons current captain"],
+     "responses": ["The current captain of Brighton & Hove Albion is Lewis Dunk."]
+},
+    {"tag": "brighton_nickname",
+     "patterns": ["what is brightons nickname", "what do they call brighton", "brightons other name"],
+     "responses": ["Brighton & Hove Albion is known as 'The Seagulls'."]
+},
+    {"tag": "brighton_colors",
+     "patterns": ["what are brightons colors", "what color does brighton wear", "brightons team colors"],
+     "responses": ["Brighton's colors are blue and white."]
+},
+    {"tag": "brighton_titles",
+     "patterns": ["how many premier league titles has brighton won", "how many league titles does brighton have"],
+     "responses": ["Brighton has never won the Premier League or First Division title."]
+},
+    {"tag": "brighton_champions_league",
+     "patterns": ["has brighton won the champions league", "how many champions league titles has brighton won"],
+     "responses": ["Brighton has never won the Champions League or European Cup."]
+},
+    {"tag": "brighton_owner",
+     "patterns": ["who owns brighton", "who is brightons owner", "brightons current owner"],
+     "responses": ["Brighton & Hove Albion is owned by Tony Bloom."]
+},
+    {"tag": "brighton_best_player",
+     "patterns": ["who is brightons best player ever", "brightons greatest player", "who is brightons legend"],
+     "responses": ["Glenn Murray is widely considered one of Brighton's greatest players of all time."]
+},
+    {"tag": "brighton_current_squad",
+     "patterns": ["who are brightons current players", "brightons squad", "who plays for brighton now"],
+     "responses": ["Brighton's current squad includes players like Pascal Groß, Kaoru Mitoma, Evan Ferguson, and Joël Veltman."]
+},
+    {"tag": "brighton_promotion",
+     "patterns": ["when did brighton get promoted to premier league", "brightons promotion to premier league"],
+     "responses": ["Brighton was promoted to the Premier League in 2017 after finishing second in the Championship."]
+},
+    {"tag": "brighton_amex",
+     "patterns": ["what is the amex stadium", "brightons home ground"],
+     "responses": ["The Amex Stadium is Brighton's home ground, officially known as the American Express Community Stadium."]
+},
+    {"tag": "chelsea_manager",
+     "patterns": ["who is the current manager of chelsea", "who is chelseas manager", "who manages chelsea"],
+     "responses": ["The current manager of Chelsea is Enzo Maresca."]
+},
+    {"tag": "chelsea_stadium",
+     "patterns": ["where is chelseas stadium", "what stadium does chelsea play at", "where does chelsea play"],
+     "responses": ["Chelsea plays at Stamford Bridge in London."]
+},
+    {"tag": "chelsea_capacity",
+     "patterns": ["what is the capacity of stamford bridge", "how many people can stamford bridge hold"],
+     "responses": ["Stamford Bridge has a capacity of 40,343 people."]
+},
+    {"tag": "chelsea_rival",
+     "patterns": ["who is chelseas main rival", "who does chelsea hate", "chelseas biggest rival"],
+     "responses": ["Chelsea's main rival is Arsenal, known as the London Derby."]
+},
+    {"tag": "chelsea_founded",
+     "patterns": ["when was chelsea founded", "when did chelsea start", "how old is chelsea"],
+     "responses": ["Chelsea was founded in 1905."]
+},
+    {"tag": "chelsea_captain",
+     "patterns": ["who is chelseas captain", "who is the captain of chelsea", "chelseas current captain"],
+     "responses": ["The current captain of Chelsea is Reece James."]
+},
+    {"tag": "chelsea_nickname",
+     "patterns": ["what is chelseas nickname", "what do they call chelsea", "chelseas other name"],
+     "responses": ["Chelsea is known as 'The Blues'."]
+},
+    {"tag": "chelsea_colors",
+     "patterns": ["what are chelseas colors", "what color does chelsea wear", "chelseas team colors"],
+     "responses": ["Chelsea's colors are blue and white."]
+},
+    {"tag": "chelsea_titles",
+     "patterns": ["how many premier league titles has chelsea won", "how many league titles does chelsea have"],
+     "responses": ["Chelsea has won 6 Premier League titles."]
+},
+    {"tag": "chelsea_champions_league",
+     "patterns": ["has chelsea won the champions league", "how many champions league titles has chelsea won"],
+     "responses": ["Chelsea has won the Champions League 2 times (2012, 2021)."]
+},
+    {"tag": "chelsea_owner",
+     "patterns": ["who owns chelsea", "who is chelseas owner", "chelseas current owner"],
+     "responses": ["Chelsea is owned by Todd Boehly and Clearlake Capital."]
+},
+    {"tag": "chelsea_best_player",
+     "patterns": ["who is chelseas best player ever", "chelseas greatest player", "who is chelseas legend"],
+     "responses": ["Frank Lampard is widely considered Chelsea's greatest player of all time."]
+},
+    {"tag": "chelsea_current_squad",
+     "patterns": ["who are chelseas current players", "chelseas squad", "who plays for chelsea now"],
+     "responses": ["Chelsea's current squad includes players like Cole Palmer, Enzo Fernández, Moisés Caicedo, and Nicolas Jackson."]
+},
+    {"tag": "chelsea_champions_league_2012",
+     "patterns": ["when did chelsea win the champions league", "chelseas champions league victory"],
+     "responses": ["Chelsea won the Champions League in 2012, defeating Bayern Munich on penalties in the final."]
+},
+    {"tag": "chelsea_stamford_bridge",
+     "patterns": ["what is stamford bridge", "chelseas home ground"],
+     "responses": ["Stamford Bridge is Chelsea's home ground, located in Fulham, London."]
+},
+    {"tag": "crystal_palace_manager",
+     "patterns": ["who is the current manager of crystal palace", "who is crystal palaces manager", "who manages crystal palace"],
+     "responses": ["The current manager of Crystal Palace is Oliver Glasner."]
+},
+    {"tag": "crystal_palace_stadium",
+     "patterns": ["where is crystal palaces stadium", "what stadium does crystal palace play at", "where does crystal palace play"],
+     "responses": ["Crystal Palace plays at Selhurst Park in London."]
+},
+    {"tag": "crystal_palace_capacity",
+     "patterns": ["what is the capacity of selhurst park", "how many people can selhurst park hold"],
+     "responses": ["Selhurst Park has a capacity of 25,486 people."]
+},
+    {"tag": "crystal_palace_rival",
+     "patterns": ["who is crystal palaces main rival", "who does crystal palace hate", "crystal palaces biggest rival"],
+     "responses": ["Crystal Palace's main rival is Brighton & Hove Albion, known as the M23 Derby."]
+},
+    {"tag": "crystal_palace_founded",
+     "patterns": ["when was crystal palace founded", "when did crystal palace start", "how old is crystal palace"],
+     "responses": ["Crystal Palace was founded in 1905."]
+},
+    {"tag": "crystal_palace_captain",
+     "patterns": ["who is crystal palaces captain", "who is the captain of crystal palace", "crystal palaces current captain"],
+     "responses": ["The current captain of Crystal Palace is Joel Ward."]
+},
+    {"tag": "crystal_palace_nickname",
+     "patterns": ["what is crystal palaces nickname", "what do they call crystal palace", "crystal palaces other name"],
+     "responses": ["Crystal Palace is known as 'The Eagles'."]
+},
+    {"tag": "crystal_palace_colors",
+     "patterns": ["what are crystal palaces colors", "what color does crystal palace wear", "crystal palaces team colors"],
+     "responses": ["Crystal Palace's colors are red and blue."]
+},
+    {"tag": "crystal_palace_titles",
+     "patterns": ["how many premier league titles has crystal palace won", "how many league titles does crystal palace have"],
+     "responses": ["Crystal Palace has never won the Premier League or First Division title."]
+},
+    {"tag": "crystal_palace_champions_league",
+     "patterns": ["has crystal palace won the champions league", "how many champions league titles has crystal palace won"],
+     "responses": ["Crystal Palace has never won the Champions League or European Cup."]
+},
+    {"tag": "crystal_palace_owner",
+     "patterns": ["who owns crystal palace", "who is crystal palaces owner", "crystal palaces current owner"],
+     "responses": ["Crystal Palace is owned by Steve Parish and other investors."]
+},
+    {"tag": "crystal_palace_best_player",
+     "patterns": ["who is crystal palaces best player ever", "crystal palaces greatest player", "who is crystal palaces legend"],
+     "responses": ["Wilfried Zaha is widely considered one of Crystal Palace's greatest players of all time."]
+},
+    {"tag": "crystal_palace_current_squad",
+     "patterns": ["who are crystal palaces current players", "crystal palaces squad", "who plays for crystal palace now"],
+     "responses": ["Crystal Palace's current squad includes players like Eberechi Eze, Michael Olise, Marc Guéhi, and Joachim Andersen."]
+},
+    {"tag": "crystal_palace_selhurst",
+     "patterns": ["what is selhurst park", "crystal palaces home ground"],
+     "responses": ["Selhurst Park is Crystal Palace's home ground, located in South London."]
+},
+    {"tag": "everton_manager",
+     "patterns": ["who is the current manager of everton", "who is evertons manager", "who manages everton"],
+     "responses": ["The current manager of Everton is Sean Dyche."]
+},
+    {"tag": "everton_stadium",
+     "patterns": ["where is evertons stadium", "what stadium does everton play at", "where does everton play"],
+     "responses": ["Everton plays at Goodison Park in Liverpool."]
+},
+    {"tag": "everton_capacity",
+     "patterns": ["what is the capacity of goodison park", "how many people can goodison park hold"],
+     "responses": ["Goodison Park has a capacity of 39,572 people."]
+},
+    {"tag": "everton_rival",
+     "patterns": ["who is evertons main rival", "who does everton hate", "evertons biggest rival"],
+     "responses": ["Everton's main rival is Liverpool, known as the Merseyside Derby."]
+},
+    {"tag": "everton_founded",
+     "patterns": ["when was everton founded", "when did everton start", "how old is everton"],
+     "responses": ["Everton was founded in 1878."]
+},
+    {"tag": "everton_captain",
+     "patterns": ["who is evertons captain", "who is the captain of everton", "evertons current captain"],
+     "responses": ["The current captain of Everton is Seamus Coleman."]
+},
+    {"tag": "everton_nickname",
+     "patterns": ["what is evertons nickname", "what do they call everton", "evertons other name"],
+     "responses": ["Everton is known as 'The Toffees'."]
+},
+    {"tag": "everton_colors",
+     "patterns": ["what are evertons colors", "what color does everton wear", "evertons team colors"],
+     "responses": ["Everton's colors are blue and white."]
+},
+    {"tag": "everton_titles",
+     "patterns": ["how many premier league titles has everton won", "how many league titles does everton have"],
+     "responses": ["Everton has won 9 First Division titles, but none in the Premier League era."]
+},
+    {"tag": "everton_champions_league",
+     "patterns": ["has everton won the champions league", "how many champions league titles has everton won"],
+     "responses": ["Everton has never won the Champions League or European Cup."]
+},
+    {"tag": "everton_owner",
+     "patterns": ["who owns everton", "who is evertons owner", "evertons current owner"],
+     "responses": ["Everton is owned by Farhad Moshiri."]
+},
+    {"tag": "everton_best_player",
+     "patterns": ["who is evertons best player ever", "evertons greatest player", "who is evertons legend"],
+     "responses": ["Dixie Dean is widely considered Everton's greatest player of all time."]
+},
+    {"tag": "everton_current_squad",
+     "patterns": ["who are evertons current players", "evertons squad", "who plays for everton now"],
+     "responses": ["Everton's current squad includes players like Dominic Calvert-Lewin, Jordan Pickford, Amadou Onana, and James Tarkowski."]
+},
+    {"tag": "everton_goodison",
+     "patterns": ["what is goodison park", "evertons home ground"],
+     "responses": ["Goodison Park is Everton's home ground, one of the oldest football stadiums in England."]
+},
+    {"tag": "fulham_manager",
+     "patterns": ["who is the current manager of fulham", "who is fulhams manager", "who manages fulham"],
+     "responses": ["The current manager of Fulham is Marco Silva."]
+},
+    {"tag": "fulham_stadium",
+     "patterns": ["where is fulhams stadium", "what stadium does fulham play at", "where does fulham play"],
+     "responses": ["Fulham plays at Craven Cottage in London."]
+},
+    {"tag": "fulham_capacity",
+     "patterns": ["what is the capacity of craven cottage", "how many people can craven cottage hold"],
+     "responses": ["Craven Cottage has a capacity of 19,359 people."]
+},
+    {"tag": "fulham_rival",
+     "patterns": ["who is fulhams main rival", "who does fulham hate", "fulhams biggest rival"],
+     "responses": ["Fulham's main rival is Chelsea, known as the West London Derby."]
+},
+    {"tag": "fulham_founded",
+     "patterns": ["when was fulham founded", "when did fulham start", "how old is fulham"],
+     "responses": ["Fulham was founded in 1879."]
+},
+    {"tag": "fulham_captain",
+     "patterns": ["who is fulhams captain", "who is the captain of fulham", "fulhams current captain"],
+     "responses": ["The current captain of Fulham is Tom Cairney."]
+},
+    {"tag": "fulham_nickname",
+     "patterns": ["what is fulhams nickname", "what do they call fulham", "fulhams other name"],
+     "responses": ["Fulham is known as 'The Cottagers'."]
+},
+    {"tag": "fulham_colors",
+     "patterns": ["what are fulhams colors", "what color does fulham wear", "fulhams team colors"],
+     "responses": ["Fulham's colors are white and black."]
+},
+    {"tag": "fulham_titles",
+     "patterns": ["how many premier league titles has fulham won", "how many league titles does fulham have"],
+     "responses": ["Fulham has never won the Premier League or First Division title."]
+},
+    {"tag": "fulham_champions_league",
+     "patterns": ["has fulham won the champions league", "how many champions league titles has fulham won"],
+     "responses": ["Fulham has never won the Champions League or European Cup."]
+},
+    {"tag": "fulham_owner",
+     "patterns": ["who owns fulham", "who is fulhams owner", "fulhams current owner"],
+     "responses": ["Fulham is owned by Shahid Khan."]
+},
+    {"tag": "fulham_best_player",
+     "patterns": ["who is fulhams best player ever", "fulhams greatest player", "who is fulhams legend"],
+     "responses": ["Johnny Haynes is widely considered Fulham's greatest player of all time."]
+},
+    {"tag": "fulham_current_squad",
+     "patterns": ["who are fulhams current players", "fulhams squad", "who plays for fulham now"],
+     "responses": ["Fulham's current squad includes players like Aleksandar Mitrović, João Palhinha, Andreas Pereira, and Bernd Leno."]
+},
+    {"tag": "fulham_craven_cottage",
+     "patterns": ["what is craven cottage", "fulhams home ground"],
+     "responses": ["Craven Cottage is Fulham's home ground, located on the banks of the River Thames."]
+},
+    {"tag": "liverpool_manager",
+     "patterns": ["who is the current manager of liverpool", "who is liverpools manager", "who manages liverpool"],
+     "responses": ["The current manager of Liverpool is Arne Slot."]
+},
+    {"tag": "liverpool_stadium",
+     "patterns": ["where is liverpools stadium", "what stadium does liverpool play at", "where does liverpool play"],
+     "responses": ["Liverpool plays at Anfield in Liverpool."]
+},
+    {"tag": "liverpool_capacity",
+     "patterns": ["what is the capacity of anfield", "how many people can anfield hold"],
+     "responses": ["Anfield has a capacity of 61,015 people."]
+},
+    {"tag": "liverpool_rival",
+     "patterns": ["who is liverpools main rival", "who does liverpool hate", "liverpools biggest rival"],
+     "responses": ["Liverpool's main rival is Manchester United, known as the North West Derby."]
+},
+    {"tag": "liverpool_founded",
+     "patterns": ["when was liverpool founded", "when did liverpool start", "how old is liverpool"],
+     "responses": ["Liverpool was founded in 1892."]
+},
+    {"tag": "liverpool_captain",
+     "patterns": ["who is liverpools captain", "who is the captain of liverpool", "liverpools current captain"],
+     "responses": ["The current captain of Liverpool is Virgil van Dijk."]
+},
+    {"tag": "liverpool_nickname",
+     "patterns": ["what is liverpools nickname", "what do they call liverpool", "liverpools other name"],
+     "responses": ["Liverpool is known as 'The Reds'."]
+},
+    {"tag": "liverpool_colors",
+     "patterns": ["what are liverpools colors", "what color does liverpool wear", "liverpools team colors"],
+     "responses": ["Liverpool's colors are red and white."]
+},
+    {"tag": "liverpool_titles",
+     "patterns": ["how many premier league titles has liverpool won", "how many league titles does liverpool have"],
+     "responses": ["Liverpool has won 20 league titles (1 Premier League, 19 First Division)."]
+},
+    {"tag": "liverpool_champions_league",
+     "patterns": ["has liverpool won the champions league", "how many champions league titles has liverpool won"],
+     "responses": ["Liverpool has won the Champions League 6 times (1977, 1978, 1981, 1984, 2005, 2019)."]
+},
+    {"tag": "liverpool_owner",
+     "patterns": ["who owns liverpool", "who is liverpools owner", "liverpools current owner"],
+     "responses": ["Liverpool is owned by Fenway Sports Group."]
+},
+    {"tag": "liverpool_best_player",
+     "patterns": ["who is liverpools best player ever", "liverpools greatest player", "who is liverpools legend"],
+     "responses": ["Kenny Dalglish is widely considered Liverpool's greatest player of all time."]
+},
+    {"tag": "liverpool_current_squad",
+     "patterns": ["who are liverpools current players", "liverpools squad", "who plays for liverpool now"],
+     "responses": ["Liverpool's current squad includes players like Mohamed Salah, Virgil van Dijk, Alisson, and Darwin Núñez."]
+},
+    {"tag": "liverpool_anfield",
+     "patterns": ["what is anfield", "liverpools home ground"],
+     "responses": ["Anfield is Liverpool's home ground, famous for its atmosphere and the Kop stand."]
+},
+    {"tag": "man_city_manager",
+     "patterns": ["who is the current manager of manchester city", "who is manchester citys manager", "who manages manchester city"],
+     "responses": ["The current manager of Manchester City is Pep Guardiola."]
+},
+    {"tag": "man_city_stadium",
+     "patterns": ["where is manchester citys stadium", "what stadium does manchester city play at", "where does manchester city play"],
+     "responses": ["Manchester City plays at the Etihad Stadium in Manchester."]
+},
+    {"tag": "man_city_capacity",
+     "patterns": ["what is the capacity of the etihad stadium", "how many people can the etihad stadium hold"],
+     "responses": ["The Etihad Stadium has a capacity of 53,400 people."]
+},
+    {"tag": "man_city_rival",
+     "patterns": ["who is manchester citys main rival", "who does manchester city hate", "manchester citys biggest rival"],
+     "responses": ["Manchester City's main rival is Manchester United, known as the Manchester Derby."]
+},
+    {"tag": "man_city_founded",
+     "patterns": ["when was manchester city founded", "when did manchester city start", "how old is manchester city"],
+     "responses": ["Manchester City was founded in 1880."]
+},
+    {"tag": "man_city_captain",
+     "patterns": ["who is manchester citys captain", "who is the captain of manchester city", "manchester citys current captain"],
+     "responses": ["The current captain of Manchester City is Kevin De Bruyne."]
+},
+    {"tag": "man_city_nickname",
+     "patterns": ["what is manchester citys nickname", "what do they call manchester city", "manchester citys other name"],
+     "responses": ["Manchester City is known as 'The Citizens' or 'City'."]
+},
+    {"tag": "man_city_colors",
+     "patterns": ["what are manchester citys colors", "what color does manchester city wear", "manchester citys team colors"],
+     "responses": ["Manchester City's colors are sky blue and white."]
+},
+    {"tag": "man_city_titles",
+     "patterns": ["how many premier league titles has manchester city won", "how many league titles does manchester city have"],
+     "responses": ["Manchester City has won 9 Premier League titles."]
+},
+    {"tag": "man_city_champions_league",
+     "patterns": ["has manchester city won the champions league", "how many champions league titles has manchester city won"],
+     "responses": ["Manchester City has won the Champions League 1 time (2023)."]
+},
+    {"tag": "man_city_owner",
+     "patterns": ["who owns manchester city", "who is manchester citys owner", "manchester citys current owner"],
+     "responses": ["Manchester City is owned by the City Football Group, with Sheikh Mansour as the majority owner."]
+},
+    {"tag": "man_city_best_player",
+     "patterns": ["who is manchester citys best player ever", "manchester citys greatest player", "who is manchester citys legend"],
+     "responses": ["Sergio Agüero is widely considered Manchester City's greatest player of all time."]
+},
+    {"tag": "man_city_current_squad",
+     "patterns": ["who are manchester citys current players", "manchester citys squad", "who plays for manchester city now"],
+     "responses": ["Manchester City's current squad includes players like Erling Haaland, Kevin De Bruyne, Phil Foden, and Rodri."]
+},
+    {"tag": "man_city_etihad",
+     "patterns": ["what is the etihad stadium", "manchester citys home ground"],
+     "responses": ["The Etihad Stadium is Manchester City's home ground, also known as the City of Manchester Stadium."]
+},
+    {"tag": "newcastle_manager",
+     "patterns": ["who is the current manager of newcastle", "who is newcastles manager", "who manages newcastle"],
+     "responses": ["The current manager of Newcastle United is Eddie Howe."]
+},
+    {"tag": "newcastle_stadium",
+     "patterns": ["where is newcastles stadium", "what stadium does newcastle play at", "where does newcastle play"],
+     "responses": ["Newcastle United plays at St. James' Park in Newcastle."]
+},
+    {"tag": "newcastle_capacity",
+     "patterns": ["what is the capacity of st james park", "how many people can st james park hold"],
+     "responses": ["St. James' Park has a capacity of 52,305 people."]
+},
+    {"tag": "newcastle_rival",
+     "patterns": ["who is newcastles main rival", "who does newcastle hate", "newcastles biggest rival"],
+     "responses": ["Newcastle's main rival is Sunderland, known as the Tyne-Wear Derby."]
+},
+    {"tag": "newcastle_founded",
+     "patterns": ["when was newcastle founded", "when did newcastle start", "how old is newcastle"],
+     "responses": ["Newcastle United was founded in 1892."]
+},
+    {"tag": "newcastle_captain",
+     "patterns": ["who is newcastles captain", "who is the captain of newcastle", "newcastles current captain"],
+     "responses": ["The current captain of Newcastle United is Jamaal Lascelles."]
+},
+    {"tag": "newcastle_nickname",
+     "patterns": ["what is newcastles nickname", "what do they call newcastle", "newcastles other name"],
+     "responses": ["Newcastle United is known as 'The Magpies'."]
+},
+    {"tag": "newcastle_colors",
+     "patterns": ["what are newcastles colors", "what color does newcastle wear", "newcastles team colors"],
+     "responses": ["Newcastle's colors are black and white."]
+},
+    {"tag": "newcastle_titles",
+     "patterns": ["how many premier league titles has newcastle won", "how many league titles does newcastle have"],
+     "responses": ["Newcastle has won 4 First Division titles, but none in the Premier League era."]
+},
+    {"tag": "newcastle_champions_league",
+     "patterns": ["has newcastle won the champions league", "how many champions league titles has newcastle won"],
+     "responses": ["Newcastle has never won the Champions League or European Cup."]
+},
+    {"tag": "newcastle_owner",
+     "patterns": ["who owns newcastle", "who is newcastles owner", "newcastles current owner"],
+     "responses": ["Newcastle United is owned by the Public Investment Fund of Saudi Arabia."]
+},
+    {"tag": "newcastle_best_player",
+     "patterns": ["who is newcastles best player ever", "newcastles greatest player", "who is newcastles legend"],
+     "responses": ["Alan Shearer is widely considered Newcastle's greatest player of all time."]
+},
+    {"tag": "newcastle_current_squad",
+     "patterns": ["who are newcastles current players", "newcastles squad", "who plays for newcastle now"],
+     "responses": ["Newcastle's current squad includes players like Alexander Isak, Bruno Guimarães, Kieran Trippier, and Nick Pope."]
+},
+    {"tag": "newcastle_st_james",
+     "patterns": ["what is st james park", "newcastles home ground"],
+     "responses": ["St. James' Park is Newcastle United's home ground, located in the city center of Newcastle."]
+},
+    {"tag": "nottingham_manager",
+     "patterns": ["who is the current manager of nottingham forest", "who is nottingham forests manager", "who manages nottingham forest"],
+     "responses": ["The current manager of Nottingham Forest is Nuno Espírito Santo."]
+},
+    {"tag": "nottingham_stadium",
+     "patterns": ["where is nottingham forests stadium", "what stadium does nottingham forest play at", "where does nottingham forest play"],
+     "responses": ["Nottingham Forest plays at the City Ground in Nottingham."]
+},
+    {"tag": "nottingham_capacity",
+     "patterns": ["what is the capacity of the city ground", "how many people can the city ground hold"],
+     "responses": ["The City Ground has a capacity of 30,445 people."]
+},
+    {"tag": "nottingham_rival",
+     "patterns": ["who is nottingham forests main rival", "who does nottingham forest hate", "nottingham forests biggest rival"],
+     "responses": ["Nottingham Forest's main rival is Derby County, known as the East Midlands Derby."]
+},
+    {"tag": "nottingham_founded",
+     "patterns": ["when was nottingham forest founded", "when did nottingham forest start", "how old is nottingham forest"],
+     "responses": ["Nottingham Forest was founded in 1865."]
+},
+    {"tag": "nottingham_captain",
+     "patterns": ["who is nottingham forests captain", "who is the captain of nottingham forest", "nottingham forests current captain"],
+     "responses": ["The current captain of Nottingham Forest is Joe Worrall."]
+},
+    {"tag": "nottingham_nickname",
+     "patterns": ["what is nottingham forests nickname", "what do they call nottingham forest", "nottingham forests other name"],
+     "responses": ["Nottingham Forest is known as 'The Reds'."]
+},
+    {"tag": "nottingham_colors",
+     "patterns": ["what are nottingham forests colors", "what color does nottingham forest wear", "nottingham forests team colors"],
+     "responses": ["Nottingham Forest's colors are red and white."]
+},
+    {"tag": "nottingham_titles",
+     "patterns": ["how many premier league titles has nottingham forest won", "how many league titles does nottingham forest have"],
+     "responses": ["Nottingham Forest has won 1 First Division title, but none in the Premier League era."]
+},
+    {"tag": "nottingham_champions_league",
+     "patterns": ["has nottingham forest won the champions league", "how many champions league titles has nottingham forest won"],
+     "responses": ["Nottingham Forest has won the European Cup 2 times (1979, 1980)."]
+},
+    {"tag": "nottingham_owner",
+     "patterns": ["who owns nottingham forest", "who is nottingham forests owner", "nottingham forests current owner"],
+     "responses": ["Nottingham Forest is owned by Evangelos Marinakis."]
+},
+    {"tag": "nottingham_best_player",
+     "patterns": ["who is nottingham forests best player ever", "nottingham forests greatest player", "who is nottingham forests legend"],
+     "responses": ["Brian Clough is widely considered Nottingham Forest's greatest manager, while John Robertson is one of their greatest players."]
+},
+    {"tag": "nottingham_current_squad",
+     "patterns": ["who are nottingham forests current players", "nottingham forests squad", "who plays for nottingham forest now"],
+     "responses": ["Nottingham Forest's current squad includes players like Morgan Gibbs-White, Taiwo Awoniyi, Brennan Johnson, and Dean Henderson."]
+},
+    {"tag": "nottingham_city_ground",
+     "patterns": ["what is the city ground", "nottingham forests home ground"],
+     "responses": ["The City Ground is Nottingham Forest's home ground, located on the banks of the River Trent."]
+},
+    {"tag": "tottenham_manager",
+     "patterns": ["who is the current manager of tottenham", "who is tottenhams manager", "who manages tottenham"],
+     "responses": ["The current manager of Tottenham Hotspur is Ange Postecoglou."]
+},
+    {"tag": "tottenham_stadium",
+     "patterns": ["where is tottenhams stadium", "what stadium does tottenham play at", "where does tottenham play"],
+     "responses": ["Tottenham Hotspur plays at the Tottenham Hotspur Stadium in London."]
+},
+    {"tag": "tottenham_capacity",
+     "patterns": ["what is the capacity of the tottenham hotspur stadium", "how many people can the tottenham hotspur stadium hold"],
+     "responses": ["The Tottenham Hotspur Stadium has a capacity of 62,850 people."]
+},
+    {"tag": "tottenham_rival",
+     "patterns": ["who is tottenhams main rival", "who does tottenham hate", "tottenhams biggest rival"],
+     "responses": ["Tottenham's main rival is Arsenal, known as the North London Derby."]
+},
+    {"tag": "tottenham_founded",
+     "patterns": ["when was tottenham founded", "when did tottenham start", "how old is tottenham"],
+     "responses": ["Tottenham Hotspur was founded in 1882."]
+},
+    {"tag": "tottenham_captain",
+     "patterns": ["who is tottenhams captain", "who is the captain of tottenham", "tottenhams current captain"],
+     "responses": ["The current captain of Tottenham Hotspur is Son Heung-min."]
+},
+    {"tag": "tottenham_nickname",
+     "patterns": ["what is tottenhams nickname", "what do they call tottenham", "tottenhams other name"],
+     "responses": ["Tottenham Hotspur is known as 'Spurs'."]
+},
+    {"tag": "tottenham_colors",
+     "patterns": ["what are tottenhams colors", "what color does tottenham wear", "tottenhams team colors"],
+     "responses": ["Tottenham's colors are white and navy blue."]
+},
+    {"tag": "tottenham_titles",
+     "patterns": ["how many premier league titles has tottenham won", "how many league titles does tottenham have"],
+     "responses": ["Tottenham has won 2 First Division titles, but none in the Premier League era."]
+},
+    {"tag": "tottenham_champions_league",
+     "patterns": ["has tottenham won the champions league", "how many champions league titles has tottenham won"],
+     "responses": ["Tottenham has never won the Champions League or European Cup."]
+},
+    {"tag": "tottenham_owner",
+     "patterns": ["who owns tottenham", "who is tottenhams owner", "tottenhams current owner"],
+     "responses": ["Tottenham Hotspur is owned by ENIC Group, with Daniel Levy as chairman."]
+},
+    {"tag": "tottenham_best_player",
+     "patterns": ["who is tottenhams best player ever", "tottenhams greatest player", "who is tottenhams legend"],
+     "responses": ["Jimmy Greaves is widely considered Tottenham's greatest player of all time."]
+},
+    {"tag": "tottenham_current_squad",
+     "patterns": ["who are tottenhams current players", "tottenhams squad", "who plays for tottenham now"],
+     "responses": ["Tottenham's current squad includes players like Son Heung-min, Harry Kane, Dejan Kulusevski, and Hugo Lloris."]
+},
+    {"tag": "tottenham_new_stadium",
+     "patterns": ["what is the tottenham hotspur stadium", "tottenhams new home ground"],
+     "responses": ["The Tottenham Hotspur Stadium is Tottenham's new home ground, opened in 2019."]
+},
+    {"tag": "west_ham_manager",
+     "patterns": ["who is the current manager of west ham", "who is west hams manager", "who manages west ham"],
+     "responses": ["The current manager of West Ham United is Julen Lopetegui."]
+},
+    {"tag": "west_ham_stadium",
+     "patterns": ["where is west hams stadium", "what stadium does west ham play at", "where does west ham play"],
+     "responses": ["West Ham United plays at the London Stadium in London."]
+},
+    {"tag": "west_ham_capacity",
+     "patterns": ["what is the capacity of the london stadium", "how many people can the london stadium hold"],
+     "responses": ["The London Stadium has a capacity of 66,000 people."]
+},
+    {"tag": "west_ham_rival",
+     "patterns": ["who is west hams main rival", "who does west ham hate", "west hams biggest rival"],
+     "responses": ["West Ham's main rival is Millwall, known as the East London Derby."]
+},
+    {"tag": "west_ham_founded",
+     "patterns": ["when was west ham founded", "when did west ham start", "how old is west ham"],
+     "responses": ["West Ham United was founded in 1895."]
+},
+    {"tag": "west_ham_captain",
+     "patterns": ["who is west hams captain", "who is the captain of west ham", "west hams current captain"],
+     "responses": ["The current captain of West Ham United is Declan Rice."]
+},
+    {"tag": "west_ham_nickname",
+     "patterns": ["what is west hams nickname", "what do they call west ham", "west hams other name"],
+     "responses": ["West Ham United is known as 'The Hammers'."]
+},
+    {"tag": "west_ham_colors",
+     "patterns": ["what are west hams colors", "what color does west ham wear", "west hams team colors"],
+     "responses": ["West Ham's colors are claret and blue."]
+},
+    {"tag": "west_ham_titles",
+     "patterns": ["how many premier league titles has west ham won", "how many league titles does west ham have"],
+     "responses": ["West Ham has never won the Premier League or First Division title."]
+},
+    {"tag": "west_ham_champions_league",
+     "patterns": ["has west ham won the champions league", "how many champions league titles has west ham won"],
+     "responses": ["West Ham has never won the Champions League or European Cup."]
+},
+    {"tag": "west_ham_owner",
+     "patterns": ["who owns west ham", "who is west hams owner", "west hams current owner"],
+     "responses": ["West Ham United is owned by David Sullivan and David Gold."]
+},
+    {"tag": "west_ham_best_player",
+     "patterns": ["who is west hams best player ever", "west hams greatest player", "who is west hams legend"],
+     "responses": ["Bobby Moore is widely considered West Ham's greatest player of all time."]
+},
+    {"tag": "west_ham_current_squad",
+     "patterns": ["who are west hams current players", "west hams squad", "who plays for west ham now"],
+     "responses": ["West Ham's current squad includes players like Declan Rice, Jarrod Bowen, Michail Antonio, and Lukasz Fabianski."]
+},
+    {"tag": "west_ham_london_stadium",
+     "patterns": ["what is the london stadium", "west hams home ground"],
+     "responses": ["The London Stadium is West Ham's home ground, originally built for the 2012 Olympics."]
+},
+    {"tag": "wolves_manager",
+     "patterns": ["who is the current manager of wolves", "who is wolves manager", "who manages wolves"],
+     "responses": ["The current manager of Wolverhampton Wanderers is Gary O'Neil."]
+},
+    {"tag": "wolves_stadium",
+     "patterns": ["where is wolves stadium", "what stadium does wolves play at", "where does wolves play"],
+     "responses": ["Wolverhampton Wanderers plays at Molineux Stadium in Wolverhampton."]
+},
+    {"tag": "wolves_capacity",
+     "patterns": ["what is the capacity of molineux stadium", "how many people can molineux stadium hold"],
+     "responses": ["Molineux Stadium has a capacity of 31,700 people."]
+},
+    {"tag": "wolves_rival",
+     "patterns": ["who is wolves main rival", "who does wolves hate", "wolves biggest rival"],
+     "responses": ["Wolves' main rival is West Bromwich Albion, known as the Black Country Derby."]
+},
+    {"tag": "wolves_founded",
+     "patterns": ["when was wolves founded", "when did wolves start", "how old is wolves"],
+     "responses": ["Wolverhampton Wanderers was founded in 1877."]
+},
+    {"tag": "wolves_captain",
+     "patterns": ["who is wolves captain", "who is the captain of wolves", "wolves current captain"],
+     "responses": ["The current captain of Wolverhampton Wanderers is Max Kilman."]
+},
+    {"tag": "wolves_nickname",
+     "patterns": ["what is wolves nickname", "what do they call wolves", "wolves other name"],
+     "responses": ["Wolverhampton Wanderers is known as 'Wolves'."]
+},
+    {"tag": "wolves_colors",
+     "patterns": ["what are wolves colors", "what color does wolves wear", "wolves team colors"],
+     "responses": ["Wolves' colors are gold and black."]
+},
+    {"tag": "wolves_titles",
+     "patterns": ["how many premier league titles has wolves won", "how many league titles does wolves have"],
+     "responses": ["Wolves has won 3 First Division titles, but none in the Premier League era."]
+},
+    {"tag": "wolves_champions_league",
+     "patterns": ["has wolves won the champions league", "how many champions league titles has wolves won"],
+     "responses": ["Wolves has never won the Champions League or European Cup."]
+},
+    {"tag": "wolves_owner",
+     "patterns": ["who owns wolves", "who is wolves owner", "wolves current owner"],
+     "responses": ["Wolverhampton Wanderers is owned by Fosun International."]
+},
+    {"tag": "wolves_best_player",
+     "patterns": ["who is wolves best player ever", "wolves greatest player", "who is wolves legend"],
+     "responses": ["Billy Wright is widely considered Wolves' greatest player of all time."]
+},
+    {"tag": "wolves_current_squad",
+     "patterns": ["who are wolves current players", "wolves squad", "who plays for wolves now"],
+     "responses": ["Wolves' current squad includes players like Pedro Neto, Matheus Cunha, José Sá, and Max Kilman."]
+},
+    {"tag": "wolves_molineux",
+     "patterns": ["what is molineux stadium", "wolves home ground"],
+     "responses": ["Molineux Stadium is Wolves' home ground, one of the oldest football stadiums in England."]
+},
+    {"tag": "bournemouth_manager",
+     "patterns": ["who is the current manager of bournemouth", "who is bournemouths manager", "who manages bournemouth"],
+     "responses": ["The current manager of Bournemouth is Andoni Iraola."]
+},
+    {"tag": "bournemouth_stadium",
+     "patterns": ["where is bournemouths stadium", "what stadium does bournemouth play at", "where does bournemouth play"],
+     "responses": ["Bournemouth plays at the Vitality Stadium in Bournemouth."]
+},
+    {"tag": "bournemouth_capacity",
+     "patterns": ["what is the capacity of the vitality stadium", "how many people can the vitality stadium hold"],
+     "responses": ["The Vitality Stadium has a capacity of 11,307 people."]
+},
+    {"tag": "bournemouth_rival",
+     "patterns": ["who is bournemouths main rival", "who does bournemouth hate", "bournemouths biggest rival"],
+     "responses": ["Bournemouth's main rival is Southampton, known as the South Coast Derby."]
+},
+    {"tag": "bournemouth_founded",
+     "patterns": ["when was bournemouth founded", "when did bournemouth start", "how old is bournemouth"],
+     "responses": ["Bournemouth was founded in 1899."]
+},
+    {"tag": "bournemouth_captain",
+     "patterns": ["who is bournemouths captain", "who is the captain of bournemouth", "bournemouths current captain"],
+     "responses": ["The current captain of Bournemouth is Neto."]
+},
+    {"tag": "bournemouth_nickname",
+     "patterns": ["what is bournemouths nickname", "what do they call bournemouth", "bournemouths other name"],
+     "responses": ["Bournemouth is known as 'The Cherries'."]
+},
+    {"tag": "bournemouth_colors",
+     "patterns": ["what are bournemouths colors", "what color does bournemouth wear", "bournemouths team colors"],
+     "responses": ["Bournemouth's colors are red and black."]
+},
+    {"tag": "bournemouth_titles",
+     "patterns": ["how many premier league titles has bournemouth won", "how many league titles does bournemouth have"],
+     "responses": ["Bournemouth has never won the Premier League title."]
+},
+    {"tag": "bournemouth_champions_league",
+     "patterns": ["has bournemouth won the champions league", "how many champions league titles has bournemouth won"],
+     "responses": ["Bournemouth has never won the Champions League."]
+},
+    {"tag": "bournemouth_owner",
+     "patterns": ["who owns bournemouth", "who is bournemouths owner", "bournemouths current owner"],
+     "responses": ["Bournemouth is owned by Bill Foley through his company AFCB Enterprises LLC."]
+},
+    {"tag": "bournemouth_best_player",
+     "patterns": ["who is bournemouths best player ever", "bournemouths greatest player", "who is bournemouths legend"],
+     "responses": ["Harry Redknapp is widely considered Bournemouth's greatest manager, leading them to promotion."]
+},
+    {"tag": "bournemouth_current_squad",
+     "patterns": ["who are bournemouths current players", "bournemouths squad", "who plays for bournemouth now"],
+     "responses": ["Bournemouth's current squad includes players like Dominic Solanke, Ryan Christie, and Philip Billing."]
+},
+    {"tag": "bournemouth_vitality",
+     "patterns": ["what is the vitality stadium", "bournemouths home ground"],
+     "responses": ["The Vitality Stadium is Bournemouth's home ground, located in Bournemouth."]
+},
+    {"tag": "bournemouth_fa_cup",
+     "patterns": ["how many fa cups has bournemouth won", "bournemouth fa cup wins"],
+     "responses": ["Bournemouth has never won the FA Cup."]
+},
+    {"tag": "bournemouth_league_cup",
+     "patterns": ["how many league cups has bournemouth won", "bournemouth league cup wins"],
+     "responses": ["Bournemouth has never won the League Cup."]
+},
+    {"tag": "bournemouth_highest_score",
+     "patterns": ["what is bournemouths highest score", "bournemouth biggest win"],
+     "responses": ["Bournemouth's highest score was 11-0 against Margate in 1971."]
+},
+    {"tag": "bournemouth_youngest_player",
+     "patterns": ["who is bournemouths youngest player", "youngest bournemouth player"],
+     "responses": ["Jaidon Anthony was Bournemouth's youngest player, making his debut at 18 years old."]
+},
+    {"tag": "bournemouth_goals_scored",
+     "patterns": ["how many goals has bournemouth scored", "bournemouth total goals"],
+     "responses": ["Bournemouth has scored over 500 goals in their history."]
+},
+    {"tag": "bournemouth_clean_sheets",
+     "patterns": ["how many clean sheets has bournemouth kept", "bournemouth clean sheet record"],
+     "responses": ["Bournemouth has kept over 50 clean sheets in their history."]
+},
+    {"tag": "bournemouth_attendance",
+     "patterns": ["what is bournemouths highest attendance", "bournemouth record attendance"],
+     "responses": ["Bournemouth's highest attendance was 28,799 against Manchester United in 2016."]
+},
+    {"tag": "bournemouth_derby",
+     "patterns": ["what is the south coast derby", "bournemouth vs southampton"],
+     "responses": ["The South Coast Derby is the match between Bournemouth and Southampton."]
+},
+    {"tag": "bournemouth_europe",
+     "patterns": ["how many european trophies has bournemouth won", "bournemouth european success"],
+     "responses": ["Bournemouth has never won a European trophy."]
+},
+    {"tag": "bournemouth_formation",
+     "patterns": ["what formation does bournemouth play", "bournemouth tactics"],
+     "responses": ["Bournemouth typically plays in a 4-3-3 formation."]
+},
+    {"tag": "bournemouth_academy",
+     "patterns": ["what is bournemouths academy called", "bournemouth youth system"],
+     "responses": ["Bournemouth's academy is called the Bournemouth Academy."]
+},
+    {"tag": "bournemouth_kit",
+     "patterns": ["who makes bournemouths kit", "bournemouth kit manufacturer"],
+     "responses": ["Bournemouth's kit is made by Umbro."]
+},
+    {"tag": "bournemouth_sponsor",
+     "patterns": ["who sponsors bournemouth", "bournemouth main sponsor"],
+     "responses": ["Bournemouth's main sponsor is Dafabet."]
+},
+    {"tag": "bournemouth_song",
+     "patterns": ["what is bournemouths anthem", "bournemouth club song"],
+     "responses": ["Bournemouth's anthem is 'We're the Red and Black Army'."]
+},
+    {"tag": "brentford_manager",
+     "patterns": ["who is the current manager of brentford", "who is brentfords manager", "who manages brentford"],
+     "responses": ["The current manager of Brentford is Thomas Frank."]
+},
+    {"tag": "brentford_stadium",
+     "patterns": ["where is brentfords stadium", "what stadium does brentford play at", "where does brentford play"],
+     "responses": ["Brentford plays at the Gtech Community Stadium in Brentford."]
+},
+    {"tag": "brentford_capacity",
+     "patterns": ["what is the capacity of the gtech community stadium", "how many people can the gtech community stadium hold"],
+     "responses": ["The Gtech Community Stadium has a capacity of 17,250 people."]
+},
+    {"tag": "brentford_rival",
+     "patterns": ["who is brentfords main rival", "who does brentford hate", "brentfords biggest rival"],
+     "responses": ["Brentford's main rival is Fulham, known as the West London Derby."]
+},
+    {"tag": "brentford_founded",
+     "patterns": ["when was brentford founded", "when did brentford start", "how old is brentford"],
+     "responses": ["Brentford was founded in 1889."]
+},
+    {"tag": "brentford_captain",
+     "patterns": ["who is brentfords captain", "who is the captain of brentford", "brentfords current captain"],
+     "responses": ["The current captain of Brentford is Christian Nørgaard."]
+},
+    {"tag": "brentford_nickname",
+     "patterns": ["what is brentfords nickname", "what do they call brentford", "brentfords other name"],
+     "responses": ["Brentford is known as 'The Bees'."]
+},
+    {"tag": "brentford_colors",
+     "patterns": ["what are brentfords colors", "what color does brentford wear", "brentfords team colors"],
+     "responses": ["Brentford's colors are red and white."]
+},
+    {"tag": "brentford_titles",
+     "patterns": ["how many premier league titles has brentford won", "how many league titles does brentford have"],
+     "responses": ["Brentford has never won the Premier League title."]
+},
+    {"tag": "brentford_champions_league",
+     "patterns": ["has brentford won the champions league", "how many champions league titles has brentford won"],
+     "responses": ["Brentford has never won the Champions League."]
+},
+    {"tag": "brentford_owner",
+     "patterns": ["who owns brentford", "who is brentfords owner", "brentfords current owner"],
+     "responses": ["Brentford is owned by Matthew Benham."]
+},
+    {"tag": "brentford_best_player",
+     "patterns": ["who is brentfords best player ever", "brentfords greatest player", "who is brentfords legend"],
+     "responses": ["Ivan Toney is widely considered Brentford's greatest player of all time."]
+},
+    {"tag": "brentford_current_squad",
+     "patterns": ["who are brentfords current players", "brentfords squad", "who plays for brentford now"],
+     "responses": ["Brentford's current squad includes players like Ivan Toney, Bryan Mbeumo, and Christian Nørgaard."]
+},
+    {"tag": "brentford_gtech",
+     "patterns": ["what is the gtech community stadium", "brentfords home ground"],
+     "responses": ["The Gtech Community Stadium is Brentford's home ground, located in Brentford."]
+},
+    {"tag": "brentford_fa_cup",
+     "patterns": ["how many fa cups has brentford won", "brentford fa cup wins"],
+     "responses": ["Brentford has never won the FA Cup."]
+},
+    {"tag": "brentford_league_cup",
+     "patterns": ["how many league cups has brentford won", "brentford league cup wins"],
+     "responses": ["Brentford has never won the League Cup."]
+},
+    {"tag": "brentford_highest_score",
+     "patterns": ["what is brentfords highest score", "brentford biggest win"],
+     "responses": ["Brentford's highest score was 9-0 against Wrexham in 1963."]
+},
+    {"tag": "brentford_youngest_player",
+     "patterns": ["who is brentfords youngest player", "youngest brentford player"],
+     "responses": ["Marcus Forss was Brentford's youngest player, making his debut at 18 years old."]
+},
+    {"tag": "brentford_goals_scored",
+     "patterns": ["how many goals has brentford scored", "brentford total goals"],
+     "responses": ["Brentford has scored over 1,000 goals in their history."]
+},
+    {"tag": "brentford_clean_sheets",
+     "patterns": ["how many clean sheets has brentford kept", "brentford clean sheet record"],
+     "responses": ["Brentford has kept over 100 clean sheets in their history."]
+},
+    {"tag": "brentford_attendance",
+     "patterns": ["what is brentfords highest attendance", "brentford record attendance"],
+     "responses": ["Brentford's highest attendance was 17,250 against Arsenal in 2021."]
+},
+    {"tag": "brentford_derby",
+     "patterns": ["what is the west london derby", "brentford vs fulham"],
+     "responses": ["The West London Derby is the match between Brentford and Fulham."]
+},
+    {"tag": "brentford_europe",
+     "patterns": ["how many european trophies has brentford won", "brentford european success"],
+     "responses": ["Brentford has never won a European trophy."]
+},
+    {"tag": "brentford_formation",
+     "patterns": ["what formation does brentford play", "brentford tactics"],
+     "responses": ["Brentford typically plays in a 3-5-2 formation."]
+},
+    {"tag": "brentford_academy",
+     "patterns": ["what is brentfords academy called", "brentford youth system"],
+     "responses": ["Brentford's academy is called the Brentford Academy."]
+},
+    {"tag": "brentford_kit",
+     "patterns": ["who makes brentfords kit", "brentford kit manufacturer"],
+     "responses": ["Brentford's kit is made by Umbro."]
+},
+    {"tag": "brentford_sponsor",
+     "patterns": ["who sponsors brentford", "brentford main sponsor"],
+     "responses": ["Brentford's main sponsor is Hollywoodbets."]
+},
+    {"tag": "brentford_song",
+     "patterns": ["what is brentfords anthem", "brentford club song"],
+     "responses": ["Brentford's anthem is 'Hey Jude'."]
+},
+    {"tag": "leeds_manager",
+     "patterns": ["who is the current manager of leeds", "who is leeds manager", "who manages leeds"],
+     "responses": ["The current manager of Leeds United is Daniel Farke."]
+},
+    {"tag": "leeds_stadium",
+     "patterns": ["where is leeds stadium", "what stadium does leeds play at", "where does leeds play"],
+     "responses": ["Leeds United plays at Elland Road in Leeds."]
+},
+    {"tag": "leeds_capacity",
+     "patterns": ["what is the capacity of elland road", "how many people can elland road hold"],
+     "responses": ["Elland Road has a capacity of 37,792 people."]
+},
+    {"tag": "leeds_rival",
+     "patterns": ["who is leeds main rival", "who does leeds hate", "leeds biggest rival"],
+     "responses": ["Leeds' main rival is Manchester United, known as the Roses Derby."]
+},
+    {"tag": "leeds_founded",
+     "patterns": ["when was leeds founded", "when did leeds start", "how old is leeds"],
+     "responses": ["Leeds United was founded in 1919."]
+},
+    {"tag": "leeds_captain",
+     "patterns": ["who is leeds captain", "who is the captain of leeds", "leeds current captain"],
+     "responses": ["The current captain of Leeds United is Liam Cooper."]
+},
+    {"tag": "leeds_nickname",
+     "patterns": ["what is leeds nickname", "what do they call leeds", "leeds other name"],
+     "responses": ["Leeds United is known as 'The Whites'."]
+},
+    {"tag": "leeds_colors",
+     "patterns": ["what are leeds colors", "what color does leeds wear", "leeds team colors"],
+     "responses": ["Leeds' colors are white and blue."]
+},
+    {"tag": "leeds_titles",
+     "patterns": ["how many premier league titles has leeds won", "how many league titles does leeds have"],
+     "responses": ["Leeds has won 3 First Division titles, but none in the Premier League era."]
+},
+    {"tag": "leeds_champions_league",
+     "patterns": ["has leeds won the champions league", "how many champions league titles has leeds won"],
+     "responses": ["Leeds has never won the Champions League or European Cup."]
+},
+    {"tag": "leeds_owner",
+     "patterns": ["who owns leeds", "who is leeds owner", "leeds current owner"],
+     "responses": ["Leeds United is owned by 49ers Enterprises."]
+},
+    {"tag": "leeds_best_player",
+     "patterns": ["who is leeds best player ever", "leeds greatest player", "who is leeds legend"],
+     "responses": ["Billy Bremner is widely considered Leeds' greatest player of all time."]
+},
+    {"tag": "leeds_current_squad",
+     "patterns": ["who are leeds current players", "leeds squad", "who plays for leeds now"],
+     "responses": ["Leeds' current squad includes players like Patrick Bamford, Kalvin Phillips, Raphinha, and Illan Meslier."]
+},
+    {"tag": "leeds_elland_road",
+     "patterns": ["what is elland road", "leeds home ground"],
+     "responses": ["Elland Road is Leeds United's home ground, one of the most iconic stadiums in English football."]
+},
+    {"tag": "burnley_manager",
+     "patterns": ["who is the current manager of burnley", "who is burnleys manager", "who manages burnley"],
+     "responses": ["The current manager of Burnley FC is Vincent Kompany."]
+},
+    {"tag": "burnley_stadium",
+     "patterns": ["where is burnleys stadium", "what stadium does burnley play at", "where does burnley play"],
+     "responses": ["Burnley FC plays at Turf Moor in Burnley."]
+},
+    {"tag": "burnley_capacity",
+     "patterns": ["what is the capacity of turf moor", "how many people can turf moor hold"],
+     "responses": ["Turf Moor has a capacity of 21,944 people."]
+},
+    {"tag": "burnley_rival",
+     "patterns": ["who is burnleys main rival", "who does burnley hate", "burnleys biggest rival"],
+     "responses": ["Burnley's main rival is Blackburn Rovers, known as the East Lancashire Derby."]
+},
+    {"tag": "burnley_founded",
+     "patterns": ["when was burnley founded", "when did burnley start", "how old is burnley"],
+     "responses": ["Burnley FC was founded in 1882."]
+},
+    {"tag": "burnley_captain",
+     "patterns": ["who is burnleys captain", "who is the captain of burnley", "burnleys current captain"],
+     "responses": ["The current captain of Burnley FC is Ben Mee."]
+},
+    {"tag": "burnley_nickname",
+     "patterns": ["what is burnleys nickname", "what do they call burnley", "burnleys other name"],
+     "responses": ["Burnley FC is known as 'The Clarets'."]
+},
+    {"tag": "burnley_colors",
+     "patterns": ["what are burnleys colors", "what color does burnley wear", "burnleys team colors"],
+     "responses": ["Burnley's colors are claret and blue."]
+},
+    {"tag": "burnley_titles",
+     "patterns": ["how many premier league titles has burnley won", "how many league titles does burnley have"],
+     "responses": ["Burnley has won 2 First Division titles, but none in the Premier League era."]
+},
+    {"tag": "burnley_champions_league",
+     "patterns": ["has burnley won the champions league", "how many champions league titles has burnley won"],
+     "responses": ["Burnley has never won the Champions League or European Cup."]
+},
+    {"tag": "burnley_owner",
+     "patterns": ["who owns burnley", "who is burnleys owner", "burnleys current owner"],
+     "responses": ["Burnley FC is owned by ALK Capital."]
+},
+    {"tag": "burnley_best_player",
+     "patterns": ["who is burnleys best player ever", "burnleys greatest player", "who is burnleys legend"],
+     "responses": ["Jimmy McIlroy is widely considered Burnley's greatest player of all time."]
+},
+    {"tag": "burnley_current_squad",
+     "patterns": ["who are burnleys current players", "burnleys squad", "who plays for burnley now"],
+     "responses": ["Burnley's current squad includes players like Nick Pope, James Tarkowski, Dwight McNeil, and Ashley Barnes."]
+},
+    {"tag": "burnley_turf_moor",
+     "patterns": ["what is turf moor", "burnleys home ground"],
+     "responses": ["Turf Moor is Burnley FC's home ground, one of the oldest football stadiums in England."]
+},
+    {"tag": "sunderland_manager",
+     "patterns": ["who is the current manager of sunderland", "who is sunderlands manager", "who manages sunderland"],
+     "responses": ["The current manager of Sunderland AFC is Tony Mowbray."]
+},
+    {"tag": "sunderland_stadium",
+     "patterns": ["where is sunderlands stadium", "what stadium does sunderland play at", "where does sunderland play"],
+     "responses": ["Sunderland AFC plays at the Stadium of Light in Sunderland."]
+},
+    {"tag": "sunderland_capacity",
+     "patterns": ["what is the capacity of the stadium of light", "how many people can the stadium of light hold"],
+     "responses": ["The Stadium of Light has a capacity of 48,707 people."]
+},
+    {"tag": "sunderland_rival",
+     "patterns": ["who is sunderlands main rival", "who does sunderland hate", "sunderlands biggest rival"],
+     "responses": ["Sunderland's main rival is Newcastle United, known as the Tyne-Wear Derby."]
+},
+    {"tag": "sunderland_founded",
+     "patterns": ["when was sunderland founded", "when did sunderland start", "how old is sunderland"],
+     "responses": ["Sunderland AFC was founded in 1879."]
+},
+    {"tag": "sunderland_captain",
+     "patterns": ["who is sunderlands captain", "who is the captain of sunderland", "sunderlands current captain"],
+     "responses": ["The current captain of Sunderland AFC is Corry Evans."]
+},
+    {"tag": "sunderland_nickname",
+     "patterns": ["what is sunderlands nickname", "what do they call sunderland", "sunderlands other name"],
+     "responses": ["Sunderland AFC is known as 'The Black Cats'."]
+},
+    {"tag": "sunderland_colors",
+     "patterns": ["what are sunderlands colors", "what color does sunderland wear", "sunderlands team colors"],
+     "responses": ["Sunderland's colors are red and white."]
+},
+    {"tag": "sunderland_titles",
+     "patterns": ["how many premier league titles has sunderland won", "how many league titles does sunderland have"],
+     "responses": ["Sunderland has won 6 First Division titles, but none in the Premier League era."]
+},
+    {"tag": "sunderland_champions_league",
+     "patterns": ["has sunderland won the champions league", "how many champions league titles has sunderland won"],
+     "responses": ["Sunderland has never won the Champions League or European Cup."]
+},
+    {"tag": "sunderland_owner",
+     "patterns": ["who owns sunderland", "who is sunderlands owner", "sunderlands current owner"],
+     "responses": ["Sunderland AFC is owned by Kyril Louis-Dreyfus."]
+},
+    {"tag": "sunderland_best_player",
+     "patterns": ["who is sunderlands best player ever", "sunderlands greatest player", "who is sunderlands legend"],
+     "responses": ["Raich Carter is widely considered Sunderland's greatest player of all time."]
+},
+    {"tag": "sunderland_current_squad",
+     "patterns": ["who are sunderlands current players", "sunderlands squad", "who plays for sunderland now"],
+     "responses": ["Sunderland's current squad includes players like Jack Clarke, Ross Stewart, Dan Neil, and Anthony Patterson."]
+},
+    {"tag": "sunderland_stadium_of_light",
+     "patterns": ["what is the stadium of light", "sunderlands home ground"],
+     "responses": ["The Stadium of Light is Sunderland AFC's home ground, one of the largest stadiums in the North East."]
+},
+    {"tag": "manchester_united_fa_cup",
+     "patterns": ["how many fa cups has manchester united won", "manchester united fa cup wins"],
+     "responses": ["Manchester United has won the FA Cup 12 times."]
+},
+    {"tag": "manchester_united_league_cup",
+     "patterns": ["how many league cups has manchester united won", "manchester united league cup wins"],
+     "responses": ["Manchester United has won the League Cup 6 times."]
+},
+    {"tag": "manchester_united_highest_score",
+     "patterns": ["what is manchester uniteds highest score", "manchester united biggest win"],
+     "responses": ["Manchester United's highest score was 10-1 against Wolves in 1892."]
+},
+    {"tag": "manchester_united_youngest_player",
+     "patterns": ["who is manchester uniteds youngest player", "youngest manchester united player"],
+     "responses": ["Angel Gomes was Manchester United's youngest player, making his debut at 16 years old."]
+},
+    {"tag": "manchester_united_goals_scored",
+     "patterns": ["how many goals has manchester united scored", "manchester united total goals"],
+     "responses": ["Manchester United has scored over 2,000 goals in the Premier League era."]
+},
+    {"tag": "manchester_united_clean_sheets",
+     "patterns": ["how many clean sheets has manchester united kept", "manchester united clean sheet record"],
+     "responses": ["Manchester United has kept over 200 clean sheets in the Premier League era."]
+},
+    {"tag": "manchester_united_attendance",
+     "patterns": ["what is manchester uniteds highest attendance", "manchester united record attendance"],
+     "responses": ["Manchester United's highest attendance was 76,962 against Arsenal in 1948."]
+},
+    {"tag": "manchester_united_derby",
+     "patterns": ["what is the manchester derby", "manchester united vs manchester city"],
+     "responses": ["The Manchester Derby is the match between Manchester United and Manchester City."]
+},
+    {"tag": "manchester_united_europe",
+     "patterns": ["how many european trophies has manchester united won", "manchester united european success"],
+     "responses": ["Manchester United has won 6 European trophies (3 Champions League, 1 Europa League, 1 Cup Winners' Cup, 1 Super Cup)."]
+},
+    {"tag": "manchester_united_formation",
+     "patterns": ["what formation does manchester united play", "manchester united tactics"],
+     "responses": ["Manchester United typically plays in a 4-2-3-1 formation."]
+},
+    {"tag": "manchester_united_academy",
+     "patterns": ["what is manchester uniteds academy called", "manchester united youth system"],
+     "responses": ["Manchester United's academy is called the Manchester United Academy."]
+},
+    {"tag": "manchester_united_kit",
+     "patterns": ["who makes manchester uniteds kit", "manchester united kit manufacturer"],
+     "responses": ["Manchester United's kit is made by Adidas."]
+},
+    {"tag": "manchester_united_sponsor",
+     "patterns": ["who sponsors manchester united", "manchester united main sponsor"],
+     "responses": ["Manchester United's main sponsor is TeamViewer."]
+},
+    {"tag": "manchester_united_song",
+     "patterns": ["what is manchester uniteds anthem", "manchester united club song"],
+     "responses": ["Manchester United's anthem is 'Glory Glory Man United'."]
+},
+    {"tag": "arsenal_fa_cup",
+     "patterns": ["how many fa cups has arsenal won", "arsenal fa cup wins"],
+     "responses": ["Arsenal has won the FA Cup 14 times, more than any other club."]
+},
+    {"tag": "arsenal_league_cup",
+     "patterns": ["how many league cups has arsenal won", "arsenal league cup wins"],
+     "responses": ["Arsenal has won the League Cup 2 times."]
+},
+    {"tag": "arsenal_highest_score",
+     "patterns": ["what is arsenals highest score", "arsenal biggest win"],
+     "responses": ["Arsenal's highest score was 12-0 against Loughborough in 1900."]
+},
+    {"tag": "arsenal_youngest_player",
+     "patterns": ["who is arsenals youngest player", "youngest arsenal player"],
+     "responses": ["Cesc Fàbregas was Arsenal's youngest player, making his debut at 16 years old."]
+},
+    {"tag": "arsenal_goals_scored",
+     "patterns": ["how many goals has arsenal scored", "arsenal total goals"],
+     "responses": ["Arsenal has scored over 1,800 goals in the Premier League era."]
+},
+    {"tag": "arsenal_clean_sheets",
+     "patterns": ["how many clean sheets has arsenal kept", "arsenal clean sheet record"],
+     "responses": ["Arsenal has kept over 180 clean sheets in the Premier League era."]
+},
+    {"tag": "arsenal_attendance",
+     "patterns": ["what is arsenals highest attendance", "arsenal record attendance"],
+     "responses": ["Arsenal's highest attendance was 73,707 against Valencia in 2001."]
+},
+    {"tag": "arsenal_derby",
+     "patterns": ["what is the north london derby", "arsenal vs tottenham"],
+     "responses": ["The North London Derby is the match between Arsenal and Tottenham Hotspur."]
+},
+    {"tag": "arsenal_europe",
+     "patterns": ["how many european trophies has arsenal won", "arsenal european success"],
+     "responses": ["Arsenal has won 2 European trophies (1 Cup Winners' Cup, 1 Fairs Cup)."]
+},
+    {"tag": "arsenal_formation",
+     "patterns": ["what formation does arsenal play", "arsenal tactics"],
+     "responses": ["Arsenal typically plays in a 4-3-3 formation."]
+},
+    {"tag": "arsenal_academy",
+     "patterns": ["what is arsenals academy called", "arsenal youth system"],
+     "responses": ["Arsenal's academy is called the Arsenal Academy."]
+},
+    {"tag": "arsenal_kit",
+     "patterns": ["who makes arsenals kit", "arsenal kit manufacturer"],
+     "responses": ["Arsenal's kit is made by Adidas."]
+},
+    {"tag": "arsenal_sponsor",
+     "patterns": ["who sponsors arsenal", "arsenal main sponsor"],
+     "responses": ["Arsenal's main sponsor is Emirates."]
+},
+    {"tag": "arsenal_song",
+     "patterns": ["what is arsenals anthem", "arsenal club song"],
+     "responses": ["Arsenal's anthem is 'The Wonder of You'."]
+},
+    {"tag": "aston_villa_fa_cup",
+     "patterns": ["how many fa cups has aston villa won", "aston villa fa cup wins"],
+     "responses": ["Aston Villa has won the FA Cup 7 times."]
+},
+    {"tag": "aston_villa_league_cup",
+     "patterns": ["how many league cups has aston villa won", "aston villa league cup wins"],
+     "responses": ["Aston Villa has won the League Cup 5 times."]
+},
+    {"tag": "aston_villa_highest_score",
+     "patterns": ["what is aston villas highest score", "aston villa biggest win"],
+     "responses": ["Aston Villa's highest score was 12-2 against Accrington in 1892."]
+},
+    {"tag": "aston_villa_youngest_player",
+     "patterns": ["who is aston villas youngest player", "youngest aston villa player"],
+     "responses": ["Jack Grealish was Aston Villa's youngest player, making his debut at 16 years old."]
+},
+    {"tag": "aston_villa_goals_scored",
+     "patterns": ["how many goals has aston villa scored", "aston villa total goals"],
+     "responses": ["Aston Villa has scored over 1,200 goals in the Premier League era."]
+},
+    {"tag": "aston_villa_clean_sheets",
+     "patterns": ["how many clean sheets has aston villa kept", "aston villa clean sheet record"],
+     "responses": ["Aston Villa has kept over 120 clean sheets in the Premier League era."]
+},
+    {"tag": "aston_villa_attendance",
+     "patterns": ["what is aston villas highest attendance", "aston villa record attendance"],
+     "responses": ["Aston Villa's highest attendance was 76,588 against Derby County in 1946."]
+},
+    {"tag": "aston_villa_derby",
+     "patterns": ["what is the second city derby", "aston villa vs birmingham"],
+     "responses": ["The Second City Derby is the match between Aston Villa and Birmingham City."]
+},
+    {"tag": "aston_villa_europe",
+     "patterns": ["how many european trophies has aston villa won", "aston villa european success"],
+     "responses": ["Aston Villa has won 1 European trophy (1 European Cup in 1982)."]
+},
+    {"tag": "aston_villa_formation",
+     "patterns": ["what formation does aston villa play", "aston villa tactics"],
+     "responses": ["Aston Villa typically plays in a 4-3-3 formation."]
+},
+    {"tag": "aston_villa_academy",
+     "patterns": ["what is aston villas academy called", "aston villa youth system"],
+     "responses": ["Aston Villa's academy is called the Aston Villa Academy."]
+},
+    {"tag": "aston_villa_kit",
+     "patterns": ["who makes aston villas kit", "aston villa kit manufacturer"],
+     "responses": ["Aston Villa's kit is made by Castore."]
+},
+    {"tag": "aston_villa_sponsor",
+     "patterns": ["who sponsors aston villa", "aston villa main sponsor"],
+     "responses": ["Aston Villa's main sponsor is Cazoo."]
+},
+    {"tag": "aston_villa_song",
+     "patterns": ["what is aston villas anthem", "aston villa club song"],
+     "responses": ["Aston Villa's anthem is 'My Old Man'."]
+},
+    {"tag": "brighton_fa_cup",
+     "patterns": ["how many fa cups has brighton won", "brighton fa cup wins"],
+     "responses": ["Brighton has never won the FA Cup."]
+},
+    {"tag": "brighton_league_cup",
+     "patterns": ["how many league cups has brighton won", "brighton league cup wins"],
+     "responses": ["Brighton has never won the League Cup."]
+},
+    {"tag": "brighton_highest_score",
+     "patterns": ["what is brightons highest score", "brighton biggest win"],
+     "responses": ["Brighton's highest score was 8-0 against Norwich City in 2011."]
+},
+    {"tag": "brighton_youngest_player",
+     "patterns": ["who is brightons youngest player", "youngest brighton player"],
+     "responses": ["Ben White was Brighton's youngest player, making his debut at 18 years old."]
+},
+    {"tag": "brighton_goals_scored",
+     "patterns": ["how many goals has brighton scored", "brighton total goals"],
+     "responses": ["Brighton has scored over 200 goals in the Premier League era."]
+},
+    {"tag": "brighton_clean_sheets",
+     "patterns": ["how many clean sheets has brighton kept", "brighton clean sheet record"],
+     "responses": ["Brighton has kept over 40 clean sheets in the Premier League era."]
+},
+    {"tag": "brighton_attendance",
+     "patterns": ["what is brightons highest attendance", "brighton record attendance"],
+     "responses": ["Brighton's highest attendance was 36,747 against Arsenal in 2019."]
+},
+    {"tag": "brighton_derby",
+     "patterns": ["what is the m23 derby", "brighton vs crystal palace"],
+     "responses": ["The M23 Derby is the match between Brighton and Crystal Palace."]
+},
+    {"tag": "brighton_europe",
+     "patterns": ["how many european trophies has brighton won", "brighton european success"],
+     "responses": ["Brighton has never won a European trophy."]
+},
+    {"tag": "brighton_formation",
+     "patterns": ["what formation does brighton play", "brighton tactics"],
+     "responses": ["Brighton typically plays in a 3-5-2 formation."]
+},
+    {"tag": "brighton_academy",
+     "patterns": ["what is brightons academy called", "brighton youth system"],
+     "responses": ["Brighton's academy is called the Brighton & Hove Albion Academy."]
+},
+    {"tag": "brighton_kit",
+     "patterns": ["who makes brightons kit", "brighton kit manufacturer"],
+     "responses": ["Brighton's kit is made by Nike."]
+},
+    {"tag": "brighton_sponsor",
+     "patterns": ["who sponsors brighton", "brighton main sponsor"],
+     "responses": ["Brighton's main sponsor is American Express."]
+},
+    {"tag": "brighton_song",
+     "patterns": ["what is brightons anthem", "brighton club song"],
+     "responses": ["Brighton's anthem is 'Sussex by the Sea'."]
+},
+    {"tag": "chelsea_fa_cup",
+     "patterns": ["how many fa cups has chelsea won", "chelsea fa cup wins"],
+     "responses": ["Chelsea has won the FA Cup 8 times."]
+},
+    {"tag": "chelsea_league_cup",
+     "patterns": ["how many league cups has chelsea won", "chelsea league cup wins"],
+     "responses": ["Chelsea has won the League Cup 5 times."]
+},
+    {"tag": "chelsea_highest_score",
+     "patterns": ["what is chelseas highest score", "chelsea biggest win"],
+     "responses": ["Chelsea's highest score was 13-0 against Jeunesse Hautcharage in 1971."]
+},
+    {"tag": "chelsea_youngest_player",
+     "patterns": ["who is chelseas youngest player", "youngest chelsea player"],
+     "responses": ["Ian Hamilton was Chelsea's youngest player, making his debut at 16 years old."]
+},
+    {"tag": "chelsea_goals_scored",
+     "patterns": ["how many goals has chelsea scored", "chelsea total goals"],
+     "responses": ["Chelsea has scored over 1,900 goals in the Premier League era."]
+},
+    {"tag": "chelsea_clean_sheets",
+     "patterns": ["how many clean sheets has chelsea kept", "chelsea clean sheet record"],
+     "responses": ["Chelsea has kept over 190 clean sheets in the Premier League era."]
+},
+    {"tag": "chelsea_attendance",
+     "patterns": ["what is chelseas highest attendance", "chelsea record attendance"],
+     "responses": ["Chelsea's highest attendance was 82,905 against Arsenal in 1935."]
+},
+    {"tag": "chelsea_derby",
+     "patterns": ["what is the west london derby", "chelsea vs fulham"],
+     "responses": ["The West London Derby is the match between Chelsea and Fulham."]
+},
+    {"tag": "chelsea_europe",
+     "patterns": ["how many european trophies has chelsea won", "chelsea european success"],
+     "responses": ["Chelsea has won 6 European trophies (2 Champions League, 2 Europa League, 2 Cup Winners' Cup)."]
+},
+    {"tag": "chelsea_formation",
+     "patterns": ["what formation does chelsea play", "chelsea tactics"],
+     "responses": ["Chelsea typically plays in a 3-4-3 formation."]
+},
+    {"tag": "chelsea_academy",
+     "patterns": ["what is chelseas academy called", "chelsea youth system"],
+     "responses": ["Chelsea's academy is called the Chelsea Academy."]
+},
+    {"tag": "chelsea_kit",
+     "patterns": ["who makes chelseas kit", "chelsea kit manufacturer"],
+     "responses": ["Chelsea's kit is made by Nike."]
+},
+    {"tag": "chelsea_sponsor",
+     "patterns": ["who sponsors chelsea", "chelsea main sponsor"],
+     "responses": ["Chelsea's main sponsor is Three."]
+},
+    {"tag": "chelsea_song",
+     "patterns": ["what is chelseas anthem", "chelsea club song"],
+     "responses": ["Chelsea's anthem is 'Blue is the Colour'."]
+},
+    {"tag": "crystal_palace_fa_cup",
+     "patterns": ["how many fa cups has crystal palace won", "crystal palace fa cup wins"],
+     "responses": ["Crystal Palace has never won the FA Cup."]
+},
+    {"tag": "crystal_palace_league_cup",
+     "patterns": ["how many league cups has crystal palace won", "crystal palace league cup wins"],
+     "responses": ["Crystal Palace has never won the League Cup."]
+},
+    {"tag": "crystal_palace_highest_score",
+     "patterns": ["what is crystal palaces highest score", "crystal palace biggest win"],
+     "responses": ["Crystal Palace's highest score was 9-0 against Barrow in 1959."]
+},
+    {"tag": "crystal_palace_youngest_player",
+     "patterns": ["who is crystal palaces youngest player", "youngest crystal palace player"],
+     "responses": ["Victor Moses was Crystal Palace's youngest player, making his debut at 16 years old."]
+},
+    {"tag": "crystal_palace_goals_scored",
+     "patterns": ["how many goals has crystal palace scored", "crystal palace total goals"],
+     "responses": ["Crystal Palace has scored over 400 goals in the Premier League era."]
+},
+    {"tag": "crystal_palace_clean_sheets",
+     "patterns": ["how many clean sheets has crystal palace kept", "crystal palace clean sheet record"],
+     "responses": ["Crystal Palace has kept over 50 clean sheets in the Premier League era."]
+},
+    {"tag": "crystal_palace_attendance",
+     "patterns": ["what is crystal palaces highest attendance", "crystal palace record attendance"],
+     "responses": ["Crystal Palace's highest attendance was 51,482 against Burnley in 1979."]
+},
+    {"tag": "crystal_palace_derby",
+     "patterns": ["what is the m23 derby", "crystal palace vs brighton"],
+     "responses": ["The M23 Derby is the match between Crystal Palace and Brighton & Hove Albion."]
+},
+    {"tag": "crystal_palace_europe",
+     "patterns": ["how many european trophies has crystal palace won", "crystal palace european success"],
+     "responses": ["Crystal Palace has never won a European trophy."]
+},
+    {"tag": "crystal_palace_formation",
+     "patterns": ["what formation does crystal palace play", "crystal palace tactics"],
+     "responses": ["Crystal Palace typically plays in a 4-3-3 formation."]
+},
+    {"tag": "crystal_palace_academy",
+     "patterns": ["what is crystal palaces academy called", "crystal palace youth system"],
+     "responses": ["Crystal Palace's academy is called the Crystal Palace Academy."]
+},
+    {"tag": "crystal_palace_kit",
+     "patterns": ["who makes crystal palaces kit", "crystal palace kit manufacturer"],
+     "responses": ["Crystal Palace's kit is made by Macron."]
+},
+    {"tag": "crystal_palace_sponsor",
+     "patterns": ["who sponsors crystal palace", "crystal palace main sponsor"],
+     "responses": ["Crystal Palace's main sponsor is W88."]
+},
+    {"tag": "crystal_palace_song",
+     "patterns": ["what is crystal palaces anthem", "crystal palace club song"],
+     "responses": ["Crystal Palace's anthem is 'Glad All Over'."]
+},
+    {"tag": "everton_fa_cup",
+     "patterns": ["how many fa cups has everton won", "everton fa cup wins"],
+     "responses": ["Everton has won the FA Cup 5 times."]
+},
+    {"tag": "everton_league_cup",
+     "patterns": ["how many league cups has everton won", "everton league cup wins"],
+     "responses": ["Everton has never won the League Cup."]
+},
+    {"tag": "everton_highest_score",
+     "patterns": ["what is evertons highest score", "everton biggest win"],
+     "responses": ["Everton's highest score was 9-1 against Plymouth Argyle in 1930."]
+},
+    {"tag": "everton_youngest_player",
+     "patterns": ["who is evertons youngest player", "youngest everton player"],
+     "responses": ["Jose Baxter was Everton's youngest player, making his debut at 16 years old."]
+},
+    {"tag": "everton_goals_scored",
+     "patterns": ["how many goals has everton scored", "everton total goals"],
+     "responses": ["Everton has scored over 1,500 goals in the Premier League era."]
+},
+    {"tag": "everton_clean_sheets",
+     "patterns": ["how many clean sheets has everton kept", "everton clean sheet record"],
+     "responses": ["Everton has kept over 150 clean sheets in the Premier League era."]
+},
+    {"tag": "everton_attendance",
+     "patterns": ["what is evertons highest attendance", "everton record attendance"],
+     "responses": ["Everton's highest attendance was 78,299 against Liverpool in 1948."]
+},
+    {"tag": "everton_derby",
+     "patterns": ["what is the merseyside derby", "everton vs liverpool"],
+     "responses": ["The Merseyside Derby is the match between Everton and Liverpool."]
+},
+    {"tag": "everton_europe",
+     "patterns": ["how many european trophies has everton won", "everton european success"],
+     "responses": ["Everton has won 1 European trophy (1 Cup Winners' Cup in 1985)."]
+},
+    {"tag": "everton_formation",
+     "patterns": ["what formation does everton play", "everton tactics"],
+     "responses": ["Everton typically plays in a 4-4-2 formation."]
+},
+    {"tag": "everton_academy",
+     "patterns": ["what is evertons academy called", "everton youth system"],
+     "responses": ["Everton's academy is called the Everton Academy."]
+},
+    {"tag": "everton_kit",
+     "patterns": ["who makes evertons kit", "everton kit manufacturer"],
+     "responses": ["Everton's kit is made by Hummel."]
+},
+    {"tag": "everton_sponsor",
+     "patterns": ["who sponsors everton", "everton main sponsor"],
+     "responses": ["Everton's main sponsor is Stake.com."]
+},
+    {"tag": "everton_song",
+     "patterns": ["what is evertons anthem", "everton club song"],
+     "responses": ["Everton's anthem is 'It's a Grand Old Team to Play For'."]
+},
+    {"tag": "fulham_fa_cup",
+     "patterns": ["how many fa cups has fulham won", "fulham fa cup wins"],
+     "responses": ["Fulham has never won the FA Cup."]
+},
+    {"tag": "fulham_league_cup",
+     "patterns": ["how many league cups has fulham won", "fulham league cup wins"],
+     "responses": ["Fulham has never won the League Cup."]
+},
+    {"tag": "fulham_highest_score",
+     "patterns": ["what is fulhams highest score", "fulham biggest win"],
+     "responses": ["Fulham's highest score was 10-1 against Ipswich Town in 1963."]
+},
+    {"tag": "fulham_youngest_player",
+     "patterns": ["who is fulhams youngest player", "youngest fulham player"],
+     "responses": ["Harvey Elliott was Fulham's youngest player, making his debut at 16 years old."]
+},
+    {"tag": "fulham_goals_scored",
+     "patterns": ["how many goals has fulham scored", "fulham total goals"],
+     "responses": ["Fulham has scored over 300 goals in the Premier League era."]
+},
+    {"tag": "fulham_clean_sheets",
+     "patterns": ["how many clean sheets has fulham kept", "fulham clean sheet record"],
+     "responses": ["Fulham has kept over 40 clean sheets in the Premier League era."]
+},
+    {"tag": "fulham_attendance",
+     "patterns": ["what is fulhams highest attendance", "fulham record attendance"],
+     "responses": ["Fulham's highest attendance was 49,335 against Millwall in 1938."]
+},
+    {"tag": "fulham_derby",
+     "patterns": ["what is the west london derby", "fulham vs chelsea"],
+     "responses": ["The West London Derby is the match between Fulham and Chelsea."]
+},
+    {"tag": "fulham_europe",
+     "patterns": ["how many european trophies has fulham won", "fulham european success"],
+     "responses": ["Fulham has never won a European trophy."]
+},
+    {"tag": "fulham_formation",
+     "patterns": ["what formation does fulham play", "fulham tactics"],
+     "responses": ["Fulham typically plays in a 4-2-3-1 formation."]
+},
+    {"tag": "fulham_academy",
+     "patterns": ["what is fulhams academy called", "fulham youth system"],
+     "responses": ["Fulham's academy is called the Fulham Academy."]
+},
+    {"tag": "fulham_kit",
+     "patterns": ["who makes fulhams kit", "fulham kit manufacturer"],
+     "responses": ["Fulham's kit is made by Adidas."]
+},
+    {"tag": "fulham_sponsor",
+     "patterns": ["who sponsors fulham", "fulham main sponsor"],
+     "responses": ["Fulham's main sponsor is SBOTOP."]
+},
+    {"tag": "fulham_song",
+     "patterns": ["what is fulhams anthem", "fulham club song"],
+     "responses": ["Fulham's anthem is 'The Fulham Song'."]
+},
+    {"tag": "ipswich_fa_cup",
+     "patterns": ["how many fa cups has ipswich won", "ipswich fa cup wins"],
+     "responses": ["Ipswich has won the FA Cup 1 time."]
+},
+    {"tag": "ipswich_league_cup",
+     "patterns": ["how many league cups has ipswich won", "ipswich league cup wins"],
+     "responses": ["Ipswich has never won the League Cup."]
+},
+    {"tag": "ipswich_highest_score",
+     "patterns": ["what is ipswichs highest score", "ipswich biggest win"],
+     "responses": ["Ipswich's highest score was 10-0 against Floriana in 1962."]
+},
+    {"tag": "ipswich_youngest_player",
+     "patterns": ["who is ipswichs youngest player", "youngest ipswich player"],
+     "responses": ["Connor Wickham was Ipswich's youngest player, making his debut at 16 years old."]
+},
+    {"tag": "ipswich_goals_scored",
+     "patterns": ["how many goals has ipswich scored", "ipswich total goals"],
+     "responses": ["Ipswich has scored over 200 goals in the Premier League era."]
+},
+    {"tag": "ipswich_clean_sheets",
+     "patterns": ["how many clean sheets has ipswich kept", "ipswich clean sheet record"],
+     "responses": ["Ipswich has kept over 30 clean sheets in the Premier League era."]
+},
+    {"tag": "ipswich_attendance",
+     "patterns": ["what is ipswichs highest attendance", "ipswich record attendance"],
+     "responses": ["Ipswich's highest attendance was 38,010 against Leeds United in 1975."]
+},
+    {"tag": "ipswich_derby",
+     "patterns": ["what is the east anglian derby", "ipswich vs norwich"],
+     "responses": ["The East Anglian Derby is the match between Ipswich and Norwich City."]
+},
+    {"tag": "ipswich_europe",
+     "patterns": ["how many european trophies has ipswich won", "ipswich european success"],
+     "responses": ["Ipswich has won 1 European trophy (1 UEFA Cup in 1981)."]
+},
+    {"tag": "ipswich_formation",
+     "patterns": ["what formation does ipswich play", "ipswich tactics"],
+     "responses": ["Ipswich typically plays in a 4-3-3 formation."]
+},
+    {"tag": "ipswich_academy",
+     "patterns": ["what is ipswichs academy called", "ipswich youth system"],
+     "responses": ["Ipswich's academy is called the Ipswich Town Academy."]
+},
+    {"tag": "ipswich_kit",
+     "patterns": ["who makes ipswichs kit", "ipswich kit manufacturer"],
+     "responses": ["Ipswich's kit is made by Umbro."]
+},
+    {"tag": "ipswich_sponsor",
+     "patterns": ["who sponsors ipswich", "ipswich main sponsor"],
+     "responses": ["Ipswich's main sponsor is Ed Sheeran."]
+},
+    {"tag": "ipswich_song",
+     "patterns": ["what is ipswichs anthem", "ipswich club song"],
+     "responses": ["Ipswich's anthem is 'Singing the Blues'."]
+},
+    {"tag": "leicester_fa_cup",
+     "patterns": ["how many fa cups has leicester won", "leicester fa cup wins"],
+     "responses": ["Leicester has won the FA Cup 1 time."]
+},
+    {"tag": "leicester_league_cup",
+     "patterns": ["how many league cups has leicester won", "leicester league cup wins"],
+     "responses": ["Leicester has won the League Cup 3 times."]
+},
+    {"tag": "leicester_highest_score",
+     "patterns": ["what is leicesters highest score", "leicester biggest win"],
+     "responses": ["Leicester's highest score was 13-0 against Notts Olympic in 1891."]
+},
+    {"tag": "leicester_youngest_player",
+     "patterns": ["who is leicesters youngest player", "youngest leicester player"],
+     "responses": ["Jeff Schlupp was Leicester's youngest player, making his debut at 16 years old."]
+},
+    {"tag": "leicester_goals_scored",
+     "patterns": ["how many goals has leicester scored", "leicester total goals"],
+     "responses": ["Leicester has scored over 600 goals in the Premier League era."]
+},
+    {"tag": "leicester_clean_sheets",
+     "patterns": ["how many clean sheets has leicester kept", "leicester clean sheet record"],
+     "responses": ["Leicester has kept over 80 clean sheets in the Premier League era."]
+},
+    {"tag": "leicester_attendance",
+     "patterns": ["what is leicesters highest attendance", "leicester record attendance"],
+     "responses": ["Leicester's highest attendance was 47,298 against Tottenham Hotspur in 2016."]
+},
+    {"tag": "leicester_derby",
+     "patterns": ["what is the east midlands derby", "leicester vs nottingham forest"],
+     "responses": ["The East Midlands Derby is the match between Leicester and Nottingham Forest."]
+},
+    {"tag": "leicester_europe",
+     "patterns": ["how many european trophies has leicester won", "leicester european success"],
+     "responses": ["Leicester has never won a European trophy."]
+},
+    {"tag": "leicester_formation",
+     "patterns": ["what formation does leicester play", "leicester tactics"],
+     "responses": ["Leicester typically plays in a 4-1-4-1 formation."]
+},
+    {"tag": "leicester_academy",
+     "patterns": ["what is leicesters academy called", "leicester youth system"],
+     "responses": ["Leicester's academy is called the Leicester City Academy."]
+},
+    {"tag": "leicester_kit",
+     "patterns": ["who makes leicesters kit", "leicester kit manufacturer"],
+     "responses": ["Leicester's kit is made by Adidas."]
+},
+    {"tag": "leicester_sponsor",
+     "patterns": ["who sponsors leicester", "leicester main sponsor"],
+     "responses": ["Leicester's main sponsor is FBS."]
+},
+    {"tag": "leicester_song",
+     "patterns": ["what is leicesters anthem", "leicester club song"],
+     "responses": ["Leicester's anthem is 'When You're Smiling'."]
+},
+    {"tag": "liverpool_fa_cup",
+     "patterns": ["how many fa cups has liverpool won", "liverpool fa cup wins"],
+     "responses": ["Liverpool has won the FA Cup 8 times."]
+},
+    {"tag": "liverpool_league_cup",
+     "patterns": ["how many league cups has liverpool won", "liverpool league cup wins"],
+     "responses": ["Liverpool has won the League Cup 9 times, more than any other club."]
+},
+    {"tag": "liverpool_highest_score",
+     "patterns": ["what is liverpools highest score", "liverpool biggest win"],
+     "responses": ["Liverpool's highest score was 11-0 against Stromsgodset in 1974."]
+},
+    {"tag": "liverpool_youngest_player",
+     "patterns": ["who is liverpools youngest player", "youngest liverpool player"],
+     "responses": ["Harvey Elliott was Liverpool's youngest player, making his debut at 16 years old."]
+},
+    {"tag": "liverpool_goals_scored",
+     "patterns": ["how many goals has liverpool scored", "liverpool total goals"],
+     "responses": ["Liverpool has scored over 2,100 goals in the Premier League era."]
+},
+    {"tag": "liverpool_clean_sheets",
+     "patterns": ["how many clean sheets has liverpool kept", "liverpool clean sheet record"],
+     "responses": ["Liverpool has kept over 220 clean sheets in the Premier League era."]
+},
+    {"tag": "liverpool_attendance",
+     "patterns": ["what is liverpools highest attendance", "liverpool record attendance"],
+     "responses": ["Liverpool's highest attendance was 61,905 against Chelsea in 1982."]
+},
+    {"tag": "liverpool_derby",
+     "patterns": ["what is the merseyside derby", "liverpool vs everton"],
+     "responses": ["The Merseyside Derby is the match between Liverpool and Everton."]
+},
+    {"tag": "liverpool_europe",
+     "patterns": ["how many european trophies has liverpool won", "liverpool european success"],
+     "responses": ["Liverpool has won 14 European trophies (6 Champions League, 3 Europa League, 4 Super Cups, 1 Club World Cup)."]
+},
+    {"tag": "liverpool_formation",
+     "patterns": ["what formation does liverpool play", "liverpool tactics"],
+     "responses": ["Liverpool typically plays in a 4-3-3 formation."]
+},
+    {"tag": "liverpool_academy",
+     "patterns": ["what is liverpools academy called", "liverpool youth system"],
+     "responses": ["Liverpool's academy is called the Liverpool Academy."]
+},
+    {"tag": "liverpool_kit",
+     "patterns": ["who makes liverpools kit", "liverpool kit manufacturer"],
+     "responses": ["Liverpool's kit is made by Nike."]
+},
+    {"tag": "liverpool_sponsor",
+     "patterns": ["who sponsors liverpool", "liverpool main sponsor"],
+     "responses": ["Liverpool's main sponsor is Standard Chartered."]
+},
+    {"tag": "liverpool_song",
+     "patterns": ["what is liverpools anthem", "liverpool club song"],
+     "responses": ["Liverpool's anthem is 'You'll Never Walk Alone'."]
+},
+    {"tag": "man_city_fa_cup",
+     "patterns": ["how many fa cups has manchester city won", "manchester city fa cup wins"],
+     "responses": ["Manchester City has won the FA Cup 7 times."]
+},
+    {"tag": "man_city_league_cup",
+     "patterns": ["how many league cups has manchester city won", "manchester city league cup wins"],
+     "responses": ["Manchester City has won the League Cup 8 times."]
+},
+    {"tag": "man_city_highest_score",
+     "patterns": ["what is manchester citys highest score", "manchester city biggest win"],
+     "responses": ["Manchester City's highest score was 12-0 against Liverpool Stanley in 1890."]
+},
+    {"tag": "man_city_youngest_player",
+     "patterns": ["who is manchester citys youngest player", "youngest manchester city player"],
+     "responses": ["Micah Richards was Manchester City's youngest player, making his debut at 17 years old."]
+},
+    {"tag": "man_city_goals_scored",
+     "patterns": ["how many goals has manchester city scored", "manchester city total goals"],
+     "responses": ["Manchester City has scored over 1,800 goals in the Premier League era."]
+},
+    {"tag": "man_city_clean_sheets",
+     "patterns": ["how many clean sheets has manchester city kept", "manchester city clean sheet record"],
+     "responses": ["Manchester City has kept over 180 clean sheets in the Premier League era."]
+},
+    {"tag": "man_city_attendance",
+     "patterns": ["what is manchester citys highest attendance", "manchester city record attendance"],
+     "responses": ["Manchester City's highest attendance was 84,569 against Stoke City in 1934."]
+},
+    {"tag": "man_city_derby",
+     "patterns": ["what is the manchester derby", "manchester city vs manchester united"],
+     "responses": ["The Manchester Derby is the match between Manchester City and Manchester United."]
+},
+    {"tag": "man_city_europe",
+     "patterns": ["how many european trophies has manchester city won", "manchester city european success"],
+     "responses": ["Manchester City has won 1 European trophy (1 Champions League in 2023)."]
+},
+    {"tag": "man_city_formation",
+     "patterns": ["what formation does manchester city play", "manchester city tactics"],
+     "responses": ["Manchester City typically plays in a 4-3-3 formation."]
+},
+    {"tag": "man_city_academy",
+     "patterns": ["what is manchester citys academy called", "manchester city youth system"],
+     "responses": ["Manchester City's academy is called the Manchester City Academy."]
+},
+    {"tag": "man_city_kit",
+     "patterns": ["who makes manchester citys kit", "manchester city kit manufacturer"],
+     "responses": ["Manchester City's kit is made by Puma."]
+},
+    {"tag": "man_city_sponsor",
+     "patterns": ["who sponsors manchester city", "manchester city main sponsor"],
+     "responses": ["Manchester City's main sponsor is Etihad Airways."]
+},
+    {"tag": "man_city_song",
+     "patterns": ["what is manchester citys anthem", "manchester city club song"],
+     "responses": ["Manchester City's anthem is 'Blue Moon'."]
+},
+    {"tag": "newcastle_fa_cup",
+     "patterns": ["how many fa cups has newcastle won", "newcastle fa cup wins"],
+     "responses": ["Newcastle has won the FA Cup 6 times."]
+},
+    {"tag": "newcastle_league_cup",
+     "patterns": ["how many league cups has newcastle won", "newcastle league cup wins"],
+     "responses": ["Newcastle has never won the League Cup."]
+},
+    {"tag": "newcastle_highest_score",
+     "patterns": ["what is newcastles highest score", "newcastle biggest win"],
+     "responses": ["Newcastle's highest score was 13-0 against Newport County in 1946."]
+},
+    {"tag": "newcastle_youngest_player",
+     "patterns": ["who is newcastles youngest player", "youngest newcastle player"],
+     "responses": ["Aaron Hughes was Newcastle's youngest player, making his debut at 17 years old."]
+},
+    {"tag": "newcastle_goals_scored",
+     "patterns": ["how many goals has newcastle scored", "newcastle total goals"],
+     "responses": ["Newcastle has scored over 1,400 goals in the Premier League era."]
+},
+    {"tag": "newcastle_clean_sheets",
+     "patterns": ["how many clean sheets has newcastle kept", "newcastle clean sheet record"],
+     "responses": ["Newcastle has kept over 140 clean sheets in the Premier League era."]
+},
+    {"tag": "newcastle_attendance",
+     "patterns": ["what is newcastles highest attendance", "newcastle record attendance"],
+     "responses": ["Newcastle's highest attendance was 68,386 against Chelsea in 1930."]
+},
+    {"tag": "newcastle_derby",
+     "patterns": ["what is the tyne wear derby", "newcastle vs sunderland"],
+     "responses": ["The Tyne-Wear Derby is the match between Newcastle and Sunderland."]
+},
+    {"tag": "newcastle_europe",
+     "patterns": ["how many european trophies has newcastle won", "newcastle european success"],
+     "responses": ["Newcastle has won 1 European trophy (1 Fairs Cup in 1969)."]
+},
+    {"tag": "newcastle_formation",
+     "patterns": ["what formation does newcastle play", "newcastle tactics"],
+     "responses": ["Newcastle typically plays in a 4-3-3 formation."]
+},
+    {"tag": "newcastle_academy",
+     "patterns": ["what is newcastles academy called", "newcastle youth system"],
+     "responses": ["Newcastle's academy is called the Newcastle United Academy."]
+},
+    {"tag": "newcastle_kit",
+     "patterns": ["who makes newcastles kit", "newcastle kit manufacturer"],
+     "responses": ["Newcastle's kit is made by Castore."]
+},
+    {"tag": "newcastle_sponsor",
+     "patterns": ["who sponsors newcastle", "newcastle main sponsor"],
+     "responses": ["Newcastle's main sponsor is Sela."]
+},
+    {"tag": "newcastle_song",
+     "patterns": ["what is newcastles anthem", "newcastle club song"],
+     "responses": ["Newcastle's anthem is 'The Blaydon Races'."]
+},
+    {"tag": "nottingham_fa_cup",
+     "patterns": ["how many fa cups has nottingham forest won", "nottingham forest fa cup wins"],
+     "responses": ["Nottingham Forest has won the FA Cup 2 times."]
+},
+    {"tag": "nottingham_league_cup",
+     "patterns": ["how many league cups has nottingham forest won", "nottingham forest league cup wins"],
+     "responses": ["Nottingham Forest has won the League Cup 4 times."]
+},
+    {"tag": "nottingham_highest_score",
+     "patterns": ["what is nottingham forests highest score", "nottingham forest biggest win"],
+     "responses": ["Nottingham Forest's highest score was 14-0 against Clapton in 1891."]
+},
+    {"tag": "nottingham_youngest_player",
+     "patterns": ["who is nottingham forests youngest player", "youngest nottingham forest player"],
+     "responses": ["Jermaine Jenas was Nottingham Forest's youngest player, making his debut at 17 years old."]
+},
+    {"tag": "nottingham_goals_scored",
+     "patterns": ["how many goals has nottingham forest scored", "nottingham forest total goals"],
+     "responses": ["Nottingham Forest has scored over 500 goals in the Premier League era."]
+},
+    {"tag": "nottingham_clean_sheets",
+     "patterns": ["how many clean sheets has nottingham forest kept", "nottingham forest clean sheet record"],
+     "responses": ["Nottingham Forest has kept over 60 clean sheets in the Premier League era."]
+},
+    {"tag": "nottingham_attendance",
+     "patterns": ["what is nottingham forests highest attendance", "nottingham forest record attendance"],
+     "responses": ["Nottingham Forest's highest attendance was 49,946 against Liverpool in 1967."]
+},
+    {"tag": "nottingham_derby",
+     "patterns": ["what is the east midlands derby", "nottingham forest vs derby county"],
+     "responses": ["The East Midlands Derby is the match between Nottingham Forest and Derby County."]
+},
+    {"tag": "nottingham_europe",
+     "patterns": ["how many european trophies has nottingham forest won", "nottingham forest european success"],
+     "responses": ["Nottingham Forest has won 2 European trophies (2 European Cups in 1979 and 1980)."]
+},
+    {"tag": "nottingham_formation",
+     "patterns": ["what formation does nottingham forest play", "nottingham forest tactics"],
+     "responses": ["Nottingham Forest typically plays in a 3-4-3 formation."]
+},
+    {"tag": "nottingham_academy",
+     "patterns": ["what is nottingham forests academy called", "nottingham forest youth system"],
+     "responses": ["Nottingham Forest's academy is called the Nottingham Forest Academy."]
+},
+    {"tag": "nottingham_kit",
+     "patterns": ["who makes nottingham forests kit", "nottingham forest kit manufacturer"],
+     "responses": ["Nottingham Forest's kit is made by Macron."]
+},
+    {"tag": "nottingham_sponsor",
+     "patterns": ["who sponsors nottingham forest", "nottingham forest main sponsor"],
+     "responses": ["Nottingham Forest's main sponsor is UNHCR."]
+},
+    {"tag": "nottingham_song",
+     "patterns": ["what is nottingham forests anthem", "nottingham forest club song"],
+     "responses": ["Nottingham Forest's anthem is 'Mull of Kintyre'."]
+},
+    {"tag": "tottenham_fa_cup",
+     "patterns": ["how many fa cups has tottenham won", "tottenham fa cup wins"],
+     "responses": ["Tottenham has won the FA Cup 8 times."]
+},
+    {"tag": "tottenham_league_cup",
+     "patterns": ["how many league cups has tottenham won", "tottenham league cup wins"],
+     "responses": ["Tottenham has won the League Cup 4 times."]
+},
+    {"tag": "tottenham_highest_score",
+     "patterns": ["what is tottenhams highest score", "tottenham biggest win"],
+     "responses": ["Tottenham's highest score was 13-2 against Crewe Alexandra in 1960."]
+},
+    {"tag": "tottenham_youngest_player",
+     "patterns": ["who is tottenhams youngest player", "youngest tottenham player"],
+     "responses": ["Danny Rose was Tottenham's youngest player, making his debut at 17 years old."]
+},
+    {"tag": "tottenham_goals_scored",
+     "patterns": ["how many goals has tottenham scored", "tottenham total goals"],
+     "responses": ["Tottenham has scored over 1,700 goals in the Premier League era."]
+},
+    {"tag": "tottenham_clean_sheets",
+     "patterns": ["how many clean sheets has tottenham kept", "tottenham clean sheet record"],
+     "responses": ["Tottenham has kept over 170 clean sheets in the Premier League era."]
+},
+    {"tag": "tottenham_attendance",
+     "patterns": ["what is tottenhams highest attendance", "tottenham record attendance"],
+     "responses": ["Tottenham's highest attendance was 75,038 against Arsenal in 2018."]
+},
+    {"tag": "tottenham_derby",
+     "patterns": ["what is the north london derby", "tottenham vs arsenal"],
+     "responses": ["The North London Derby is the match between Tottenham and Arsenal."]
+},
+    {"tag": "tottenham_europe",
+     "patterns": ["how many european trophies has tottenham won", "tottenham european success"],
+     "responses": ["Tottenham has won 3 European trophies (2 UEFA Cups, 1 Cup Winners' Cup)."]
+},
+    {"tag": "tottenham_formation",
+     "patterns": ["what formation does tottenham play", "tottenham tactics"],
+     "responses": ["Tottenham typically plays in a 3-4-3 formation."]
+},
+    {"tag": "tottenham_academy",
+     "patterns": ["what is tottenhams academy called", "tottenham youth system"],
+     "responses": ["Tottenham's academy is called the Tottenham Hotspur Academy."]
+},
+    {"tag": "tottenham_kit",
+     "patterns": ["who makes tottenhams kit", "tottenham kit manufacturer"],
+     "responses": ["Tottenham's kit is made by Nike."]
+},
+    {"tag": "tottenham_sponsor",
+     "patterns": ["who sponsors tottenham", "tottenham main sponsor"],
+     "responses": ["Tottenham's main sponsor is AIA."]
+},
+    {"tag": "tottenham_song",
+     "patterns": ["what is tottenhams anthem", "tottenham club song"],
+     "responses": ["Tottenham's anthem is 'Glory Glory Tottenham Hotspur'."]
+},
+    {"tag": "west_ham_fa_cup",
+     "patterns": ["how many fa cups has west ham won", "west ham fa cup wins"],
+     "responses": ["West Ham has won the FA Cup 3 times."]
+},
+    {"tag": "west_ham_league_cup",
+     "patterns": ["how many league cups has west ham won", "west ham league cup wins"],
+     "responses": ["West Ham has never won the League Cup."]
+},
+    {"tag": "west_ham_highest_score",
+     "patterns": ["what is west hams highest score", "west ham biggest win"],
+     "responses": ["West Ham's highest score was 10-0 against Bury in 1983."]
+},
+    {"tag": "west_ham_youngest_player",
+     "patterns": ["who is west hams youngest player", "youngest west ham player"],
+     "responses": ["Declan Rice was West Ham's youngest player, making his debut at 18 years old."]
+},
+    {"tag": "west_ham_goals_scored",
+     "patterns": ["how many goals has west ham scored", "west ham total goals"],
+     "responses": ["West Ham has scored over 1,200 goals in the Premier League era."]
+},
+    {"tag": "west_ham_clean_sheets",
+     "patterns": ["how many clean sheets has west ham kept", "west ham clean sheet record"],
+     "responses": ["West Ham has kept over 120 clean sheets in the Premier League era."]
+},
+    {"tag": "west_ham_attendance",
+     "patterns": ["what is west hams highest attendance", "west ham record attendance"],
+     "responses": ["West Ham's highest attendance was 42,322 against Tottenham Hotspur in 2016."]
+},
+    {"tag": "west_ham_derby",
+     "patterns": ["what is the east london derby", "west ham vs millwall"],
+     "responses": ["The East London Derby is the match between West Ham and Millwall."]
+},
+    {"tag": "west_ham_europe",
+     "patterns": ["how many european trophies has west ham won", "west ham european success"],
+     "responses": ["West Ham has won 1 European trophy (1 Cup Winners' Cup in 1965)."]
+},
+    {"tag": "west_ham_formation",
+     "patterns": ["what formation does west ham play", "west ham tactics"],
+     "responses": ["West Ham typically plays in a 4-2-3-1 formation."]
+},
+    {"tag": "west_ham_academy",
+     "patterns": ["what is west hams academy called", "west ham youth system"],
+     "responses": ["West Ham's academy is called the West Ham United Academy."]
+},
+    {"tag": "west_ham_kit",
+     "patterns": ["who makes west hams kit", "west ham kit manufacturer"],
+     "responses": ["West Ham's kit is made by Umbro."]
+},
+    {"tag": "west_ham_sponsor",
+     "patterns": ["who sponsors west ham", "west ham main sponsor"],
+     "responses": ["West Ham's main sponsor is Betway."]
+},
+    {"tag": "west_ham_song",
+     "patterns": ["what is west hams anthem", "west ham club song"],
+     "responses": ["West Ham's anthem is 'I'm Forever Blowing Bubbles'."]
+},
+    {"tag": "wolves_fa_cup",
+     "patterns": ["how many fa cups has wolves won", "wolves fa cup wins"],
+     "responses": ["Wolves has won the FA Cup 4 times."]
+},
+    {"tag": "wolves_league_cup",
+     "patterns": ["how many league cups has wolves won", "wolves league cup wins"],
+     "responses": ["Wolves has won the League Cup 2 times."]
+},
+    {"tag": "wolves_highest_score",
+     "patterns": ["what is wolves highest score", "wolves biggest win"],
+     "responses": ["Wolves' highest score was 14-0 against Crosswell's Brewery in 1886."]
+},
+    {"tag": "wolves_youngest_player",
+     "patterns": ["who is wolves youngest player", "youngest wolves player"],
+     "responses": ["Morgan Gibbs-White was Wolves' youngest player, making his debut at 16 years old."]
+},
+    {"tag": "wolves_goals_scored",
+     "patterns": ["how many goals has wolves scored", "wolves total goals"],
+     "responses": ["Wolves has scored over 400 goals in the Premier League era."]
+},
+    {"tag": "wolves_clean_sheets",
+     "patterns": ["how many clean sheets has wolves kept", "wolves clean sheet record"],
+     "responses": ["Wolves has kept over 50 clean sheets in the Premier League era."]
+},
+    {"tag": "wolves_attendance",
+     "patterns": ["what is wolves highest attendance", "wolves record attendance"],
+     "responses": ["Wolves' highest attendance was 61,315 against Liverpool in 1939."]
+},
+    {"tag": "wolves_derby",
+     "patterns": ["what is the black country derby", "wolves vs west brom"],
+     "responses": ["The Black Country Derby is the match between Wolves and West Bromwich Albion."]
+},
+    {"tag": "wolves_europe",
+     "patterns": ["how many european trophies has wolves won", "wolves european success"],
+     "responses": ["Wolves has never won a European trophy."]
+},
+    {"tag": "wolves_formation",
+     "patterns": ["what formation does wolves play", "wolves tactics"],
+     "responses": ["Wolves typically plays in a 3-5-2 formation."]
+},
+    {"tag": "wolves_academy",
+     "patterns": ["what is wolves academy called", "wolves youth system"],
+     "responses": ["Wolves' academy is called the Wolverhampton Wanderers Academy."]
+},
+    {"tag": "wolves_kit",
+     "patterns": ["who makes wolves kit", "wolves kit manufacturer"],
+     "responses": ["Wolves' kit is made by Castore."]
+},
+    {"tag": "wolves_sponsor",
+     "patterns": ["who sponsors wolves", "wolves main sponsor"],
+     "responses": ["Wolves' main sponsor is AstroPay."]
+},
+    {"tag": "wolves_song",
+     "patterns": ["what is wolves anthem", "wolves club song"],
+     "responses": ["Wolves' anthem is 'The Liquidator'."]
+},
+    {"tag": "leeds_fa_cup",
+     "patterns": ["how many fa cups has leeds won", "leeds fa cup wins"],
+     "responses": ["Leeds has won the FA Cup 1 time."]
+},
+    {"tag": "leeds_league_cup",
+     "patterns": ["how many league cups has leeds won", "leeds league cup wins"],
+     "responses": ["Leeds has won the League Cup 1 time."]
+},
+    {"tag": "leeds_highest_score",
+     "patterns": ["what is leeds highest score", "leeds biggest win"],
+     "responses": ["Leeds' highest score was 8-0 against Leicester City in 1934."]
+},
+    {"tag": "leeds_youngest_player",
+     "patterns": ["who is leeds youngest player", "youngest leeds player"],
+     "responses": ["Aaron Lennon was Leeds' youngest player, making his debut at 16 years old."]
+},
+    {"tag": "leeds_goals_scored",
+     "patterns": ["how many goals has leeds scored", "leeds total goals"],
+     "responses": ["Leeds has scored over 1,000 goals in the Premier League era."]
+},
+    {"tag": "leeds_clean_sheets",
+     "patterns": ["how many clean sheets has leeds kept", "leeds clean sheet record"],
+     "responses": ["Leeds has kept over 100 clean sheets in the Premier League era."]
+},
+    {"tag": "leeds_attendance",
+     "patterns": ["what is leeds highest attendance", "leeds record attendance"],
+     "responses": ["Leeds' highest attendance was 57,892 against Sunderland in 1967."]
+},
+    {"tag": "leeds_derby",
+     "patterns": ["what is the roses derby", "leeds vs manchester united"],
+     "responses": ["The Roses Derby is the match between Leeds and Manchester United."]
+},
+    {"tag": "leeds_europe",
+     "patterns": ["how many european trophies has leeds won", "leeds european success"],
+     "responses": ["Leeds has won 2 European trophies (2 Fairs Cups in 1968 and 1971)."]
+},
+    {"tag": "leeds_formation",
+     "patterns": ["what formation does leeds play", "leeds tactics"],
+     "responses": ["Leeds typically plays in a 4-1-4-1 formation."]
+},
+    {"tag": "leeds_academy",
+     "patterns": ["what is leeds academy called", "leeds youth system"],
+     "responses": ["Leeds' academy is called the Leeds United Academy."]
+},
+    {"tag": "leeds_kit",
+     "patterns": ["who makes leeds kit", "leeds kit manufacturer"],
+     "responses": ["Leeds' kit is made by Adidas."]
+},
+    {"tag": "leeds_sponsor",
+     "patterns": ["who sponsors leeds", "leeds main sponsor"],
+     "responses": ["Leeds' main sponsor is SBOTOP."]
+},
+    {"tag": "leeds_song",
+     "patterns": ["what is leeds anthem", "leeds club song"],
+     "responses": ["Leeds' anthem is 'Marching On Together'."]
+},
+    {"tag": "burnley_fa_cup",
+     "patterns": ["how many fa cups has burnley won", "burnley fa cup wins"],
+     "responses": ["Burnley has won the FA Cup 1 time."]
+},
+    {"tag": "burnley_league_cup",
+     "patterns": ["how many league cups has burnley won", "burnley league cup wins"],
+     "responses": ["Burnley has never won the League Cup."]
+},
+    {"tag": "burnley_highest_score",
+     "patterns": ["what is burnleys highest score", "burnley biggest win"],
+     "responses": ["Burnley's highest score was 9-0 against Darwen in 1890."]
+},
+    {"tag": "burnley_youngest_player",
+     "patterns": ["who is burnleys youngest player", "youngest burnley player"],
+     "responses": ["Jay Rodriguez was Burnley's youngest player, making his debut at 17 years old."]
+},
+    {"tag": "burnley_goals_scored",
+     "patterns": ["how many goals has burnley scored", "burnley total goals"],
+     "responses": ["Burnley has scored over 300 goals in the Premier League era."]
+},
+    {"tag": "burnley_clean_sheets",
+     "patterns": ["how many clean sheets has burnley kept", "burnley clean sheet record"],
+     "responses": ["Burnley has kept over 40 clean sheets in the Premier League era."]
+},
+    {"tag": "burnley_attendance",
+     "patterns": ["what is burnleys highest attendance", "burnley record attendance"],
+     "responses": ["Burnley's highest attendance was 54,775 against Huddersfield Town in 1924."]
+},
+    {"tag": "burnley_derby",
+     "patterns": ["what is the east lancashire derby", "burnley vs blackburn"],
+     "responses": ["The East Lancashire Derby is the match between Burnley and Blackburn Rovers."]
+},
+    {"tag": "burnley_europe",
+     "patterns": ["how many european trophies has burnley won", "burnley european success"],
+     "responses": ["Burnley has never won a European trophy."]
+},
+    {"tag": "burnley_formation",
+     "patterns": ["what formation does burnley play", "burnley tactics"],
+     "responses": ["Burnley typically plays in a 4-4-2 formation."]
+},
+    {"tag": "burnley_academy",
+     "patterns": ["what is burnleys academy called", "burnley youth system"],
+     "responses": ["Burnley's academy is called the Burnley Academy."]
+},
+    {"tag": "burnley_kit",
+     "patterns": ["who makes burnleys kit", "burnley kit manufacturer"],
+     "responses": ["Burnley's kit is made by Umbro."]
+},
+    {"tag": "burnley_sponsor",
+     "patterns": ["who sponsors burnley", "burnley main sponsor"],
+     "responses": ["Burnley's main sponsor is W88."]
+},
+    {"tag": "burnley_song",
+     "patterns": ["what is burnleys anthem", "burnley club song"],
+     "responses": ["Burnley's anthem is 'No Nay Never'."]
+},
+    {"tag": "sunderland_fa_cup",
+     "patterns": ["how many fa cups has sunderland won", "sunderland fa cup wins"],
+     "responses": ["Sunderland has won the FA Cup 2 times."]
+},
+    {"tag": "sunderland_league_cup",
+     "patterns": ["how many league cups has sunderland won", "sunderland league cup wins"],
+     "responses": ["Sunderland has never won the League Cup."]
+},
+    {"tag": "sunderland_highest_score",
+     "patterns": ["what is sunderlands highest score", "sunderland biggest win"],
+     "responses": ["Sunderland's highest score was 9-1 against Newcastle United in 1908."]
+},
+    {"tag": "sunderland_youngest_player",
+     "patterns": ["who is sunderlands youngest player", "youngest sunderland player"],
+     "responses": ["Jordan Henderson was Sunderland's youngest player, making his debut at 17 years old."]
+},
+    {"tag": "sunderland_goals_scored",
+     "patterns": ["how many goals has sunderland scored", "sunderland total goals"],
+     "responses": ["Sunderland has scored over 1,000 goals in the Premier League era."]
+},
+    {"tag": "sunderland_clean_sheets",
+     "patterns": ["how many clean sheets has sunderland kept", "sunderland clean sheet record"],
+     "responses": ["Sunderland has kept over 100 clean sheets in the Premier League era."]
+},
+    {"tag": "sunderland_attendance",
+     "patterns": ["what is sunderlands highest attendance", "sunderland record attendance"],
+     "responses": ["Sunderland's highest attendance was 75,118 against Derby County in 1973."]
+},
+    {"tag": "sunderland_derby",
+     "patterns": ["what is the tyne wear derby", "sunderland vs newcastle"],
+     "responses": ["The Tyne-Wear Derby is the match between Sunderland and Newcastle United."]
+},
+    {"tag": "sunderland_europe",
+     "patterns": ["how many european trophies has sunderland won", "sunderland european success"],
+     "responses": ["Sunderland has never won a European trophy."]
+},
+    {"tag": "sunderland_formation",
+     "patterns": ["what formation does sunderland play", "sunderland tactics"],
+     "responses": ["Sunderland typically plays in a 4-2-3-1 formation."]
+},
+    {"tag": "sunderland_academy",
+     "patterns": ["what is sunderlands academy called", "sunderland youth system"],
+     "responses": ["Sunderland's academy is called the Sunderland Academy."]
+},
+    {"tag": "sunderland_kit",
+     "patterns": ["who makes sunderlands kit", "sunderland kit manufacturer"],
+     "responses": ["Sunderland's kit is made by Nike."]
+},
+    {"tag": "sunderland_sponsor",
+     "patterns": ["who sponsors sunderland", "sunderland main sponsor"],
+     "responses": ["Sunderland's main sponsor is Spreadex."]
+},
+    {"tag": "sunderland_song",
+     "patterns": ["what is sunderlands anthem", "sunderland club song"],
+     "responses": ["Sunderland's anthem is 'Sunderland Til I Die'."]
+},
+    {
+        "tag": "ronaldo",
+        "patterns": ["who is ronaldo", "tell me about ronaldo", "information on ronaldo"],
+        "responses": ["Cristiano Ronaldo is a Portuguese footballer, widely regarded as one of the greatest of all time. He has played for top clubs like Manchester United, Real Madrid, Juventus, and Al-Nassr, and is known for his incredible goal-scoring ability. He has won multiple Ballon d'Or awards and major international titles with Portugal."]
+},
+    {
+        "tag": "messi",
+        "patterns": ["who is messi", "tell me about messi", "information on messi"],
+        "responses": ["Lionel Messi is an Argentine footballer, often considered one of the greatest players in history. He spent the majority of his career at FC Barcelona before moving to Paris Saint-Germain and later Inter Miami. Messi has won numerous Ballon d'Or awards and has set multiple records for goals and assists."]
+},    {
+        "tag": "neymar",
+        "patterns": ["who is neymar", "tell me about neymar", "information on neymar"],
+        "responses": ["Neymar Jr. is a Brazilian footballer known for his exceptional dribbling skills, creativity, and goal-scoring ability. He has played for clubs like Santos, FC Barcelona, and Paris Saint-Germain. Neymar is also a key player for the Brazilian national team and has won several domestic and international titles."]
+},
+    {
+        "tag": "mbappe",
+        "patterns": ["who is mbappe", "tell me about mbappe", "information on mbappe"],
+        "responses": ["Kylian Mbappé is a French footballer known for his incredible speed, skill, and goal-scoring prowess. He rose to prominence with AS Monaco before transferring to Paris Saint-Germain. Mbappé has won multiple Ligue 1 titles and was a key player in France's 2018 FIFA World Cup victory."]
+},
+    {
+        "tag": "whowon",
+        "patterns": ["who won the premier league last season", "who was the winner of the 2024-25 premier league", "who won last year", "who won last season"],
+        "responses": ["Manchester City won the Premier League in the 2024-25 season."]
+},
+    {
+        "tag": "topscorer",
+        "patterns": ["who was the top scorer last season", "who scored the most goals in the 2024-25 premier league", "who scored the most goals last season", "who scored the most goals last year"],
+        "responses": ["Erling Haaland was the top scorer in the Premier League for the 2024-25 season."]
+},
+    {
+        "tag": "best_team",
+        "patterns": ["what is the best team in the premier league", "which team is considered the best in the premier league", "what is the best team"],
+        "responses": ["A definitive answer to the best team in the Premier League can vary based on criteria such as historical success, current form, or fan opinions. It is difficult to say which is the best team overall."]
+},    
+    {
+        "tag": "most_titles",
+        "patterns": ["which team has the most premier league titles", "who has won the most premier league championships", "which team has the most titles", "who has won the most titles"],
+        "responses": ["Manchester United holds the record for the most Premier League titles, having won it 13 times since the league's inception in 1992."]
+},
+    {
+        "tag": "next_match",
+        "patterns": ["what is the next match in the premier league", "when is the next premier league game", "when is the next match", "what is the next game"],
+        "responses": ["The next Premier League match is between Chelsea and Sunderland today at 7:30 PM."]
+}
+    ]}
